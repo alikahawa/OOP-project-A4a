@@ -2,19 +2,19 @@ import java.util.ArrayList;
 
 public class Question {
 
-    private String rightAnswer;
+    private char rightAnswer;
     private ArrayList<String> questionList;
 
-    public Question(String rightAnswer, ArrayList<String> questionList) {
+    public Question(char rightAnswer, ArrayList<String> questionList) {
         this.rightAnswer = rightAnswer;
         this.questionList = questionList;
     }
 
-    public String getRightAnswer() {
+    public char getRightAnswer() {
         return rightAnswer;
     }
 
-    public void setRightAnswer(String rightAnswer) {
+    public char setRightAnswer(char rightAnswer) {
         this.rightAnswer = rightAnswer;
     }
 
