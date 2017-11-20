@@ -1,13 +1,32 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Question {
 
     private char rightAnswer;
-    private ArrayList<String> questionList;
+    private ArrayList<String> answerList;
+    private String question;
 
-    public Question(char rightAnswer, ArrayList<String> questionList) {
+    public Question(char rightAnswer, ArrayList<String> answerList, String question) {
         this.rightAnswer = rightAnswer;
-        this.questionList = questionList;
+        this.answerList = answerList;
+        this.question = question;
+    }
+
+    public ArrayList<String> getAnswerList() {
+        return answerList;
+    }
+
+    public void setAnswerList(ArrayList<String> answerList) {
+        this.answerList = answerList;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public char getRightAnswer() {
@@ -19,12 +38,18 @@ public class Question {
     }
 
     public ArrayList<String> getQuestionList() {
-        return questionList;
+        return answerList;
     }
 
     public void setQuestionList(ArrayList<String> questionList) {
-        this.questionList = questionList;
+        this.answerList = questionList;
     }
 
+    public String print()
+    {
+        for(int i = 0; i < answerList.size(); i++)
+        {
 
+        }
+    }
 }
