@@ -102,6 +102,23 @@ public class Question {
         }
     }
 
+    public void WriteToXML(String fileName)
+    {
+        try {
+
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+
+            Document doc = docBuilder.newDocument();
+            Element rootElement = doc.createElement("MultiQuestion");
+            doc.appendChild(rootElement);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     public void print() {
         System.out.println(question);
 
@@ -111,7 +128,7 @@ public class Question {
     }
 
     public boolean isItRightAnswer(char input) {
-        int tmp = this.rightAnswer + 'A';
-        return tmp == input;
+        char tmp = (char)(this.rightAnswer + 'A');
+        return tmp == Character.toUpperCase(input);
     }
 }

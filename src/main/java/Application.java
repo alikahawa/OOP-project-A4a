@@ -1,10 +1,12 @@
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
 
-        Question.ReadFromXML("C:\\Users\\ANDOR-LAPTOP\\Documents\\Uni\\OOP\\Project\\xml format.xml");
+        List<Question> tmpql = Question.ReadFromXML("C:\\Users\\ANDOR-LAPTOP\\Documents\\Uni\\OOP\\Project\\xml format.xml");
+        tmpql.WriteToXML("C:\\Users\\ANDOR-LAPTOP\\Documents\\Uni\\OOP\\Project\\xml format.xml");
 
         while (true){
             System.out.println("Welcome to the practice low literacy program\n");
