@@ -9,14 +9,15 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 import java.io.File;
+import java.util.List;
 
 public class Question {
 
-    private char rightAnswer;
+    private int rightAnswer;
     private ArrayList<String> answerList;
     private String question;
 
-    public Question(char rightAnswer, ArrayList<String> answerList, String question) {
+    public Question(int rightAnswer, ArrayList<String> answerList, String question) {
         this.rightAnswer = rightAnswer;
         this.answerList = answerList;
         this.question = question;
@@ -38,11 +39,11 @@ public class Question {
         this.question = question;
     }
 
-    public char getRightAnswer() {
+    public int getRightAnswer() {
         return rightAnswer;
     }
 
-    public void setRightAnswer(char rightAnswer) {
+    public void setRightAnswer(int rightAnswer) {
         this.rightAnswer = rightAnswer;
     }
 
@@ -54,7 +55,7 @@ public class Question {
         this.answerList = questionList;
     }
 
-    public static void ReadFromXML(String fileName) {
+    public static List<Question> ReadFromXML(String fileName) {
         try {
             File xmlFile = new File(fileName);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -63,15 +64,41 @@ public class Question {
             doc.getDocumentElement().normalize();
 
             NodeList nList = doc.getElementsByTagName("Question");
+
+            List<Question> QuestionList = new ArrayList<Question>();
+
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
 
-                System.out.println("\nCurrent Element :" + nNode.getNodeName());
-            }
+                Element tmpElement = (Element) nNode;
+                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
+                int numberOfAnswers = Integer.parseInt(tmpElement.getElementsByTagName("NumberOfAnswers").item(0).getTextContent());
+                String rightAnswerString = tmpElement.getElementsByTagName("RightAnswer").item(0).getTextContent();
+                int rightAnswerIndex = 0;
 
+                ArrayList<String> answersList = new ArrayList<>();
+
+                NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
+
+                for (int i = 0; i < numberOfAnswers; i++)
+                {
+                    String tmp = answersNodeList.item(i).getTextContent();
+                    if (tmp.equals(rightAnswerString))
+                    {
+                        rightAnswerIndex = i;
+                    }
+                    answersList.add(tmp);
+                }
+
+                QuestionList.add(new Question(rightAnswerIndex, answersList, questionText));
+
+
+            }
+            return QuestionList;
 
         } catch (Exception e) {
             e.printStackTrace();
+            return new ArrayList<Question>();
         }
     }
 
