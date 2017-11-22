@@ -27,7 +27,7 @@ public class Application {
                         System.out.println("Nice!");
                     }
                     else{
-                        System.out.println("Not good answer!" +
+                        System.out.println("Not a good answer!" +
                                 "\n the right answer is c ");
                     }
 
