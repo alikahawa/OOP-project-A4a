@@ -54,25 +54,6 @@ public class Question {
         this.answerList = questionList;
     }
 
-
-
-    public void WriteToXML(String fileName)
-    {
-        try {
-
-            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-
-            Document doc = docBuilder.newDocument();
-            Element rootElement = doc.createElement("MultiQuestion");
-            doc.appendChild(rootElement);
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
-
     public void print() {
         System.out.println(question);
 
