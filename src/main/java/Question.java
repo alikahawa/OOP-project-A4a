@@ -9,7 +9,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 import java.io.File;
-import java.util.List;
 
 public class Question {
 
@@ -55,52 +54,7 @@ public class Question {
         this.answerList = questionList;
     }
 
-    public static List<Question> ReadFromXML(String fileName) {
-        try {
-            File xmlFile = new File(fileName);
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(xmlFile);
-            doc.getDocumentElement().normalize();
 
-            NodeList nList = doc.getElementsByTagName("Question");
-
-            List<Question> QuestionList = new ArrayList<Question>();
-
-            for (int temp = 0; temp < nList.getLength(); temp++) {
-                Node nNode = nList.item(temp);
-
-                Element tmpElement = (Element) nNode;
-                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
-                int numberOfAnswers = Integer.parseInt(tmpElement.getElementsByTagName("NumberOfAnswers").item(0).getTextContent());
-                String rightAnswerString = tmpElement.getElementsByTagName("RightAnswer").item(0).getTextContent();
-                int rightAnswerIndex = 0;
-
-                ArrayList<String> answersList = new ArrayList<>();
-
-                NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
-
-                for (int i = 0; i < numberOfAnswers; i++)
-                {
-                    String tmp = answersNodeList.item(i).getTextContent();
-                    if (tmp.equals(rightAnswerString))
-                    {
-                        rightAnswerIndex = i;
-                    }
-                    answersList.add(tmp);
-                }
-
-                QuestionList.add(new Question(rightAnswerIndex, answersList, questionText));
-
-
-            }
-            return QuestionList;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ArrayList<Question>();
-        }
-    }
 
     public void WriteToXML(String fileName)
     {
