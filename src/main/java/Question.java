@@ -1,5 +1,14 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+
+import java.io.File;
 
 public class Question {
 
@@ -33,7 +42,7 @@ public class Question {
         return rightAnswer;
     }
 
-    public char setRightAnswer(char rightAnswer) {
+    public void setRightAnswer(char rightAnswer) {
         this.rightAnswer = rightAnswer;
     }
 
@@ -45,11 +54,37 @@ public class Question {
         this.answerList = questionList;
     }
 
-    public String print()
-    {
-        for(int i = 0; i < answerList.size(); i++)
-        {
+    public static void ReadFromXML(String fileName) {
+        try {
+            File xmlFile = new File(fileName);
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(xmlFile);
+            doc.getDocumentElement().normalize();
 
+            NodeList nList = doc.getElementsByTagName("Question");
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+
+                System.out.println("\nCurrent Element :" + nNode.getNodeName());
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+
+    public void print() {
+        System.out.println(question);
+
+        for (int i = 0; i < answerList.size(); i++) {
+            System.out.println(answerList.get(i));
+        }
+    }
+
+    public boolean isItRightAnswer(String input) {
+        String tmp = "" + this.rightAnswer;
+        return (tmp.equals(input));
     }
 }

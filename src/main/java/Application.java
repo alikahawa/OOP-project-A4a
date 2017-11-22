@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
+
+        Question.ReadFromXML("C:\\Users\\ANDOR-LAPTOP\\Documents\\Uni\\OOP\\Project\\xml format.xml");
+
         while (true){
             System.out.println("Welcome to the practice low literacy program\n");
             System.out.println("Press 1 to enter the first exam");
