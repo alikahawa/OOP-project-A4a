@@ -21,23 +21,19 @@ public class QuestionList {
 
     List<Question> qList;
 
-    public QuestionList()
-    {
+    public QuestionList() {
         qList = new ArrayList<Question>();
     }
 
-    public List<Question> getQList()
-    {
+    public List<Question> getQList() {
         return qList;
     }
 
-    public void setQList(List<Question> qList)
-    {
+    public void setQList(List<Question> qList) {
         this.qList = qList;
     }
 
-    public void add(Question q)
-    {
+    public void add(Question q) {
         qList.add(q);
     }
 
@@ -66,11 +62,9 @@ public class QuestionList {
 
                 NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
 
-                for (int i = 0; i < numberOfAnswers; i++)
-                {
+                for (int i = 0; i < numberOfAnswers; i++) {
                     String tmp = answersNodeList.item(i).getTextContent();
-                    if (tmp.equals(rightAnswerString))
-                    {
+                    if (tmp.equals(rightAnswerString)) {
                         rightAnswerIndex = i;
                     }
                     answersList.add(tmp);
@@ -87,8 +81,7 @@ public class QuestionList {
         }
     }
 
-    public void WriteToXML(String fileName)
-    {
+    public void WriteToXML(String fileName) {
         try {
 
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -118,8 +111,7 @@ public class QuestionList {
                 Element AnswersElement = doc.createElement("Answers");
                 QuestionElement.appendChild(AnswersElement);
 
-                for (String s : q.getAnswerList())
-                {
+                for (String s : q.getAnswerList()) {
                     //Answer element
                     Element AnswerElement = doc.createElement("Answer");
                     AnswerElement.appendChild(doc.createTextNode(s));
@@ -130,10 +122,7 @@ public class QuestionList {
                 Element RightAnswerElement = doc.createElement("RightAnswer");
                 RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
                 QuestionElement.appendChild(RightAnswerElement);
-
-
             }
-
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
@@ -144,9 +133,7 @@ public class QuestionList {
             StreamResult result = new StreamResult(new File(fileName));
 
             transformer.transform(source, result);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
