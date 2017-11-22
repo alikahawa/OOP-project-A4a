@@ -110,8 +110,8 @@ public class Question {
         }
     }
 
-    public boolean isItRightAnswer(String input) {
-        String tmp = "" + this.rightAnswer;
-        return (tmp.equals(input));
+    public boolean isItRightAnswer(char input) {
+        int tmp = this.rightAnswer + 'A';
+        return tmp == input;
     }
 }
