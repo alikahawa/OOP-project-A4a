@@ -1,14 +1,6 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
-
-import java.io.File;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Question {
 
@@ -65,5 +57,29 @@ public class Question {
     public boolean isItRightAnswer(char input) {
         char tmp = (char)(this.rightAnswer + 'A');
         return tmp == Character.toUpperCase(input);
+    }
+
+    public boolean askQuestion(Scanner sc){
+        System.out.println(this.question);
+        ArrayList<String> shuffledAnswerList = new ArrayList<String>(this.answerList);
+        Collections.shuffle(shuffledAnswerList);
+
+        for(String answer: shuffledAnswerList){
+            System.out.println(String.valueOf((char)(shuffledAnswerList.indexOf(answer) + 65)) + ": " + answer);
+        }
+
+        int answer = sc.next().toUpperCase().charAt(0) - 65;
+        if(answer > this.answerList.size() || answer <= 0){
+            System.out.println("wrong\n");
+            return false;
+        }
+        boolean res = shuffledAnswerList.get(answer).equals(this.answerList.get(rightAnswer));
+        if(res){
+            System.out.println("right\n");
+        }
+        else{
+            System.out.println("wrong\n");
+        }
+        return res;
     }
 }

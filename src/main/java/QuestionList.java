@@ -7,6 +7,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
@@ -35,6 +36,12 @@ public class QuestionList {
 
     public void add(Question q) {
         qList.add(q);
+    }
+
+    public ArrayList<Question> shuffleQuestionList(){
+        ArrayList<Question> res =  new ArrayList<Question>(this.qList);
+        Collections.shuffle(res);
+        return res;
     }
 
     public static QuestionList ReadFromXML(String fileName) {
