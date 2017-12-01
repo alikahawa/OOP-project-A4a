@@ -67,3 +67,4 @@ public class Question {
         return tmp == Character.toUpperCase(input);
     }
 }
+
