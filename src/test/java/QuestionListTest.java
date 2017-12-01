@@ -32,7 +32,7 @@ public class QuestionListTest {
         ql.add(q);
         QuestionList q2 = new QuestionList();
         q2.add(q);
-       assertTrue("Not working well!",q2.equals(ql));
+       assertTrue("Add is Not working well!",q2.equals(ql));
     }
 
     @Test
@@ -60,6 +60,21 @@ public class QuestionListTest {
         q2.add(q);
         q2.add(qu);
         assertTrue("Add is not working well!",q2.equals(ql));
+    }
+
+    @Test
+    public void test_the_addQuestions3() {
+        ArrayList<String> al = new ArrayList<>();
+        Question q = new Question(1,al,"Some question?");
+        Question qu = new Question(2,al,"Another Question?");
+        QuestionList ql = new QuestionList();
+        ql.add(q);
+        ql.add(qu);
+        ql.add(qu);
+        QuestionList q2 = new QuestionList();
+        q2.add(q);
+        q2.add(qu);
+        assertFalse("Add is not working well!",q2.equals(ql));
     }
 
 }
