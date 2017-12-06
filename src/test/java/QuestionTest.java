@@ -14,7 +14,7 @@ public class QuestionTest {
     @Test
     public void test_the_constructor() {
         ArrayList<String> al = new ArrayList<>();
-        assertThat("Question constructer is not working well", new Question(1, al, "What is what?").getQuestion(),
+        assertThat("Question constructer is not working well", new MultiQuestion(1, al, "What is what?").getQuestion(),
                 equalTo("What is what?"));
     }
 
@@ -22,7 +22,7 @@ public class QuestionTest {
     public void test_the_constructor1() {
         ArrayList<String> al = new ArrayList<>();
         assertTrue("Address constructor is not working",
-                new Question (2, al, "What is what?").getRightAnswer() == 2);
+                new MultiQuestion (2, al, "What is what?").getRightAnswer() == 2);
     }
 
 }

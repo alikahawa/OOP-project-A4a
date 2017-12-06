@@ -45,8 +45,8 @@ public class QuestionList {
             Document doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-            Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestionsElement").item(0);
-            Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestionsElement").item(0);
+            Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestions").item(0);
+            Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestions").item(0);
 
             NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
