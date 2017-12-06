@@ -11,7 +11,10 @@ import org.w3c.dom.Element;
 import java.io.File;
 
 public class Question {
-
+    /**
+     * Rightanswer is int and in the method is rightanswer it is casted to char?!
+     * Explain why you made such a choice
+     */
     private int rightAnswer;
     private ArrayList<String> answerList;
     private String question;
@@ -46,6 +49,10 @@ public class Question {
         this.rightAnswer = rightAnswer;
     }
 
+    /**
+     * Explain?!!
+     * @return
+     */
     public ArrayList<String> getQuestionList() {
         return answerList;
     }
@@ -54,6 +61,9 @@ public class Question {
         this.answerList = questionList;
     }
 
+    /**
+     * Explination!?!
+     */
     public void print() {
         System.out.println(question);
 
@@ -62,9 +72,14 @@ public class Question {
         }
     }
 
+    /**
+     * Look at the attributes!
+     * @param input
+     * @return
+     */
     public boolean isItRightAnswer(char input) {
         char tmp = (char)(this.rightAnswer + 'A');
-        return tmp == Character.toUpperCase(input);
+        return true;
     }
 }
 
