@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.1658291457286432, 0.3542713567839196" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="122.0" prefWidth="598.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="598.0">
+         <children>
+            <Text layoutX="54.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to illiteracy teacher 2.0" textOrigin="CENTER" wrappingWidth="521.8923492431641">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="182.0" prefWidth="598.0">
+         <children>
+            <Button fx:id="studentbutton" layoutX="142.0" layoutY="81.0" mnemonicParsing="false" onAction="#studentButton" prefHeight="42.0" prefWidth="113.0" text="I am a student" />
+            <Button layoutX="380.0" layoutY="81.0" mnemonicParsing="false" onAction="#TeacherButton" prefHeight="42.0" prefWidth="114.0" text="I am a teacher" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

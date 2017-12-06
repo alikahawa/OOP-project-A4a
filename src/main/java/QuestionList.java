@@ -8,28 +8,32 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.OutputKeys;
+
 
 public class QuestionList {
 
     List<Question> qList;
 
-    public QuestionList()
-    {
+    public QuestionList() {
         qList = new ArrayList<Question>();
     }
 
-    public List<Question> getQList()
-    {
+    public List<Question> getQList() {
         return qList;
     }
 
-    public void setQList(List<Question> qList)
-    {
+    public void setQList(List<Question> qList) {
         this.qList = qList;
     }
 
-    public void add(Question q)
-    {
+    public void add(Question q) {
         qList.add(q);
     }
 
@@ -58,11 +62,9 @@ public class QuestionList {
 
                 NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
 
-                for (int i = 0; i < numberOfAnswers; i++)
-                {
+                for (int i = 0; i < numberOfAnswers; i++) {
                     String tmp = answersNodeList.item(i).getTextContent();
-                    if (tmp.equals(rightAnswerString))
-                    {
+                    if (tmp.equals(rightAnswerString)) {
                         rightAnswerIndex = i;
                     }
                     answersList.add(tmp);
@@ -79,9 +81,61 @@ public class QuestionList {
         }
     }
 
-    public void WriteToXML(String fileName)
-    {
+    public void WriteToXML(String fileName) {
+        try {
 
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+
+            //Base Node
+            Document doc = docBuilder.newDocument();
+            Element MultiQuestionsElement = doc.createElement("MultiQuestions");
+            doc.appendChild(MultiQuestionsElement);
+
+            for (Question q : qList) {
+                // Question elements
+                Element QuestionElement = doc.createElement("Question");
+                MultiQuestionsElement.appendChild(QuestionElement);
+
+                //Text element
+                Element TextElement = doc.createElement("Text");
+                TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                QuestionElement.appendChild(TextElement);
+
+                //NumberOfAnswers element
+                Element NumberOfAnswersElement = doc.createElement("NumberOfAnswers");
+                NumberOfAnswersElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().size())));
+                QuestionElement.appendChild(NumberOfAnswersElement);
+
+                //Answers element
+                Element AnswersElement = doc.createElement("Answers");
+                QuestionElement.appendChild(AnswersElement);
+
+                for (String s : q.getAnswerList()) {
+                    //Answer element
+                    Element AnswerElement = doc.createElement("Answer");
+                    AnswerElement.appendChild(doc.createTextNode(s));
+                    AnswersElement.appendChild(AnswerElement);
+                }
+
+                //RightAnswer element
+                Element RightAnswerElement = doc.createElement("RightAnswer");
+                RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
+                QuestionElement.appendChild(RightAnswerElement);
+            }
+
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+            DOMSource source = new DOMSource(doc);
+            StreamResult result = new StreamResult(new File(fileName));
+
+            transformer.transform(source, result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
