@@ -72,7 +72,7 @@ public class QuestionTest {
         String c = "answer c";
         String d = "answer d";
         al.add(a); al.add(b); al.add(c); al.add(d);
-        Question q = new Question(2,al,"What is the right answer?");
+        Question q = new Question(1,al,"What is the right answer?");
         assertTrue("Isrightanswer is not working!",q.isItRightAnswer('b'));
     }
 
@@ -108,7 +108,7 @@ public class QuestionTest {
         String c = "answer c";
         String d = "answer d";
         al.add(a); al.add(b); al.add(c); al.add(d);
-        Question q = new Question('d' ,al,"What is the right answer?");
+        Question q = new Question(3,al,"What is the right answer?");
         assertTrue("Isrightanswer is not working!",q.isItRightAnswer('d'));
     }
 

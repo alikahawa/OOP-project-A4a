@@ -12,8 +12,8 @@ import java.io.File;
 
 public class Question {
     /**
-     * Rightanswer is int and in the method is rightanswer it is casted to char?!
-     * Explain why you made such a choice
+     * RightANswer is a position in the arrayList which is the right answer. For example if the right answer
+     * is A the this.rightAnswer is 0.
      */
     private int rightAnswer;
     private ArrayList<String> answerList;
@@ -50,8 +50,7 @@ public class Question {
     }
 
     /**
-     * Explain?!!
-     * @return
+     * Same as getAnswerList() to make it confusing.
      */
     public ArrayList<String> getQuestionList() {
         return answerList;
@@ -62,7 +61,7 @@ public class Question {
     }
 
     /**
-     * Explination!?!
+     * Prints out a question + the answerlist.
      */
     public void print() {
         System.out.println(question);
@@ -73,13 +72,14 @@ public class Question {
     }
 
     /**
-     * Look at the attributes!
+     * Checks if an answer is right
      * @param input
-     * @return
+     * @return boolean
      */
     public boolean isItRightAnswer(char input) {
-        char tmp = (char)(this.rightAnswer + 'A');
-        return true;
+        int tmp = (this.rightAnswer + 'a');
+        char tmp2 = Character.toLowerCase(input);
+        return (tmp == (int)tmp2);
     }
 }
 
