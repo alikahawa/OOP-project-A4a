@@ -45,7 +45,10 @@ public class QuestionList {
             Document doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-            NodeList nList = doc.getElementsByTagName("Question");
+            Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestionsElement").item(0);
+            Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestionsElement").item(0);
+
+            NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
             QuestionList questionList = new QuestionList();
 
@@ -73,6 +76,24 @@ public class QuestionList {
                 questionList.add(new MultiQuestion(rightAnswerIndex, answersList, questionText));
 
             }
+
+
+            nList = PictureQuestionsElement.getElementsByTagName("Question");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+
+                Element tmpElement = (Element) nNode;
+                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
+                String picture = tmpElement.getElementsByTagName("Picture").item(0).getTextContent();
+                int X1 = Integer.parseInt(tmpElement.getElementsByTagName("X1").item(0).getTextContent());
+                int X2 = Integer.parseInt(tmpElement.getElementsByTagName("X2").item(0).getTextContent());
+                int Y1 = Integer.parseInt(tmpElement.getElementsByTagName("Y1").item(0).getTextContent());
+                int Y2 = Integer.parseInt(tmpElement.getElementsByTagName("Y2").item(0).getTextContent());
+
+                questionList.add(new PictureQuestion(questionText, picture, X1, X2, Y1, Y2));
+            }
+
             return questionList;
 
         } catch (Exception e) {
@@ -89,8 +110,12 @@ public class QuestionList {
 
             //Base Node
             Document doc = docBuilder.newDocument();
+            Element QuestionsElement = doc.createElement("Questions");
+            doc.appendChild(QuestionsElement);
             Element MultiQuestionsElement = doc.createElement("MultiQuestions");
-            doc.appendChild(MultiQuestionsElement);
+            QuestionsElement.appendChild(MultiQuestionsElement);
+            Element PictureQuestionsElement = doc.createElement("PictureQuestions");
+            QuestionsElement.appendChild(PictureQuestionsElement);
 
             for (Question q2 : qList) {
                 if (q2 instanceof MultiQuestion) {
@@ -132,10 +157,41 @@ public class QuestionList {
 
                     // Question elements
                     Element QuestionElement = doc.createElement("Question");
-                    MultiQuestionsElement.appendChild(QuestionElement);
+                    PictureQuestionsElement.appendChild(QuestionElement);
 
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
 
+                    //Picture element
+                    Element PictureElement = doc.createElement("Picture");
+                    PictureElement.appendChild(doc.createTextNode(q.getPicture()));
+                    QuestionElement.appendChild(PictureElement);
 
+                    // Bounds elements
+                    Element BoundsElement = doc.createElement("Bounds");
+                    QuestionElement.appendChild(BoundsElement);
+
+                    //X1 element
+                    Element X1Element = doc.createElement("X1");
+                    X1Element.appendChild(doc.createTextNode(String.valueOf(q.getX1())));
+                    BoundsElement.appendChild(X1Element);
+
+                    //X2 element
+                    Element X2Element = doc.createElement("X2");
+                    X2Element.appendChild(doc.createTextNode(String.valueOf(q.getX2())));
+                    BoundsElement.appendChild(X2Element);
+
+                    //Y1 element
+                    Element Y1Element = doc.createElement("Y1");
+                    Y1Element.appendChild(doc.createTextNode(String.valueOf(q.getY1())));
+                    BoundsElement.appendChild(Y1Element);
+
+                    //Y2 element
+                    Element Y2Element = doc.createElement("Y2");
+                    Y2Element.appendChild(doc.createTextNode(String.valueOf(q.getY2())));
+                    BoundsElement.appendChild(Y2Element);
                 }
             }
 
