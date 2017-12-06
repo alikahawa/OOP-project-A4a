@@ -69,7 +69,7 @@ public class Question {
         }
 
         int answer = sc.next().toUpperCase().charAt(0) - 65;
-        if(answer > this.answerList.size() || answer <= 0){
+        if(answer > this.answerList.size() || answer < 0) {
             System.out.println("wrong\n");
             return false;
         }
