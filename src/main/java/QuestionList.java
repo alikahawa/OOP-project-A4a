@@ -70,7 +70,7 @@ public class QuestionList {
                     answersList.add(tmp);
                 }
 
-                questionList.add(new Question(rightAnswerIndex, answersList, questionText));
+                questionList.add(new MultiQuestion(rightAnswerIndex, answersList, questionText));
 
             }
             return questionList;
@@ -92,36 +92,51 @@ public class QuestionList {
             Element MultiQuestionsElement = doc.createElement("MultiQuestions");
             doc.appendChild(MultiQuestionsElement);
 
-            for (Question q : qList) {
-                // Question elements
-                Element QuestionElement = doc.createElement("Question");
-                MultiQuestionsElement.appendChild(QuestionElement);
+            for (Question q2 : qList) {
+                if (q2 instanceof MultiQuestion) {
+                    MultiQuestion q = (MultiQuestion)q2;
 
-                //Text element
-                Element TextElement = doc.createElement("Text");
-                TextElement.appendChild(doc.createTextNode(q.getQuestion()));
-                QuestionElement.appendChild(TextElement);
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    MultiQuestionsElement.appendChild(QuestionElement);
 
-                //NumberOfAnswers element
-                Element NumberOfAnswersElement = doc.createElement("NumberOfAnswers");
-                NumberOfAnswersElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().size())));
-                QuestionElement.appendChild(NumberOfAnswersElement);
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
 
-                //Answers element
-                Element AnswersElement = doc.createElement("Answers");
-                QuestionElement.appendChild(AnswersElement);
+                    //NumberOfAnswers element
+                    Element NumberOfAnswersElement = doc.createElement("NumberOfAnswers");
+                    NumberOfAnswersElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().size())));
+                    QuestionElement.appendChild(NumberOfAnswersElement);
 
-                for (String s : q.getAnswerList()) {
-                    //Answer element
-                    Element AnswerElement = doc.createElement("Answer");
-                    AnswerElement.appendChild(doc.createTextNode(s));
-                    AnswersElement.appendChild(AnswerElement);
+                    //Answers element
+                    Element AnswersElement = doc.createElement("Answers");
+                    QuestionElement.appendChild(AnswersElement);
+
+                    for (String s : q.getAnswerList()) {
+                        //Answer element
+                        Element AnswerElement = doc.createElement("Answer");
+                        AnswerElement.appendChild(doc.createTextNode(s));
+                        AnswersElement.appendChild(AnswerElement);
+                    }
+
+                    //RightAnswer element
+                    Element RightAnswerElement = doc.createElement("RightAnswer");
+                    RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
+                    QuestionElement.appendChild(RightAnswerElement);
                 }
+                else if (q2 instanceof PictureQuestion)
+                {
+                    PictureQuestion q = (PictureQuestion)q2;
 
-                //RightAnswer element
-                Element RightAnswerElement = doc.createElement("RightAnswer");
-                RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
-                QuestionElement.appendChild(RightAnswerElement);
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    MultiQuestionsElement.appendChild(QuestionElement);
+
+
+
+                }
             }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
