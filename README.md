@@ -7,4 +7,5 @@
 <p><b><i>Maxime van Dongen</b></i></p>
 <p><b><i>Nathalie van den Bos</b></i></p>
 <p><b><i>Liam Kedem</b></i></p>
+<p><b><i>Raymond Koopmanschap</b></i></p>
 <h6>If you all like it we can add pictures</h6>
