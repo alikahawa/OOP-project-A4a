@@ -72,7 +72,10 @@ public class QuestionList {
             Document doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-            NodeList nList = doc.getElementsByTagName("Question");
+            Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestions").item(0);
+            Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestions").item(0);
+
+            NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
             QuestionList questionList = new QuestionList();
 
@@ -97,9 +100,27 @@ public class QuestionList {
                     answersList.add(tmp);
                 }
 
-                questionList.add(new Question(rightAnswerIndex, answersList, questionText));
+                questionList.add(new MultiQuestion(rightAnswerIndex, answersList, questionText));
 
             }
+
+
+            nList = PictureQuestionsElement.getElementsByTagName("Question");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+
+                Element tmpElement = (Element) nNode;
+                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
+                String picture = tmpElement.getElementsByTagName("Picture").item(0).getTextContent();
+                int X1 = Integer.parseInt(tmpElement.getElementsByTagName("X1").item(0).getTextContent());
+                int X2 = Integer.parseInt(tmpElement.getElementsByTagName("X2").item(0).getTextContent());
+                int Y1 = Integer.parseInt(tmpElement.getElementsByTagName("Y1").item(0).getTextContent());
+                int Y2 = Integer.parseInt(tmpElement.getElementsByTagName("Y2").item(0).getTextContent());
+
+                questionList.add(new PictureQuestion(questionText, picture, X1, X2, Y1, Y2));
+            }
+
             return questionList;
 
         } catch (Exception e) {
@@ -116,39 +137,89 @@ public class QuestionList {
 
             //Base Node
             Document doc = docBuilder.newDocument();
+            Element QuestionsElement = doc.createElement("Questions");
+            doc.appendChild(QuestionsElement);
             Element MultiQuestionsElement = doc.createElement("MultiQuestions");
-            doc.appendChild(MultiQuestionsElement);
+            QuestionsElement.appendChild(MultiQuestionsElement);
+            Element PictureQuestionsElement = doc.createElement("PictureQuestions");
+            QuestionsElement.appendChild(PictureQuestionsElement);
 
-            for (Question q : qList) {
-                // Question elements
-                Element QuestionElement = doc.createElement("Question");
-                MultiQuestionsElement.appendChild(QuestionElement);
+            for (Question q2 : qList) {
+                if (q2 instanceof MultiQuestion) {
+                    MultiQuestion q = (MultiQuestion)q2;
 
-                //Text element
-                Element TextElement = doc.createElement("Text");
-                TextElement.appendChild(doc.createTextNode(q.getQuestion()));
-                QuestionElement.appendChild(TextElement);
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    MultiQuestionsElement.appendChild(QuestionElement);
 
-                //NumberOfAnswers element
-                Element NumberOfAnswersElement = doc.createElement("NumberOfAnswers");
-                NumberOfAnswersElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().size())));
-                QuestionElement.appendChild(NumberOfAnswersElement);
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
 
-                //Answers element
-                Element AnswersElement = doc.createElement("Answers");
-                QuestionElement.appendChild(AnswersElement);
+                    //NumberOfAnswers element
+                    Element NumberOfAnswersElement = doc.createElement("NumberOfAnswers");
+                    NumberOfAnswersElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().size())));
+                    QuestionElement.appendChild(NumberOfAnswersElement);
 
-                for (String s : q.getAnswerList()) {
-                    //Answer element
-                    Element AnswerElement = doc.createElement("Answer");
-                    AnswerElement.appendChild(doc.createTextNode(s));
-                    AnswersElement.appendChild(AnswerElement);
+                    //Answers element
+                    Element AnswersElement = doc.createElement("Answers");
+                    QuestionElement.appendChild(AnswersElement);
+
+                    for (String s : q.getAnswerList()) {
+                        //Answer element
+                        Element AnswerElement = doc.createElement("Answer");
+                        AnswerElement.appendChild(doc.createTextNode(s));
+                        AnswersElement.appendChild(AnswerElement);
+                    }
+
+                    //RightAnswer element
+                    Element RightAnswerElement = doc.createElement("RightAnswer");
+                    RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
+                    QuestionElement.appendChild(RightAnswerElement);
                 }
+                else if (q2 instanceof PictureQuestion)
+                {
+                    PictureQuestion q = (PictureQuestion)q2;
 
-                //RightAnswer element
-                Element RightAnswerElement = doc.createElement("RightAnswer");
-                RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
-                QuestionElement.appendChild(RightAnswerElement);
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    PictureQuestionsElement.appendChild(QuestionElement);
+
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
+
+                    //Picture element
+                    Element PictureElement = doc.createElement("Picture");
+                    PictureElement.appendChild(doc.createTextNode(q.getPicture()));
+                    QuestionElement.appendChild(PictureElement);
+
+                    // Bounds elements
+                    Element BoundsElement = doc.createElement("Bounds");
+                    QuestionElement.appendChild(BoundsElement);
+
+                    //X1 element
+                    Element X1Element = doc.createElement("X1");
+                    X1Element.appendChild(doc.createTextNode(String.valueOf(q.getX1())));
+                    BoundsElement.appendChild(X1Element);
+
+                    //X2 element
+                    Element X2Element = doc.createElement("X2");
+                    X2Element.appendChild(doc.createTextNode(String.valueOf(q.getX2())));
+                    BoundsElement.appendChild(X2Element);
+
+                    //Y1 element
+                    Element Y1Element = doc.createElement("Y1");
+                    Y1Element.appendChild(doc.createTextNode(String.valueOf(q.getY1())));
+                    BoundsElement.appendChild(Y1Element);
+
+                    //Y2 element
+                    Element Y2Element = doc.createElement("Y2");
+                    Y2Element.appendChild(doc.createTextNode(String.valueOf(q.getY2())));
+                    BoundsElement.appendChild(Y2Element);
+                }
             }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
