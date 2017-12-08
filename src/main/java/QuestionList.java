@@ -7,7 +7,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
@@ -35,6 +37,31 @@ public class QuestionList {
 
     public void add(Question q) {
         qList.add(q);
+    }
+
+    public ArrayList<Question> shuffleQuestionList(){
+        ArrayList<Question> res =  new ArrayList<Question>(this.qList);
+        Collections.shuffle(res);
+        return res;
+    }
+
+    public void displayQuestionList(Scanner sc, int nQuestions){
+        ArrayList<Question> shuffledTmpql = this.shuffleQuestionList();
+        int nRight = 0;
+        for(int i = 0; i<nQuestions; i++){
+            if(((MultiQuestion)shuffledTmpql.get(i)).askQuestion(sc)){
+                nRight++;
+            }
+        }
+        int grade = Math.round(nRight / nQuestions * 10);
+        System.out.println("Your grade is a: " + grade);
+        if(grade >= 6){
+            System.out.println("Well Done!");
+        }
+    }
+
+    public void displayQuestionList(Scanner sc){
+        displayQuestionList(sc, this.qList.size());
     }
 
     public static QuestionList ReadFromXML(String fileName) {

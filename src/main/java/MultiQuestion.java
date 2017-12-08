@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class MultiQuestion extends Question {
 
@@ -27,6 +29,9 @@ public class MultiQuestion extends Question {
         this.rightAnswer = rightAnswer;
     }
 
+    /**
+     * Same as getAnswerList() to make it confusing.
+     */
     public ArrayList<String> getQuestionList() {
         return answerList;
     }
@@ -35,6 +40,9 @@ public class MultiQuestion extends Question {
         this.answerList = questionList;
     }
 
+    /**
+     * Prints out a question + the answerlist.
+     */
     public void print() {
         System.out.println(question);
 
@@ -43,9 +51,39 @@ public class MultiQuestion extends Question {
         }
     }
 
+    /**
+     * Checks if an answer is right
+     * @param input
+     * @return boolean
+     */
     public boolean isItRightAnswer(char input) {
         char tmp = (char)(this.rightAnswer + 'A');
         return tmp == Character.toUpperCase(input);
+    }
+
+
+    public boolean askQuestion(Scanner sc){
+        System.out.println(this.question);
+        ArrayList<String> shuffledAnswerList = new ArrayList<String>(this.answerList);
+        Collections.shuffle(shuffledAnswerList);
+
+        for(String answer: shuffledAnswerList){
+            System.out.println(String.valueOf((char)(shuffledAnswerList.indexOf(answer) + 65)) + ": " + answer);
+        }
+
+        int answer = sc.next().toUpperCase().charAt(0) - 65;
+        if(answer > this.answerList.size() || answer < 0) {
+            System.out.println("wrong\n");
+            return false;
+        }
+        boolean res = shuffledAnswerList.get(answer).equals(this.answerList.get(rightAnswer));
+        if(res){
+            System.out.println("right\n");
+        }
+        else{
+            System.out.println("wrong\n");
+        }
+        return res;
     }
 
 }
