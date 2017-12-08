@@ -10,7 +10,7 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
-            <Button layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="34.0" prefWidth="88.0" text="&lt;-- Back " />
+            <Button fx:id="backButton" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="34.0" prefWidth="88.0" text="&lt;-- Back " />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -22,7 +22,7 @@
          </children></AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="598.0">
          <children>
-            <Button layoutX="111.0" layoutY="121.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="150.0" text="Login" />
+            <Button fx:id="loginButton" layoutX="111.0" layoutY="121.0" mnemonicParsing="false" onAction="#LoginButton" prefHeight="48.0" prefWidth="150.0" text="Login" />
             <Button layoutX="344.0" layoutY="121.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="158.0" text="Create new account" />
          </children>
       </AnchorPane>
