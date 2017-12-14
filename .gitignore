@@ -22,3 +22,6 @@
 hs_err_pid*
 .idea/
 target/classes/sample.fxml
+
+# JavaFX files
+/out/
