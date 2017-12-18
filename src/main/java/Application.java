@@ -26,7 +26,7 @@ public class Application {
                     String type = sc.next();
                     System.out.println("Please enter a username: ");
                     String username = sc.next();
-                    // Checks is username is already used, could later be implanted in an add user function
+                    // Checks is username is already used, could later be implemented in an add user function
                     for(User user : userList.getUserList()){
                         if(user.getUserName().equals(username)){
                             System.out.println("Username already used.");
