@@ -13,6 +13,7 @@ public class Application {
             String key;
             Scanner sc = new Scanner(System.in);
             System.out.println("Welcome to the practice low literacy program.");
+            // This is meant as a demo. Feel free to pull this branch and see how the options work.
             login_register_loop:
             while(true){
                 System.out.println("Would you like to login or register?\nPress 1 to login\nPress 2 to register");
@@ -25,12 +26,14 @@ public class Application {
                     String type = sc.next();
                     System.out.println("Please enter a username: ");
                     String username = sc.next();
+                    // Checks is username is already used, could later be implanted in an add user function
                     for(User user : userList.getUserList()){
                         if(user.getUserName().equals(username)){
                             System.out.println("Username already used.");
                             continue login_register_loop;
                         }
                     }
+                    // The password itself is never saved as a string. See the Users.xml file to see how it is saved
                     System.out.println("Enter a password: ");
                     String password = User.encrypt(sc.next());
                     System.out.println("Enter your email:");
