@@ -236,4 +236,25 @@ public class QuestionList {
         }
     }
 
+    @Override
+    public boolean equals(Object other)
+    {
+        if (other instanceof QuestionList)
+        {
+            QuestionList otherQL = (QuestionList)other;
+            if (otherQL.qList.size() == this.qList.size())
+            {
+                for (Question q : otherQL.qList)
+                {
+                    if (!this.qList.contains(q))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

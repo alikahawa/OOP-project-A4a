@@ -71,4 +71,21 @@ public class PictureQuestion extends Question {
         this.Y2 = Y2;
     }
 
+    public boolean equals(Object other)
+    {
+        if (other instanceof PictureQuestion)
+        {
+            PictureQuestion otherQ = (PictureQuestion)other;
+            if (otherQ.question == this.question &&
+                otherQ.picture == this.picture &&
+                otherQ.X1 == this.X1 &&
+                otherQ.X2 == this.X2 &&
+                otherQ.Y1 == this.Y1 &&
+                otherQ.Y2 == this.Y2)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
