@@ -1,3 +1,5 @@
+package Application;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -10,9 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -75,7 +75,7 @@ public class QuestionList {
             Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestions").item(0);
             Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestions").item(0);
 
-            NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
+            NodeList nList = MultiQuestionsElement.getElementsByTagName("Application.Question");
 
             QuestionList questionList = new QuestionList();
 
@@ -105,7 +105,7 @@ public class QuestionList {
             }
 
 
-            nList = PictureQuestionsElement.getElementsByTagName("Question");
+            nList = PictureQuestionsElement.getElementsByTagName("Application.Question");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
@@ -148,8 +148,8 @@ public class QuestionList {
                 if (q2 instanceof MultiQuestion) {
                     MultiQuestion q = (MultiQuestion)q2;
 
-                    // Question elements
-                    Element QuestionElement = doc.createElement("Question");
+                    // Application.Question elements
+                    Element QuestionElement = doc.createElement("Application.Question");
                     MultiQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
@@ -182,8 +182,8 @@ public class QuestionList {
                 {
                     PictureQuestion q = (PictureQuestion)q2;
 
-                    // Question elements
-                    Element QuestionElement = doc.createElement("Question");
+                    // Application.Question elements
+                    Element QuestionElement = doc.createElement("Application.Question");
                     PictureQuestionsElement.appendChild(QuestionElement);
 
                     //Text element

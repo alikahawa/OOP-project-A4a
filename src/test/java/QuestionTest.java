@@ -1,4 +1,5 @@
 
+import Application.MultiQuestion;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -13,12 +14,12 @@ public class QuestionTest {
     public ExpectedException expectedException = ExpectedException.none();
 
     /**
-     * Test for the getter of the Question
+     * Test for the getter of the Application.Question
      */
     @Test
     public void test_the_constructor() {
         ArrayList<String> al = new ArrayList<>();
-        assertThat("Question constructer is not working well", new MultiQuestion(1, al, "What is what?").getQuestion(), equalTo("What is what?"));
+        assertThat("Application.Question constructer is not working well", new MultiQuestion(1, al, "What is what?").getQuestion(), equalTo("What is what?"));
     }
 
     /**
