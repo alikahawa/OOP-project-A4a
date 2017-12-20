@@ -1,3 +1,5 @@
+package Application;
+
 public class PictureQuestion extends Question {
 
     String picture;

@@ -1,3 +1,6 @@
+import Application.MultiQuestion;
+import Application.Question;
+import Application.QuestionList;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -20,7 +23,7 @@ public class QuestionListTest {
         MultiQuestion q = new MultiQuestion(1,al,"Some question?");
         QuestionList ql = new QuestionList();
 
-        assertThat("Question constructor is not working well", new MultiQuestion(1, al, "What is what?").getQuestion(),
+        assertThat("Application.Question constructor is not working well", new MultiQuestion(1, al, "What is what?").getQuestion(),
                 equalTo("What is what?"));
     }
 
@@ -39,7 +42,7 @@ public class QuestionListTest {
     public void test_the_addQuestions1() {
         ArrayList<String> al = new ArrayList<>();
         Question q = new MultiQuestion(1,al,"Some question?");
-        Question qu = new MultiQuestion(2,al,"Another Question?");
+        Question qu = new MultiQuestion(2,al,"Another Application.Question?");
         QuestionList ql = new QuestionList();
         ql.add(q);
         QuestionList q2 = new QuestionList();
@@ -52,7 +55,7 @@ public class QuestionListTest {
     public void test_the_addQuestions2() {
         ArrayList<String> al = new ArrayList<>();
         Question q = new MultiQuestion(1,al,"Some question?");
-        Question qu = new MultiQuestion(2,al,"Another Question?");
+        Question qu = new MultiQuestion(2,al,"Another Application.Question?");
         QuestionList ql = new QuestionList();
         ql.add(q);
         ql.add(qu);
@@ -66,7 +69,7 @@ public class QuestionListTest {
     public void test_the_addQuestions3() {
         ArrayList<String> al = new ArrayList<>();
         Question q = new MultiQuestion(1,al,"Some question?");
-        Question qu = new MultiQuestion(2,al,"Another Question?");
+        Question qu = new MultiQuestion(2,al,"Another Application.Question?");
         QuestionList ql = new QuestionList();
         ql.add(q);
         ql.add(qu);
