@@ -19,5 +19,8 @@ public abstract class Question {
     }
 
     public abstract void print();
+
+    @Override
+    public abstract boolean equals(Object other);
 }
 

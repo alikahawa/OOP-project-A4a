@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Mult;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -84,6 +86,19 @@ public class MultiQuestion extends Question {
             System.out.println("wrong\n");
         }
         return res;
+    }
+
+    public boolean equals(Object other)
+    {
+        if (other instanceof MultiQuestion)
+        {
+            MultiQuestion otherQ = (MultiQuestion)other;
+            if (otherQ.question == this.question && otherQ.rightAnswer == this.rightAnswer && otherQ.answerList.equals(this.answerList))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
