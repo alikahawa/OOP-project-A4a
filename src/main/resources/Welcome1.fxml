@@ -12,7 +12,7 @@
             <Font name="Georgia Pro" size="96.0" />
          </font>
       </Label>
-      <Button layoutX="170.0" layoutY="280.0" mnemonicParsing="false" prefHeight="141.0" prefWidth="343.0" style="-fx-background-color: Black;" text="START" textFill="#f5f2f2">
+      <Button fx:id="start" layoutX="170.0" layoutY="280.0" mnemonicParsing="false" onAction="#fromWelcomeToMainScreen" prefHeight="141.0" prefWidth="343.0" style="-fx-background-color: Black;" text="START" textFill="#f5f2f2">
          <font>
             <Font size="78.0" />
          </font>
