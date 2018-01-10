@@ -199,4 +199,44 @@
             </Bounds>
         </Question>
     </PictureQuestions>
+    <DropDownQuestions>
+        <Question>
+            <Text>Example</Text>
+            <Answers>
+                <Answer>1</Answer>
+                <Answer>2</Answer>
+                <Answer>3</Answer>
+            </Answers>
+            <RightAnswer>1</RightAnswer>
+        </Question>
+    </DropDownQuestions>
+    <CheckBoxQuestions>
+        <Question>
+            <Text>Example</Text>
+            <Answers>
+                <Answer>1</Answer>
+                <Answer>2</Answer>
+                <Answer>3</Answer>
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>
+                1
+                2
+            </RightAnswer>
+            </RightAnswers>
+        </Question>
+        <Question>
+            <Text>What is right?</Text>
+            <Answers>
+                <Answer>answer 1</Answer>
+                <Answer>answer 2</Answer>
+                <Answer>answer 3</Answer>
+
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>answer 1</RightAnswer>
+                <RightAnswer>answer 2</RightAnswer>
+            </RightAnswers>
+        </Question>
+    </CheckBoxQuestions>
 </Questions>
