@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BeginScreensController">
+   <children>
+      <Text layoutX="144.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome teacher" wrappingWidth="312.53668212890625">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="148.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To make question for students you need an authentication code that can be obtained by the reading &amp; writing foundation" textAlignment="CENTER" wrappingWidth="304.5367431640625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField layoutX="290.0" layoutY="202.0" prefHeight="26.0" prefWidth="249.0" />
+      <Text layoutX="62.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authentication code" wrappingWidth="197.3367919921875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="143.0" layoutY="267.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="314.0" style="-fx-background-color: Black;" text="Continue" textFill="#f5f2f2">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

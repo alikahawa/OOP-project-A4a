@@ -214,8 +214,8 @@ public class QuestionList {
                 if (q2 instanceof MultiQuestion) {
                     MultiQuestion q = (MultiQuestion)q2;
 
-                    // Application.Question elements
-                    Element QuestionElement = doc.createElement("Application.Question");
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
                     MultiQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
@@ -248,7 +248,7 @@ public class QuestionList {
                 {
                     PictureQuestion q = (PictureQuestion)q2;
 
-                    // Application.Question elements
+                    // Question elements
                     Element QuestionElement = doc.createElement("Question");
                     PictureQuestionsElement.appendChild(QuestionElement);
 
