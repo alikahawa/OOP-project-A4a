@@ -1,7 +1,9 @@
 language: java
 sudo: false # faster builds
+install: true
 
 script: mvn clean verify
+- mvn install
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t repository-upload-token
