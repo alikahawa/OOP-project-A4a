@@ -19,7 +19,8 @@ public class BeginScreensController {
     @FXML private Button createAccount;
     @FXML private Button createAccount_student;
     @FXML private Button createAccount_teacher;
-    @FXML private Button createAccount_finished;
+    @FXML private Button createAccount_finished_student;
+    @FXML private Button createAccount_finished_teacher;
 
 
     public void fromWelcomeToLoginScreen() throws IOException {
@@ -36,24 +37,29 @@ public class BeginScreensController {
         createAccount.getScene().setRoot(root);
     }
     public void createAccountButton_student() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_simple.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_student.fxml"));
         Parent root = loader.load();
         BeginScreensController controller = loader.getController();
         createAccount_student.getScene().setRoot(root);
     }
     public void createAccountButton_teacher() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_simple.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_teacher.fxml"));
         Parent root = loader.load();
         BeginScreensController controller = loader.getController();
         createAccount_teacher.getScene().setRoot(root);
     }
-    public void createAccount_finished() throws IOException {
+    public void createAccount_button_finished_student() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
         Parent root = loader.load();
         BeginScreensController controller = loader.getController();
-        createAccount_finished.getScene().setRoot(root);
+        createAccount_finished_student.getScene().setRoot(root);
+    }
+    public void createAccount_button_finished_teacher() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccount_finished_teacher.getScene().setRoot(root);
     }
 
-
-
 }
+

@@ -1,3 +1,6 @@
+import Application.Student;
+import Application.Teacher;
+import Application.User;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
