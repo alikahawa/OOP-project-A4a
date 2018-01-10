@@ -75,7 +75,7 @@ public class QuestionList {
             Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestions").item(0);
             Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestions").item(0);
 
-            NodeList nList = MultiQuestionsElement.getElementsByTagName("Application.Question");
+            NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
             QuestionList questionList = new QuestionList();
 
@@ -105,7 +105,7 @@ public class QuestionList {
             }
 
 
-            nList = PictureQuestionsElement.getElementsByTagName("Application.Question");
+            nList = PictureQuestionsElement.getElementsByTagName("Question");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
@@ -148,8 +148,8 @@ public class QuestionList {
                 if (q2 instanceof MultiQuestion) {
                     MultiQuestion q = (MultiQuestion)q2;
 
-                    // Application.Question elements
-                    Element QuestionElement = doc.createElement("Application.Question");
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
                     MultiQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
@@ -182,8 +182,8 @@ public class QuestionList {
                 {
                     PictureQuestion q = (PictureQuestion)q2;
 
-                    // Application.Question elements
-                    Element QuestionElement = doc.createElement("Application.Question");
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
                     PictureQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
