@@ -12,18 +12,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class BeginScreensController {
+public class TestSelectorController {
 
     @FXML private Button TextBasedExamButton;
-    @FXML private Button PictureBasedExamButton1
-    @FXML private Button PictureBasedExamButton2
-    @FXML private Button UIBasedExamButton
+    @FXML private Button PictureBasedExamButton1;
+    @FXML private Button PictureBasedExamButton2;
+    @FXML private Button UIBasedExamButton;
 
     public void goToStartOfTextBasedTest() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/UserChoiseText.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/TextExam.fxml"));
         Parent root = loader.load();
         BeginScreensController controller = loader.getController();
         TextBasedExamButton.getScene().setRoot(root);
     }
+
+    
 
 }

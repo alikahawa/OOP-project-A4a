@@ -61,5 +61,4 @@ public class BeginScreensController {
         login.getScene().setRoot(root);
     }
 
-
 }
