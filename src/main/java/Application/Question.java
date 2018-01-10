@@ -21,6 +21,5 @@ public abstract class Question {
     }
 
     public abstract void print();
-
 }
 

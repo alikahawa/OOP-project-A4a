@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <MultiUsers>
-    <Teacher>
-        <UserName>user</UserName>
-        <Password>cGFzc3dvcmQ=</Password>
-        <Email>user@domain.com</Email>
-    </Teacher>
+    <Student>
+        <UserName>Pizza</UserName>
+        <Password>Tm8=</Password>
+        <Email>br@boy.com</Email>
+    </Student>
 </MultiUsers>
