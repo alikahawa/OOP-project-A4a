@@ -16,9 +16,14 @@ public class TextTestController {
 
     QuestionList tmpql = QuestionList.ReadFromXML("OOP.xml");
     tmpql.WriteToXML("OOP.xml");
+ 
+    QuestionList tmpq1shuffled = tmpq1.shuffleQuestionList();
 
     UserList userList = UserList.readFromXML("src/Users.xml");
     userList.writeToXML("src/Users.xml");
+   
+    int examquestioncount = 0;
+    int score = 0;
 
     @FXML private Button answerA;
     @FXML private Button answerB;
@@ -32,18 +37,62 @@ public class TextTestController {
     public static void main(String[] args) {
 
         // start quiz 10 vragen, per vraag show vraag en 3 antwoorden.
-        for (i = 0; i < 9; i++)
-        {
-            QuestionList tmpq1shuffled = tmpq1.shuffleQuestionList();
+        displayQuestion(examquestioncount);
 
-            MultiQuestion tmpquestion = (MultiQuestion)shuffleQuestionList().getQ(i);
+    }
+
+    public void displayQuestion()
+    {
+        // "(multiquestion)" is tijdelijk en moet gefixt worden.
+        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.getQ(examquestioncount);
             
-            questionText.setText(tmpquestion.getQuestion());
-            answerAText.setText(tmpquestion.getAnswerList().get(0));
-            answerBText.setText(tmpquestion.getAnswerList().get(0));
-            answerCText.setText(tmpquestion.getAnswerList().get(0));
+        questionText.setText(tmpquestion.getQuestion());
+        answerAText.setText(tmpquestion.getAnswerList().get(0));
+        answerBText.setText(tmpquestion.getAnswerList().get(0));
+        answerCText.setText(tmpquestion.getAnswerList().get(0));
+    }
 
+    public void checkAnswer(answer)
+    {
+        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.getQ(examquestioncount);
+            
+        if (answer == tmpquestion.getRightAnswer())
+        {
+            // correcte antwoord score gaat omhoog
+            score++;
+            examquestioncount++;
+            scoreCounter.setText("Score:" + score + "/" + examquestioncount);
+
+            // hier scherm GROEN
+
+            // display volgende vraag.
+            if (examquestioncount < 10)
+            {
+            displayQuestion(examquestioncount);
+            }
+            else
+            {
+                // hier scherm QUIZ KLAAR
+            }
         }
+        else
+        {
+            // incorrecte antwoord score blijft gelijk
+            score = score;
+            examquestioncount++;
+            scoreCounter.setText("Score:" + score + "/" + examquestioncount);
 
+            // hier scherm ROOD
+
+            // display volgende vraag.
+            if (examquestioncount < 10)
+            {
+            displayQuestion(examquestioncount);
+            }
+            else
+            {
+                // hier scherm QUIZ KLAAR
+            }
+        }
     }
 }
