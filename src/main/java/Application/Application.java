@@ -42,11 +42,11 @@ public class Application {
                     key = sc.next();
                     if(type.equals("1")){
                         userList.add(new Teacher(username, password, key));
-                        System.out.println("Application.User added!");
+                        System.out.println("User added!");
                     }
                     else if(type.equals("2")){
                         userList.add(new Student(username, password, key));
-                        System.out.println("Application.User added!");
+                        System.out.println("User added!");
                     }
                     break;
                 }
