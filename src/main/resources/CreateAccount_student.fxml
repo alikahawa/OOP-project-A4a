@@ -34,9 +34,9 @@
                <font>
                   <Font size="28.0" />
                </font></Label>
-            <TextField prefHeight="26.0" prefWidth="342.0" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="firstname" prefHeight="26.0" prefWidth="342.0" promptText="Enter your first name here" GridPane.columnIndex="1" />
+            <TextField promptText="Enter your last name here" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField promptText="Enter your mail address here" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <Button fx:id="createAccount_finished_student" layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#createAccount_button_finished_student" prefHeight="86.0" prefWidth="294.0" style="-fx-background-color: Black;" text="OK" textFill="#f5f2f2">

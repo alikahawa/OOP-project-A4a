@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,6 +22,9 @@ public class BeginScreensController {
     @FXML private Button createAccount_teacher;
     @FXML private Button createAccount_finished_student;
     @FXML private Button createAccount_finished_teacher;
+    @FXML private Button succesfully_created_account;
+    @FXML private Button finishedAuthenticationTeacher;
+    @FXML private TextField firstname;
 
 
     public void fromWelcomeToLoginScreen() throws IOException {
@@ -49,16 +53,30 @@ public class BeginScreensController {
         createAccount_teacher.getScene().setRoot(root);
     }
     public void createAccount_button_finished_student() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
+        System.out.println(firstname.getText());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
         Parent root = loader.load();
         BeginScreensController controller = loader.getController();
         createAccount_finished_student.getScene().setRoot(root);
+
     }
     public void createAccount_button_finished_teacher() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
         Parent root = loader.load();
         BeginScreensController controller = loader.getController();
         createAccount_finished_teacher.getScene().setRoot(root);
+    }
+    public void succesfullyAccountToLoginScreen() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        succesfully_created_account.getScene().setRoot(root);
+    }
+    public void finishedAuthenticationTeacherButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        finishedAuthenticationTeacher.getScene().setRoot(root);
     }
 
 }
