@@ -17,6 +17,9 @@ public class BeginScreensController {
     @FXML private Button start;
     @FXML private Button login;
     @FXML private Button createAccount;
+    @FXML private Button createAccount_student;
+    @FXML private Button createAccount_teacher;
+    @FXML private Button createAccount_finished;
 
 
     public void fromWelcomeToLoginScreen() throws IOException {
@@ -32,6 +35,25 @@ public class BeginScreensController {
         BeginScreensController controller = loader.getController();
         createAccount.getScene().setRoot(root);
     }
+    public void createAccountButton_student() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_simple.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccount_student.getScene().setRoot(root);
+    }
+    public void createAccountButton_teacher() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_simple.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccount_teacher.getScene().setRoot(root);
+    }
+    public void createAccount_finished() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccount_finished.getScene().setRoot(root);
+    }
+
 
 
 }

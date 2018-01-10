@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="670.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BeginScreensController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BeginScreensController">
    <children>
-      <Label layoutX="126.0" layoutY="69.0" prefHeight="110.0" prefWidth="417.0" style="-fx-background-color: PaleTurquoise;" text="Welcome" textFill="#645757">
+      <Label layoutX="103.0" layoutY="20.0" prefHeight="110.0" prefWidth="417.0" style="-fx-background-color: PaleTurquoise;" text="Welcome" textFill="#645757">
          <font>
             <Font name="Georgia Pro" size="96.0" />
          </font>
       </Label>
-      <Button fx:id="start" layoutX="170.0" layoutY="280.0" mnemonicParsing="false" onAction="#fromWelcomeToLoginScreen" prefHeight="141.0" prefWidth="343.0" style="-fx-background-color: Black;" text="START" textFill="#f5f2f2">
+      <Button fx:id="start" layoutX="128.0" layoutY="200.0" mnemonicParsing="false" onAction="#fromWelcomeToLoginScreen" prefHeight="141.0" prefWidth="343.0" style="-fx-background-color: Black;" text="START" textFill="#f5f2f2">
          <font>
             <Font size="78.0" />
          </font>
