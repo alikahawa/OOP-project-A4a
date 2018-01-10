@@ -31,6 +31,10 @@ public class QuestionList {
         return qList;
     }
 
+    public List<Question> getQ(i) {
+        return qList.get(i);
+    }
+
     public void setQList(List<Question> qList) {
         this.qList = qList;
     }
