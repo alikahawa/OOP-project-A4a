@@ -79,7 +79,7 @@ public class QuestionList {
             Element DropDownElement = (Element)doc.getElementsByTagName("DropDownQuestions").item(0);
             Element CheckBoxElement = (Element)doc.getElementsByTagName("CheckBoxQuestions").item(0);
 
-            NodeList nList = MultiQuestionsElement.getElementsByTagName("Application.Question");
+            NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
             QuestionList questionList = new QuestionList();
 
@@ -109,7 +109,7 @@ public class QuestionList {
             }
 
 
-            nList = PictureQuestionsElement.getElementsByTagName("Application.Question");
+            nList = PictureQuestionsElement.getElementsByTagName("Question");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
@@ -249,7 +249,7 @@ public class QuestionList {
                     PictureQuestion q = (PictureQuestion)q2;
 
                     // Application.Question elements
-                    Element QuestionElement = doc.createElement("Application.Question");
+                    Element QuestionElement = doc.createElement("Question");
                     PictureQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
