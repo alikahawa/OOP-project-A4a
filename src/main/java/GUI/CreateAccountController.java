@@ -30,6 +30,7 @@ public class CreateAccountController {
     @FXML private Text warningPromptTeacher;
     @FXML private Text authenticationPrompt;
     @FXML private TextField authenticationPassword;
+    @FXML private Button teacherAuthenticationCancel;
 
     public void createAccountButton_student() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_student.fxml"));
@@ -104,8 +105,6 @@ public class CreateAccountController {
             authenticationPrompt.setText("Onjuist wachtwoord, misschien moet het juiste wachtwoord geheim blijven, maar jij mag het wel" +
                     "weten, het wachtwoord is: just merge it");
         }
-
-
     }
     public void userChoiceCancelButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
@@ -124,5 +123,11 @@ public class CreateAccountController {
         Parent root = loader.load();
         CreateAccountController controller = loader.getController();
         createAccountTeacherCancel.getScene().setRoot(root);
+    }
+    public void TeacherAuthenticationCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        CreateAccountController controller = loader.getController();
+        teacherAuthenticationCancel.getScene().setRoot(root);
     }
 }

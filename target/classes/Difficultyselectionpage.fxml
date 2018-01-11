@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TestSelectorController.java">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TestSelectorController">
    <children>
       <Button fx:id="TextBasedExamButton" layoutX="163.0" layoutY="48.0" mnemonicParsing="false" onAction="#goToStartOfTextBasedTest" prefHeight="66.0" prefWidth="274.0" style="-fx-background-color: Black;" text="Text Exam" textFill="#f8f6f6">
          <font>

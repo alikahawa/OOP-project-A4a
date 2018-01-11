@@ -24,11 +24,16 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="finishedAuthenticationTeacher" layoutX="143.0" layoutY="267.0" mnemonicParsing="false" onAction="#finishedAuthenticationTeacherButton" prefHeight="74.0" prefWidth="314.0" style="-fx-background-color: Black;" text="Continue" textFill="#f5f2f2">
+      <Button fx:id="finishedAuthenticationTeacher" layoutX="63.0" layoutY="271.0" mnemonicParsing="false" onAction="#finishedAuthenticationTeacherButton" prefHeight="60.0" prefWidth="234.0" style="-fx-background-color: Black;" text="Continue" textFill="#f5f2f2">
          <font>
             <Font size="40.0" />
          </font>
       </Button>
       <Text fx:id="authenticationPrompt" layoutX="50.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="520.0000305175781" />
+      <Button fx:id="teacherAuthenticationCancel" layoutX="322.0" layoutY="271.0" mnemonicParsing="false" onAction="#TeacherAuthenticationCancelButton" prefHeight="60.0" prefWidth="234.0" style="-fx-background-color: Black;" text="Back" textFill="#f5f2f2">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
