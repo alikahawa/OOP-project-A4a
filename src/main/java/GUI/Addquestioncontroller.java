@@ -26,6 +26,9 @@ public class Addquestioncontroller {
    We need to use the write methode for the textfields and the textarea to save the given text to the database
     */
 
+   /*
+   This method will make the button cancel navigate back to teacheradd
+    */
     public void CancelbacktoTeacheradd() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacheradd.fxml"));
         Parent root = loader.load();
