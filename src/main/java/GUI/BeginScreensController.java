@@ -8,11 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+/**
+ * This creates a connection between all the create account screens
+ */
 public class BeginScreensController {
 
     @FXML private Button start;
@@ -24,7 +27,17 @@ public class BeginScreensController {
     @FXML private Button createAccount_finished_teacher;
     @FXML private Button succesfully_created_account;
     @FXML private Button finishedAuthenticationTeacher;
-    @FXML private TextField firstname;
+    @FXML private TextField firstnameStudent;
+    @FXML private TextField lastnameStudent;
+    @FXML private TextField mailaddressStudent;
+    @FXML private TextField firstnameTeacher;
+    @FXML private TextField lastnameTeacher;
+    @FXML private TextField mailaddressTeacher;
+    @FXML private Button user_choice_cancel;
+    @FXML private Button createAccountStudentCancel;
+    @FXML private Button createAccountTeacherCancel;
+    @FXML private Text warningPromptStudent;
+    @FXML private Text warningPromptTeacher;
 
 
     public void fromWelcomeToLoginScreen() throws IOException {
@@ -52,19 +65,49 @@ public class BeginScreensController {
         BeginScreensController controller = loader.getController();
         createAccount_teacher.getScene().setRoot(root);
     }
-    public void createAccount_button_finished_student() throws IOException {
-        System.out.println(firstname.getText());
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
-        Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
-        createAccount_finished_student.getScene().setRoot(root);
 
+    /**
+     * createAccount_button_finished_student checks if the first and last name has at least 1 character and mail address is in the format
+     * something@something.something so the @ and . are necessary
+     * @throws IOException
+     */
+    public void createAccount_button_finished_student() throws IOException {
+        //System.out.println(firstname.getText());
+
+        if (firstnameStudent.getText().isEmpty() || !firstnameStudent.getText().matches("[A-Za-z0-9_]+")){
+            warningPromptStudent.setText("Please only use letters and numbers for first name");
+        }
+        else if (lastnameStudent.getText().isEmpty() || !lastnameStudent.getText().matches("[A-Za-z0-9_]+")){
+            warningPromptStudent.setText("Please only use letters and numbers for last name");
+        }
+        else if (mailaddressStudent.getText().isEmpty() || !mailaddressStudent.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")){
+            warningPromptStudent.setText("Please use a valid mail address");
+        }
+        else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
+            Parent root = loader.load();
+            BeginScreensController controller = loader.getController();
+            createAccount_finished_student.getScene().setRoot(root);
+        }
     }
     public void createAccount_button_finished_teacher() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
-        Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
-        createAccount_finished_teacher.getScene().setRoot(root);
+        if (firstnameTeacher.getText().isEmpty() || !firstnameTeacher.getText().matches("[A-Za-z0-9_]+")){
+            warningPromptTeacher.setText("Please only use letters and numbers for first name");
+        }
+        else if (lastnameTeacher.getText().isEmpty() || !lastnameTeacher.getText().matches("[A-Za-z0-9_]+")){
+            warningPromptTeacher.setText("Please only use letters and numbers for last name");
+        }
+        else if (mailaddressTeacher.getText().isEmpty() || !mailaddressTeacher.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")){
+            warningPromptTeacher.setText("Please use a valid mail address");
+        }
+        else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
+            Parent root = loader.load();
+            BeginScreensController controller = loader.getController();
+            createAccount_finished_teacher.getScene().setRoot(root);
+        }
     }
     public void succesfullyAccountToLoginScreen() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
@@ -78,6 +121,28 @@ public class BeginScreensController {
         BeginScreensController controller = loader.getController();
         finishedAuthenticationTeacher.getScene().setRoot(root);
     }
+    public void userChoiceCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        user_choice_cancel.getScene().setRoot(root);
+    }
+    public void createAccountStudentCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccountStudentCancel.getScene().setRoot(root);
+    }
+    public void createAccountTeacherCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccountTeacherCancel.getScene().setRoot(root);
+    }
+
+
+
+
 
 }
 

@@ -16,7 +16,7 @@
             <Font name="Georgia Pro" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="205.0" layoutY="287.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: Black;" text="Back" textFill="#faf7f7">
+      <Button fx:id="user_choice_cancel" layoutX="205.0" layoutY="287.0" mnemonicParsing="false" onAction="#userChoiceCancelButton" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: Black;" text="Back" textFill="#faf7f7">
          <font>
             <Font name="Georgia Pro" size="22.0" />
          </font>
