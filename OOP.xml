@@ -1,192 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Questions>
-    <MultiQuestions>
-        <Question>
-            <Text>Liam likes swimming. He packed his swimsuit and now he is on his way to the swimming pool to go swimming. What is correct?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>Liam will meet his friends to play football</Answer>
-                <Answer>Liam does not have a swimming diploma</Answer>
-                <Answer>Liam is going to swim and is on his way to the pool at the moment</Answer>
-            </Answers>
-            <RightAnswer>Liam is going to swim and is on his way to the pool at the moment</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Every sunday Nathalie visits her grandmother. They always bake cookies together. What is NOT correct?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>Nathalie goes to her grandmother on Sundays</Answer>
-                <Answer>Nathalie's grandmother never bakes cookies</Answer>
-                <Answer>On Sundays Nathalie visits her grandmother</Answer>
-            </Answers>
-            <RightAnswer>Nathalie's grandmother never bakes cookies</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Andor has a dog named Otis. Otis' favourite toy is his yellow ball. What is correct?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>Otis likes to play with his yellow ball</Answer>
-                <Answer>Otis is a cat</Answer>
-                <Answer>Otis is the pet of Ali and Otis likes to play with his yellow ball</Answer>
-            </Answers>
-            <RightAnswer>Otis likes to play with his yellow ball</RightAnswer>
-        </Question>
-        <Question>
-            <Text>The zoo of Delft has a baby elephant. What is correct?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>In Delft there are no giraffes</Answer>
-                <Answer>There is an elephant born in Delft</Answer>
-                <Answer>The zoo of Rotterdam does not have elephants</Answer>
-            </Answers>
-            <RightAnswer>There is an elephant born in Delft</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Maxime and Kirti play in a band together. Maxime is the singer and Kirti plays guitar. What is correct?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>Maxime plays the piano</Answer>
-                <Answer>Kirti does not like Maxime</Answer>
-                <Answer>Maxime sings and Kirti plays the guitar. They play in the same band.</Answer>
-            </Answers>
-            <RightAnswer>Maxime sings and Kirti plays the guitar. They play in the same band.</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Matthias has to be at the TU Delft at 8.45. He takes the train every day ay 8.10, he arrives at 8.30 and he is in the building at 8.40. Today the train has a 20 minutes delay. What is correct?</Text>
-            <NumberOfAnswers>2</NumberOfAnswers>
-            <Answers>
-                <Answer>Matthias is late</Answer>
-                <Answer>Matthias is on time</Answer>
-            </Answers>
-            <RightAnswer>Matthias is late</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Nathalie is in the shopping centre and she's buying 2 books and a pen. They cost in total $45,68, where the books cost $20 each and the pen costs $5,68. Nathalie has 1 bill of $20, 3 bills of $5 and 1 bill of $10. What is correct?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>Nathalie can buy everything</Answer>
-                <Answer>Nathalie can only buy 2 books</Answer>
-                <Answer>Nathalie can only buy 1 book</Answer>
-                <Answer>Nathalie can't buy anything</Answer>
-            </Answers>
-            <RightAnswer>Nathalie can only buy 2 books</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Andor is at home and he wants to do 2 things: eat and go swimming. Eating takes him 1.50 hours and swimming takes him 2.00 hours. It's 21.00 and he has to sleep at 22.40. What is correct?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>Andor only has time to go swimming</Answer>
-                <Answer>Andor only has time to go eat</Answer>
-                <Answer>Andor can do both</Answer>
-                <Answer>Andor can't do either of them</Answer>
-            </Answers>
-            <RightAnswer>Andor only has time to go eat</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Ali is a guy who wears glasses all the time. One day he's walking outside and he walks against everything: people, walls, poles,... What is most probably the problem?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>Ali forgot his glasses at home</Answer>
-                <Answer>Ali is unhandy</Answer>
-                <Answer>Ali doesn't care where he goes</Answer>
-            </Answers>
-            <RightAnswer>Ali forgot his glasses at home</RightAnswer>
-        </Question>
-        <Question>
-            <Text>It's 12.45 and it's the lunch break at the TU Delft. Maxime has a lecture at 13.45. She takes 1.50 hours to have lunch. What is correct?</Text>
-            <NumberOfAnswers>2</NumberOfAnswers>
-            <Answers>
-                <Answer>Maxime will be late for her next lecture</Answer>
-                <Answer>Maxime will be on time for her next lecture</Answer>
-            </Answers>
-            <RightAnswer>Maxime will be late for her next lecture</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Liam has 27 pieces of cake. He is walking to school and he drops 5, 7 get taken by his friends and he gives 3 to his teachers. How many pieces does he have left?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>13</Answer>
-                <Answer>12</Answer>
-                <Answer>20</Answer>
-                <Answer>5</Answer>
-            </Answers>
-            <RightAnswer>12</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Matthias drinks 1 bottle of water every 1.5 hours. Considering that there are 24 hours in a day, how many bottles does he finish?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>16</Answer>
-                <Answer>12</Answer>
-                <Answer>4</Answer>
-                <Answer>21</Answer>
-            </Answers>
-            <RightAnswer>16</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Andor is borrowing $200 from the bank. He spent $15 on lunch, $29.15 on a new book an $98 on clothes. Does Andor have any money left?</Text>
-            <NumberOfAnswers>2</NumberOfAnswers>
-            <Answers>
-                <Answer>Yes</Answer>
-                <Answer>No</Answer>
-            </Answers>
-            <RightAnswer>Yes</RightAnswer>
-        </Question>
-        <Question>
-            <Text>The price of a new MacBook is $1000, there is a 20% sale on iPhones and 10% sale on MacBooks. How much does the MacBook cost now?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>$900</Answer>
-                <Answer>$999</Answer>
-                <Answer>$100</Answer>
-                <Answer>$800</Answer>
-            </Answers>
-            <RightAnswer>$900</RightAnswer>
-        </Question>
-        <Question>
-            <Text>There is a triangle and there is a circle, in the middle of the circle is a square. What is in the circle?</Text>
-            <NumberOfAnswers>3</NumberOfAnswers>
-            <Answers>
-                <Answer>A triangle</Answer>
-                <Answer>A circle</Answer>
-                <Answer>A square</Answer>
-            </Answers>
-            <RightAnswer>A square</RightAnswer>
-        </Question>
-        <Question>
-            <Text>There was dirty wash. When it comes out of the laundry it is clean. In what state is the wash after it came out of the laundry?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>Dirty</Answer>
-                <Answer>Clean</Answer>
-                <Answer>Wash</Answer>
-                <Answer>Laundry</Answer>
-            </Answers>
-            <RightAnswer>Clean</RightAnswer>
-        </Question>
-        <Question>
-            <Text>Building 12 at TU Delft is open from Monday to Friday 07.30 - 18.30. Is building 12 reachable on Thursday at 14.30?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>Yes</Answer>
-                <Answer>No</Answer>
-                <Answer>Not mentioned</Answer>
-                <Answer>None of the above</Answer>
-            </Answers>
-            <RightAnswer>Yes</RightAnswer>
-        </Question>
-        <Question>
-            <Text>There will be a Master Event on Thursday 23 November at VU Amsterdam. Where will the Master Event be?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
-            <Answers>
-                <Answer>TU Delft</Answer>
-                <Answer>UVA Amsterdam</Answer>
-                <Answer>VU Amsterdam</Answer>
-                <Answer>UU Utrecht</Answer>
-            </Answers>
-            <RightAnswer>VU Amsterdam</RightAnswer>
-        </Question>
-    </MultiQuestions>
+    <MultiQuestions/>
     <PictureQuestions>
         <Question>
             <Text>push in the upper left corner</Text>
@@ -199,4 +13,59 @@
             </Bounds>
         </Question>
     </PictureQuestions>
+    <DropDownQuestions>
+        <Question>
+            <Text>Example</Text>
+            <Answers>
+                <Answer>1</Answer>
+                <Answer>2</Answer>
+                <Answer>3</Answer>
+            </Answers>
+            <RightAnswer>1</RightAnswer>
+        </Question>
+    </DropDownQuestions>
+    <CheckBoxQuestions>
+        <Question>
+            <Text>Example</Text>
+            <Answers>
+                <Answer>1</Answer>
+                <Answer>2</Answer>
+                <Answer>3</Answer>
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>
+                
+                
+                
+                
+                1
+                2
+            
+            
+            
+            
+            </RightAnswer>
+            </RightAnswers>
+        </Question>
+        <Question>
+            <Text>What is right?</Text>
+            <Answers>
+                <Answer>answer 1</Answer>
+                <Answer>answer 2</Answer>
+                <Answer>answer 3</Answer>
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>
+                
+                
+                
+                answer 1
+                answer 2
+            
+            
+            
+            </RightAnswer>
+            </RightAnswers>
+        </Question>
+    </CheckBoxQuestions>
 </Questions>

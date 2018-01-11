@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -78,8 +80,10 @@ public class QuestionList {
 
             Element MultiQuestionsElement = (Element)doc.getElementsByTagName("MultiQuestions").item(0);
             Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestions").item(0);
+            Element DropDownElement = (Element)doc.getElementsByTagName("DropDownQuestions").item(0);
+            Element CheckBoxElement = (Element)doc.getElementsByTagName("CheckBoxQuestions").item(0);
 
-            NodeList nList = MultiQuestionsElement.getElementsByTagName("Application.Question");
+            NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
             QuestionList questionList = new QuestionList();
 
@@ -109,7 +113,7 @@ public class QuestionList {
             }
 
 
-            nList = PictureQuestionsElement.getElementsByTagName("Application.Question");
+            nList = PictureQuestionsElement.getElementsByTagName("Question");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
@@ -125,12 +129,70 @@ public class QuestionList {
                 questionList.add(new PictureQuestion(questionText, picture, X1, X2, Y1, Y2));
             }
 
+            nList = DropDownElement.getElementsByTagName("Question");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+
+                Element tmpElement = (Element) nNode;
+                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
+                String rightAnswerString = tmpElement.getElementsByTagName("RightAnswer").item(0).getTextContent();
+                int rightAnswerIndex = 0;
+
+                ArrayList<String> answersList = new ArrayList<>();
+
+                NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
+
+                for (int i = 0; i < 3; i++) {
+                    String tmp = answersNodeList.item(i).getTextContent();
+                    if (tmp.equals(rightAnswerString)) {
+                        rightAnswerIndex = i;
+                    }
+                    answersList.add(tmp);
+                }
+
+                questionList.add(new DropDown(rightAnswerIndex, answersList, questionText));
+
+        }
+
+        nList = CheckBoxElement.getElementsByTagName("Question");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+
+                Element tmpElement = (Element) nNode;
+                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
+
+                ArrayList<String> answersList = new ArrayList<>();
+
+
+                NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
+                for (int i = 0; i < 3; i++) {
+                    String tmp = answersNodeList.item(i).getTextContent();
+                    answersList.add(tmp);
+                }
+
+                ArrayList<String> rightAnswerList = new ArrayList<>();
+
+
+                NodeList rightAnswersNodeList = tmpElement.getElementsByTagName("RightAnswers");
+                for (int i = 0; i < rightAnswersNodeList.getLength(); i++) {
+                    String tmp = rightAnswersNodeList.item(i).getTextContent();
+                    rightAnswerList.add(tmp);
+                }
+
+                questionList.add(new CheckBox(rightAnswerList, answersList, questionText));
+
+            }
+
             return questionList;
 
         } catch (Exception e) {
             e.printStackTrace();
             return new QuestionList();
         }
+
+
     }
 
     public void WriteToXML(String fileName) {
@@ -147,13 +209,17 @@ public class QuestionList {
             QuestionsElement.appendChild(MultiQuestionsElement);
             Element PictureQuestionsElement = doc.createElement("PictureQuestions");
             QuestionsElement.appendChild(PictureQuestionsElement);
+            Element DropDownElement = doc.createElement("DropDownQuestions");
+            QuestionsElement.appendChild(DropDownElement);
+            Element CheckBoxElement = doc.createElement("CheckBoxQuestions");
+            QuestionsElement.appendChild(CheckBoxElement);
 
             for (Question q2 : qList) {
                 if (q2 instanceof MultiQuestion) {
                     MultiQuestion q = (MultiQuestion)q2;
 
-                    // Application.Question elements
-                    Element QuestionElement = doc.createElement("Application.Question");
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
                     MultiQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
@@ -186,8 +252,8 @@ public class QuestionList {
                 {
                     PictureQuestion q = (PictureQuestion)q2;
 
-                    // Application.Question elements
-                    Element QuestionElement = doc.createElement("Application.Question");
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
                     PictureQuestionsElement.appendChild(QuestionElement);
 
                     //Text element
@@ -223,6 +289,70 @@ public class QuestionList {
                     Element Y2Element = doc.createElement("Y2");
                     Y2Element.appendChild(doc.createTextNode(String.valueOf(q.getY2())));
                     BoundsElement.appendChild(Y2Element);
+                }
+
+                else if (q2 instanceof DropDown) {
+                    DropDown q = (DropDown)q2;
+
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    DropDownElement.appendChild(QuestionElement);
+
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
+
+                    //Answers element
+                    Element AnswersElement = doc.createElement("Answers");
+                    QuestionElement.appendChild(AnswersElement);
+
+                    for (String s : q.getAnswerList()) {
+                        //Answer element
+                        Element AnswerElement = doc.createElement("Answer");
+                        AnswerElement.appendChild(doc.createTextNode(s));
+                        AnswersElement.appendChild(AnswerElement);
+                    }
+
+                    //RightAnswer element
+                    Element RightAnswerElement = doc.createElement("RightAnswer");
+                    RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
+                    QuestionElement.appendChild(RightAnswerElement);
+                }
+
+                else if (q2 instanceof CheckBox) {
+                    CheckBox q = (CheckBox)q2;
+
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    CheckBoxElement.appendChild(QuestionElement);
+
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
+
+                    //Answers element
+                    Element AnswersElement = doc.createElement("Answers");
+                    QuestionElement.appendChild(AnswersElement);
+
+                    for (String s : q.getAnswerList()) {
+                        //Answer element
+                        Element AnswerElement = doc.createElement("Answer");
+                        AnswerElement.appendChild(doc.createTextNode(s));
+                        AnswersElement.appendChild(AnswerElement);
+                    }
+
+                    //RightAnswer element
+                    Element RightAnswerElement = doc.createElement("RightAnswers");
+                    QuestionElement.appendChild(RightAnswerElement);
+
+                    for (String s : q.getRightAnswerList()) {
+                        //Answer element
+                        Element AnswerElement = doc.createElement("RightAnswer");
+                        AnswerElement.appendChild(doc.createTextNode(s));
+                        RightAnswerElement.appendChild(AnswerElement);
+                    }
                 }
             }
 
