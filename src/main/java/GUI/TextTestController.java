@@ -31,19 +31,16 @@ public class TextTestController {
     @FXML private Label answerCText;
     @FXML private Label questionText;
     @FXML private Label scoreCounter;
+    private Button abcButton;
 
     @FXML
     public void initialize() {
 
         System.out.println("Text-based test is loaded");
-
         tmpql = QuestionList.ReadFromXML("OOP.xml");
-        tmpql.WriteToXML("OOP.xml");
-
-        answerAText.setText("TESTTEST");
 
         tmpq1shuffled = tmpql.shuffleQuestionList();
-        // start quiz 10 vragen, per vraag show vraag en 3 antwoorden.
+        // start quiz, per vraag show vraag en 3 antwoorden.
 
         displayQuestion();
     }
@@ -61,16 +58,18 @@ public class TextTestController {
         answerAText.setText(tmpquestion.getAnswerList().get(0));
         answerBText.setText(tmpquestion.getAnswerList().get(1));
         answerCText.setText(tmpquestion.getAnswerList().get(2));
+
+        scoreCounter.setText("Score: " + score + "/" + examquestioncount);
     }
     
-    public void checkAnswer(int answer)
+    public void checkAnswer(int answer) throws IOException
     {
         if (answer == tmpquestion.getRightAnswer())
         {
             // correcte antwoord score gaat omhoog en naar volgende vraag
             score++;
             examquestioncount++;
-            scoreCounter.setText("Score:" + score + "/" + examquestioncount);
+            scoreCounter.setText("Score: " + score + "/" + examquestioncount);
 
             // hier scherm GROEN
 
@@ -81,7 +80,7 @@ public class TextTestController {
             }
             else
             {
-                // hier scherm QUIZ KLAAR
+                    examDone();
             }
         }
         else
@@ -89,7 +88,7 @@ public class TextTestController {
             // incorrecte antwoord score blijft gelijk
             score = score;
             examquestioncount++;
-            scoreCounter.setText("Score:" + score + "/" + examquestioncount);
+            scoreCounter.setText("Score: " + score + "/" + examquestioncount);
 
             // hier scherm ROOD
 
@@ -100,21 +99,44 @@ public class TextTestController {
             }
             else
             {
-                // hier scherm QUIZ KLAAR
+                    examDone();
             }
         }
     }
 
     public void answerAPressed() throws IOException{
         checkAnswer(0);
+        abcButton = answerA;
     }
 
     public void answerBPressed() throws IOException{
         checkAnswer(1);
+        abcButton = answerB;
     }
 
     public void answerCPressed() throws IOException{
         checkAnswer(2);
+        abcButton = answerC;
     }
 
+    public void examDone() throws IOException
+    {
+        int Result = score;
+
+        if (Result > 6) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/examPassed.fxml"));
+            Parent root = loader.load();
+            examDoneController controller = loader.getController();
+            controller.setFinalScore(Result);
+            abcButton.getScene().setRoot(root);
+        }
+        else
+        {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/examFailed.fxml"));
+            Parent root = loader.load();
+            examDoneController controller = loader.getController();
+            controller.setFinalScore(Result);
+            abcButton.getScene().setRoot(root);
+        }
+    }
 }

@@ -53,7 +53,7 @@
         </Question>
         <Question>
             <Text>Matthias has to be at the TU Delft at 8.45. He takes the train every day ay 8.10, he arrives at 8.30 and he is in the building at 8.40. Today the train has a 20 minutes delay. What is correct?</Text>
-            <NumberOfAnswers>2</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Matthias is late</Answer>
                 <Answer>Matthias is on time</Answer>
@@ -63,7 +63,7 @@
         </Question>
         <Question>
             <Text>Nathalie is in the shopping centre and she's buying 2 books and a pen. They cost in total $45,68, where the books cost $20 each and the pen costs $5,68. Nathalie has 1 bill of $20, 3 bills of $5 and 1 bill of $10. What is correct?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Nathalie can buy everything</Answer>
                 <Answer>Nathalie can only buy 2 books</Answer>
@@ -73,7 +73,7 @@
         </Question>
         <Question>
             <Text>Andor is at home and he wants to do 2 things: eat and go swimming. Eating takes him 1.50 hours and swimming takes him 2.00 hours. It's 21.00 and he has to sleep at 22.40. What is correct?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Andor only has time to go swimming</Answer>
                 <Answer>Andor only has time to go eat</Answer>
@@ -93,7 +93,7 @@
         </Question>
         <Question>
             <Text>It's 12.45 and it's the lunch break at the TU Delft. Maxime has a lecture at 13.45. She takes 1.50 hours to have lunch. What is correct?</Text>
-            <NumberOfAnswers>2</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Maxime will be late for her next lecture</Answer>
                 <Answer>Maxime will be on time for her next lecture</Answer>
@@ -103,7 +103,7 @@
         </Question>
         <Question>
             <Text>Liam has 27 pieces of cake. He is walking to school and he drops 5, 7 get taken by his friends and he gives 3 to his teachers. How many pieces does he have left?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>13</Answer>
                 <Answer>12</Answer>
@@ -113,7 +113,7 @@
         </Question>
         <Question>
             <Text>Matthias drinks 1 bottle of water every 1.5 hours. Considering that there are 24 hours in a day, how many bottles does he finish?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>16</Answer>
                 <Answer>12</Answer>
@@ -123,7 +123,7 @@
         </Question>
         <Question>
             <Text>Andor is borrowing $200 from the bank. He spent $15 on lunch, $29.15 on a new book an $98 on clothes. Does Andor have any money left?</Text>
-            <NumberOfAnswers>2</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Yes</Answer>
                 <Answer>No</Answer>
@@ -133,7 +133,7 @@
         </Question>
         <Question>
             <Text>The price of a new MacBook is $1000, there is a 20% sale on iPhones and 10% sale on MacBooks. How much does the MacBook cost now?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>$900</Answer>
                 <Answer>$999</Answer>
@@ -153,7 +153,7 @@
         </Question>
         <Question>
             <Text>There was dirty wash. When it comes out of the laundry it is clean. In what state is the wash after it came out of the laundry?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Dirty</Answer>
                 <Answer>Clean</Answer>
@@ -163,7 +163,7 @@
         </Question>
         <Question>
             <Text>Building 12 at TU Delft is open from Monday to Friday 07.30 - 18.30. Is building 12 reachable on Thursday at 14.30?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Yes</Answer>
                 <Answer>No</Answer>
@@ -173,7 +173,7 @@
         </Question>
         <Question>
             <Text>There will be a Master Event on Thursday 23 November at VU Amsterdam. Where will the Master Event be?</Text>
-            <NumberOfAnswers>4</NumberOfAnswers>
+            <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>TU Delft</Answer>
                 <Answer>UVA Amsterdam</Answer>
