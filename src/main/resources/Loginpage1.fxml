@@ -34,7 +34,7 @@
             <TextField prefHeight="53.0" prefWidth="190.0" GridPane.columnIndex="1" />
          </children>
       </GridPane>
-      <Button fx:id="login" layoutX="115.0" layoutY="185.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="378.0" style="-fx-background-color: Black;" text="Log in " textFill="#fdf9f9">
+      <Button fx:id="login" layoutX="115.0" layoutY="185.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="78.0" prefWidth="378.0" style="-fx-background-color: Black;" text="Log in " textFill="#fdf9f9">
          <font>
             <Font name="Georgia Pro Bold" size="26.0" />
          </font>
