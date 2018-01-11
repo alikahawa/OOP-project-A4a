@@ -33,6 +33,10 @@ public class QuestionList {
         return qList;
     }
 
+    public Question getQ(int i) {
+        return qList.get(i);
+    }
+
     public void setQList(List<Question> qList) {
         this.qList = qList;
     }
