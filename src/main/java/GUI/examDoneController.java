@@ -17,10 +17,15 @@ public class examDoneController {
 
     @FXML private Label finalScore;
     @FXML private Button returnButton;
+    @FXML private Label finalText;
 
     public void setFinalScore(int score)
     {
         finalScore.setText("Score: " + score + "/10");
+        if (score ==10)
+        {
+            finalText.setText("PERFECT! Andy would be proud");
+        }
     }
 
     public void returnToMainMenu() throws IOException
@@ -29,7 +34,5 @@ public class examDoneController {
         Parent root = loader.load();
         TestSelectorController controller = loader.getController();
         returnButton.getScene().setRoot(root);
-    }
-
-
+}
 }
