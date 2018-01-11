@@ -118,7 +118,8 @@ public class TextTestController {
             examDoneController controller = loader.getController();
             controller.setFinalScore(Result);
             abcButton.getScene().setRoot(root);
-        } else {
+        }
+        else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/examFailed.fxml"));
             Parent root = loader.load();
             examDoneController controller = loader.getController();
