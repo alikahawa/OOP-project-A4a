@@ -18,6 +18,10 @@ public class Teacheraddcontroller {
     @FXML private Button addimage;
     @FXML private Button back;
 
+    /*
+    This method will make the butoon add text question navigate the teacher to the screen where
+    the question can be added
+     */
     public void fromTeacheraddToAddquestion() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Addquestion.fxml"));
         Parent root = loader.load();
@@ -25,6 +29,10 @@ public class Teacheraddcontroller {
         addtextquestion.getScene().setRoot(root);
     }
 
+    /*
+    This method is for the add image button, It will navigate the teacher to another screen where he/she can upload
+    a picture and then add a question on it
+     */
     public void ToAddimage() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
@@ -32,6 +40,9 @@ public class Teacheraddcontroller {
         addimage.getScene().setRoot(root);
     }
 
+    /*
+    This method is foe the mypage button, it will navigate the user to his/her page
+     */
     public void Tomypage() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
         Parent root = loader.load();
@@ -39,6 +50,9 @@ public class Teacheraddcontroller {
         mypage.getScene().setRoot(root);
     }
 
+    /*
+    Get back to the login screen (( Need to be disscused ))
+     */
     public void backtoLoginscreen() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
