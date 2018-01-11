@@ -34,7 +34,5 @@ public class examDoneController {
         Parent root = loader.load();
         TestSelectorController controller = loader.getController();
         returnButton.getScene().setRoot(root);
-    }
-
-
+}
 }

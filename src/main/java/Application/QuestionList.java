@@ -37,6 +37,17 @@ public class QuestionList {
         return qList;
     }
 
+    public ArrayList<MultiQuestion> getMultiQList(){
+        ArrayList<MultiQuestion> res =  new ArrayList<MultiQuestion>();
+
+        for (int i =0; i< qList.size(); i++)
+        {
+            res.add(getMultiQuestion(i));
+        }
+
+        return res;
+    }
+
     public Question getQ(int i) {
         return qList.get(i);
     }

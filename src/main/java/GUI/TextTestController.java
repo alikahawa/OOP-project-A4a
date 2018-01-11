@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Text;
 import javafx.scene.image.ImageView;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -51,9 +52,12 @@ public class TextTestController {
         // Krijg uit de geshufflede lijst een question, en zet die als de tmpquestion(de vraag die nu beantwoord moet worden).
         // 1. Ik zet "tmpq1shuffled" om naar een questionlist zodat ik makkelijk een multiquestion uit de geshufflde lijst kan halen.
         // 2. Daarna haal ik er een vraag uit, "tmpquestion".
+        // 3. Ik weet dat dit heel vaag is wat er nu allemaal gebeurd, ik zal het later oplossen als daar animo voor is
 
         QuestionList tmpq1shuffledQuestionList = new QuestionList(tmpq1shuffled);
-        tmpquestion = tmpq1shuffledQuestionList.getMultiQuestion(examquestioncount);
+        ArrayList<MultiQuestion> tmp2 = tmpq1shuffledQuestionList.getMultiQList();
+        //tmpquestion = tmpq1shuffledQuestionList.getMultiQuestion(examquestioncount);
+        tmpquestion = tmp2.get(examquestioncount);
 
         questionText.setText(tmpquestion.getQuestion());
         answerAText.setText(tmpquestion.getAnswerList().get(0));
