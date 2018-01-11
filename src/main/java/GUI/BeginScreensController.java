@@ -25,6 +25,9 @@ public class BeginScreensController {
     @FXML private Button succesfully_created_account;
     @FXML private Button finishedAuthenticationTeacher;
     @FXML private TextField firstname;
+    @FXML private Button user_choice_cancel;
+    @FXML private Button createAccountStudentCancel;
+    @FXML private Button createAccountTeacherCancel;
 
 
     public void fromWelcomeToLoginScreen() throws IOException {
@@ -78,6 +81,28 @@ public class BeginScreensController {
         BeginScreensController controller = loader.getController();
         finishedAuthenticationTeacher.getScene().setRoot(root);
     }
+    public void userChoiceCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        user_choice_cancel.getScene().setRoot(root);
+    }
+    public void createAccountStudentCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccountStudentCancel.getScene().setRoot(root);
+    }
+    public void createAccountTeacherCancelButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
+        Parent root = loader.load();
+        BeginScreensController controller = loader.getController();
+        createAccountTeacherCancel.getScene().setRoot(root);
+    }
+
+
+
+
 
 }
 

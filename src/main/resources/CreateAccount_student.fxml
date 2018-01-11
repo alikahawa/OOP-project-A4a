@@ -43,7 +43,7 @@
          <font>
             <Font size="40.0" />
          </font></Button>
-      <Button layoutX="329.0" layoutY="299.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="242.0" style="-fx-background-color: Black;" text="Cancel" textFill="#f5f2f2">
+      <Button fx:id="createAccountStudentCancel" layoutX="329.0" layoutY="299.0" mnemonicParsing="false" onAction="#createAccountStudentCancelButton" prefHeight="86.0" prefWidth="242.0" style="-fx-background-color: Black;" text="Cancel" textFill="#f5f2f2">
          <font>
             <Font size="40.0" />
          </font></Button>
