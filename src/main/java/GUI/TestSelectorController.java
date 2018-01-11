@@ -25,7 +25,4 @@ public class TestSelectorController {
         BeginScreensController controller = loader.getController();
         TextBasedExamButton.getScene().setRoot(root);
     }
-
-    
-
 }
