@@ -214,66 +214,8 @@
                 <Answer>3</Answer>
             </Answers>
             <RightAnswers>
-                <RightAnswer>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                1
-                2
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            </RightAnswer>
+                <RightAnswer>1</RightAnswer>
+                <RightAnswer>2</RightAnswer>
             </RightAnswers>
         </Question>
         <Question>
@@ -284,64 +226,8 @@
                 <Answer>answer 3</Answer>
             </Answers>
             <RightAnswers>
-                <RightAnswer>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                answer 1
-                answer 2
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            </RightAnswer>
+               <RightAnswer>answer 1</RightAnswer>
+               <RightAnswer> answer 2</RightAnswer>
             </RightAnswers>
         </Question>
     </CheckBoxQuestions>

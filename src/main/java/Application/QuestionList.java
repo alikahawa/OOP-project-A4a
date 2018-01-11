@@ -192,7 +192,7 @@ public class QuestionList {
                 ArrayList<String> rightAnswerList = new ArrayList<>();
 
 
-                NodeList rightAnswersNodeList = tmpElement.getElementsByTagName("RightAnswers");
+                NodeList rightAnswersNodeList = tmpElement.getElementsByTagName("RightAnswer");
                 for (int i = 0; i < rightAnswersNodeList.getLength(); i++) {
                     String tmp = rightAnswersNodeList.item(i).getTextContent();
                     rightAnswerList.add(tmp);

@@ -5,4 +5,9 @@
         <Password>Tm8=</Password>
         <Email>br@boy.com</Email>
     </Student>
+    <Teacher>
+        <UserName>user</UserName>
+        <Password>cGFzc3dvcmQ=</Password>
+        <Email>user@email.com</Email>
+    </Teacher>
 </MultiUsers>
