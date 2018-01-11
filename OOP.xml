@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Questions>
-        <MultiQuestions>
+    <MultiQuestions>
         <Question>
             <Text>Liam likes swimming. He packed his swimsuit and now he is on his way to the swimming pool to go swimming. What is correct?</Text>
             <NumberOfAnswers>3</NumberOfAnswers>
@@ -187,7 +187,6 @@
             <RightAnswer>VU Amsterdam</RightAnswer>
         </Question>
     </MultiQuestions>
-
     <PictureQuestions>
         <Question>
             <Text>push in the upper left corner</Text>
@@ -239,8 +238,18 @@
                 
                 
                 
+                
+                
+                
+                
+                
                 1
                 2
+            
+            
+            
+            
+            
             
             
             
@@ -288,8 +297,18 @@
                 
                 
                 
+                
+                
+                
+                
+                
                 answer 1
                 answer 2
+            
+            
+            
+            
+            
             
             
             

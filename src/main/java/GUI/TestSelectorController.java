@@ -20,9 +20,10 @@ public class TestSelectorController {
     @FXML private Button UIBasedExamButton;
 
     public void goToStartOfTextBasedTest() throws IOException {
+        System.out.println("Text-based test is being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/TextExam.fxml"));
         Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
+        TextTestController controller = loader.getController();
         TextBasedExamButton.getScene().setRoot(root);
     }
 }

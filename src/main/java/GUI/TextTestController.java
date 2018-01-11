@@ -9,30 +9,38 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 
 public class TextTestController {
-    static int examquestioncount = 0;
-    static int score = 0;
-    static ArrayList<Question> tmpq1shuffled;
-    static QuestionList tmpql;
+    int examquestioncount = 0;
+    int score = 0;
+    ArrayList<Question> tmpq1shuffled;
+    QuestionList tmpql;
+    int answer;
+    MultiQuestion tmpquestion;
 
-    @FXML private static Button answerA;
-    @FXML private static Button answerB;
-    @FXML private static Button answerC;
-    @FXML private static Label answerAText;
-    @FXML private static Label answerBText;
-    @FXML private static Label answerCText;
-    @FXML private static Label questionText;
-    @FXML private static Label scoreCounter;
+    @FXML private Button answerA;
+    @FXML private Button answerB;
+    @FXML private Button answerC;
+    @FXML private Label answerAText;
+    @FXML private Label answerBText;
+    @FXML private Label answerCText;
+    @FXML private Label questionText;
+    @FXML private Label scoreCounter;
 
-    public static void main(String[] args) {
+    @FXML
+    public void initialize() {
+
+        System.out.println("Text-based test is loaded");
 
         tmpql = QuestionList.ReadFromXML("OOP.xml");
         tmpql.WriteToXML("OOP.xml");
+
+        answerAText.setText("TESTTEST");
 
         tmpq1shuffled = tmpql.shuffleQuestionList();
         // start quiz 10 vragen, per vraag show vraag en 3 antwoorden.
@@ -40,22 +48,23 @@ public class TextTestController {
         displayQuestion();
     }
 
-    public static void displayQuestion()
+    public void displayQuestion()
     {
-        // "(multiquestion)" is tijdelijk en moet gefixt worden.
-        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.get(examquestioncount);
+        // Krijg uit de geshufflede lijst een question, en zet die als de tmpquestion(de vraag die nu beantwoord moet worden).
+        // 1. Ik zet "tmpq1shuffled" om naar een questionlist zodat ik makkelijk een multiquestion uit de geshufflde lijst kan halen.
+        // 2. Daarna haal ik er een vraag uit, "tmpquestion".
+
+        QuestionList tmpq1shuffledQuestionList = new QuestionList(tmpq1shuffled);
+        tmpquestion = tmpq1shuffledQuestionList.getMultiQuestion(examquestioncount);
 
         questionText.setText(tmpquestion.getQuestion());
         answerAText.setText(tmpquestion.getAnswerList().get(0));
-        answerBText.setText(tmpquestion.getAnswerList().get(0));
-        answerCText.setText(tmpquestion.getAnswerList().get(0));
+        answerBText.setText(tmpquestion.getAnswerList().get(1));
+        answerCText.setText(tmpquestion.getAnswerList().get(2));
     }
     
-    public static void checkAnswer(int answer)
+    public void checkAnswer(int answer)
     {
-        // "(multiquestion)" is tijdelijk en moet gefixt worden.
-        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.get(examquestioncount);
-
         if (answer == tmpquestion.getRightAnswer())
         {
             // correcte antwoord score gaat omhoog en naar volgende vraag
@@ -95,4 +104,17 @@ public class TextTestController {
             }
         }
     }
+
+    public void answerAPressed() throws IOException{
+        checkAnswer(0);
+    }
+
+    public void answerBPressed() throws IOException{
+        checkAnswer(1);
+    }
+
+    public void answerCPressed() throws IOException{
+        checkAnswer(2);
+    }
+
 }
