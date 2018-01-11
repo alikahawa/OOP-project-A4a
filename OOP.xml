@@ -57,6 +57,7 @@
             <Answers>
                 <Answer>Matthias is late</Answer>
                 <Answer>Matthias is on time</Answer>
+		<Answer>Matthias does not arrive</Answer>
             </Answers>
             <RightAnswer>Matthias is late</RightAnswer>
         </Question>
@@ -67,7 +68,6 @@
                 <Answer>Nathalie can buy everything</Answer>
                 <Answer>Nathalie can only buy 2 books</Answer>
                 <Answer>Nathalie can only buy 1 book</Answer>
-                <Answer>Nathalie can't buy anything</Answer>
             </Answers>
             <RightAnswer>Nathalie can only buy 2 books</RightAnswer>
         </Question>
@@ -78,7 +78,6 @@
                 <Answer>Andor only has time to go swimming</Answer>
                 <Answer>Andor only has time to go eat</Answer>
                 <Answer>Andor can do both</Answer>
-                <Answer>Andor can't do either of them</Answer>
             </Answers>
             <RightAnswer>Andor only has time to go eat</RightAnswer>
         </Question>
@@ -98,6 +97,7 @@
             <Answers>
                 <Answer>Maxime will be late for her next lecture</Answer>
                 <Answer>Maxime will be on time for her next lecture</Answer>
+		<Answer>Maxime stops with her study</Answer>
             </Answers>
             <RightAnswer>Maxime will be late for her next lecture</RightAnswer>
         </Question>
@@ -108,7 +108,6 @@
                 <Answer>13</Answer>
                 <Answer>12</Answer>
                 <Answer>20</Answer>
-                <Answer>5</Answer>
             </Answers>
             <RightAnswer>12</RightAnswer>
         </Question>
@@ -119,7 +118,6 @@
                 <Answer>16</Answer>
                 <Answer>12</Answer>
                 <Answer>4</Answer>
-                <Answer>21</Answer>
             </Answers>
             <RightAnswer>16</RightAnswer>
         </Question>
@@ -139,7 +137,6 @@
                 <Answer>$900</Answer>
                 <Answer>$999</Answer>
                 <Answer>$100</Answer>
-                <Answer>$800</Answer>
             </Answers>
             <RightAnswer>$900</RightAnswer>
         </Question>
@@ -160,7 +157,6 @@
                 <Answer>Dirty</Answer>
                 <Answer>Clean</Answer>
                 <Answer>Wash</Answer>
-                <Answer>Laundry</Answer>
             </Answers>
             <RightAnswer>Clean</RightAnswer>
         </Question>
@@ -171,7 +167,6 @@
                 <Answer>Yes</Answer>
                 <Answer>No</Answer>
                 <Answer>Not mentioned</Answer>
-                <Answer>None of the above</Answer>
             </Answers>
             <RightAnswer>Yes</RightAnswer>
         </Question>
@@ -182,7 +177,6 @@
                 <Answer>TU Delft</Answer>
                 <Answer>UVA Amsterdam</Answer>
                 <Answer>VU Amsterdam</Answer>
-                <Answer>UU Utrecht</Answer>
             </Answers>
             <RightAnswer>VU Amsterdam</RightAnswer>
         </Question>
@@ -243,8 +237,18 @@
                 
                 
                 
+                
+                
+                
+                
+                
                 1
                 2
+            
+            
+            
+            
+            
             
             
             
@@ -302,8 +306,18 @@
                 
                 
                 
+                
+                
+                
+                
+                
                 answer 1
                 answer 2
+            
+            
+            
+            
+            
             
             
             
