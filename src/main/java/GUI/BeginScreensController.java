@@ -35,7 +35,7 @@ public class BeginScreensController {
     public void loginButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Difficultyselectionpage.fxml"));
         Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
+        TestSelectorController controller = loader.getController();
         login.getScene().setRoot(root);
     }
 }
