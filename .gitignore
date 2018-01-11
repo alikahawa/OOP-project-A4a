@@ -25,3 +25,4 @@ target/classes/sample.fxml
 
 # JavaFX files
 /out/
+/target
