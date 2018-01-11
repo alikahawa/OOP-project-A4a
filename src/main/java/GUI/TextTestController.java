@@ -2,6 +2,8 @@ package GUI;
 
 import Application.MultiQuestion;
 import Application.Question;
+import Application.QuestionList;
+import Application.UserList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,52 +15,50 @@ import java.util.ArrayList;
 
 
 public class TextTestController {
+    static int examquestioncount = 0;
+    static int score = 0;
+    static ArrayList<Question> tmpq1shuffled;
+    static QuestionList tmpql;
 
-    QuestionList tmpql = QuestionList.ReadFromXML("OOP.xml");
-    tmpql.WriteToXML("OOP.xml");
- 
-    QuestionList tmpq1shuffled = tmpq1.shuffleQuestionList();
+    @FXML private static Button answerA;
+    @FXML private static Button answerB;
+    @FXML private static Button answerC;
+    @FXML private static Label answerAText;
+    @FXML private static Label answerBText;
+    @FXML private static Label answerCText;
+    @FXML private static Label questionText;
+    @FXML private static Label scoreCounter;
 
-    UserList userList = UserList.readFromXML("src/Users.xml");
-    userList.writeToXML("src/Users.xml");
-   
-    int examquestioncount = 0;
-    int score = 0;
-
-    @FXML private Button answerA;
-    @FXML private Button answerB;
-    @FXML private Button answerC;
-    @FXML private Label answerAText;
-    @FXML private Label answerBText;
-    @FXML private Label answerCText;
-    @FXML private Label questionText;
-    @FXML private Label scoreCounter;
-    
     public static void main(String[] args) {
 
-        // start quiz 10 vragen, per vraag show vraag en 3 antwoorden.
-        displayQuestion(examquestioncount);
+        tmpql = QuestionList.ReadFromXML("OOP.xml");
+        tmpql.WriteToXML("OOP.xml");
 
+        tmpq1shuffled = tmpql.shuffleQuestionList();
+        // start quiz 10 vragen, per vraag show vraag en 3 antwoorden.
+
+        displayQuestion();
     }
 
-    public void displayQuestion()
+    public static void displayQuestion()
     {
         // "(multiquestion)" is tijdelijk en moet gefixt worden.
-        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.getQ(examquestioncount);
-            
+        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.get(examquestioncount);
+
         questionText.setText(tmpquestion.getQuestion());
         answerAText.setText(tmpquestion.getAnswerList().get(0));
         answerBText.setText(tmpquestion.getAnswerList().get(0));
         answerCText.setText(tmpquestion.getAnswerList().get(0));
     }
-
-    public void checkAnswer(answer)
+    
+    public static void checkAnswer(int answer)
     {
-        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.getQ(examquestioncount);
-            
+        // "(multiquestion)" is tijdelijk en moet gefixt worden.
+        MultiQuestion tmpquestion = (MultiQuestion)tmpq1shuffled.get(examquestioncount);
+
         if (answer == tmpquestion.getRightAnswer())
         {
-            // correcte antwoord score gaat omhoog
+            // correcte antwoord score gaat omhoog en naar volgende vraag
             score++;
             examquestioncount++;
             scoreCounter.setText("Score:" + score + "/" + examquestioncount);
@@ -68,7 +68,7 @@ public class TextTestController {
             // display volgende vraag.
             if (examquestioncount < 10)
             {
-            displayQuestion(examquestioncount);
+                displayQuestion();
             }
             else
             {
@@ -87,7 +87,7 @@ public class TextTestController {
             // display volgende vraag.
             if (examquestioncount < 10)
             {
-            displayQuestion(examquestioncount);
+                displayQuestion();
             }
             else
             {

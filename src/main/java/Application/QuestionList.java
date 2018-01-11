@@ -31,7 +31,7 @@ public class QuestionList {
         return qList;
     }
 
-    public List<Question> getQ(i) {
+    public Question getQ(int i) {
         return qList.get(i);
     }
 
