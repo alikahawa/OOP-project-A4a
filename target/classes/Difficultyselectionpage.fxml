@@ -8,17 +8,17 @@
    <children>
       <Button fx:id="TextBasedExamButton" layoutX="163.0" layoutY="48.0" mnemonicParsing="false" onAction="#goToStartOfTextBasedTest" prefHeight="66.0" prefWidth="274.0" style="-fx-background-color: Black;" text="Text Exam" textFill="#f8f6f6">
          <font>
-            <Font name="Georgia Pro Bold" size="26.0" />
+            <Font size="26.0" />
          </font>
       </Button>
       <Button fx:id="PictureBasedExamButton1" layoutX="163.0" layoutY="126.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="274.0" style="-fx-background-color: Black;" text="Picture Exam1" textFill="#f8f4f4">
          <font>
-            <Font name="Georgia Pro Bold" size="26.0" />
+            <Font size="26.0" />
          </font>
       </Button>
       <Button fx:id="PictureBasedExamButton2" layoutX="163.0" layoutY="200.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="274.0" style="-fx-background-color: Black;" text="Picture Exam2" textFill="#fdfcfc">
          <font>
-            <Font name="Georgia Pro Bold" size="26.0" />
+            <Font size="26.0" />
          </font>
       </Button>
       <Button layoutX="467.0" layoutY="321.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="123.0" style="-fx-background-color: Black;" text="Back" textFill="#faf7f7">
@@ -28,12 +28,12 @@
       </Button>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="108.0" style="-fx-background-color: Black;" text="My page" textFill="#faf7f7">
          <font>
-            <Font name="Georgia Pro Bold" size="19.0" />
+            <Font size="19.0" />
          </font>
       </Button>
       <Button fx:id="UIBasedExamButton" layoutX="162.0" layoutY="278.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="274.0" style="-fx-background-color: Black;" text="UI Exam" textFill="#fdfcfc">
          <font>
-            <Font name="Georgia Pro Bold" size="26.0" />
+            <Font size="26.0" />
          </font>
       </Button>
    </children>

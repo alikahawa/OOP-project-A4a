@@ -42,9 +42,12 @@ public class QuestionList {
 
         for (int i =0; i< qList.size(); i++)
         {
-            res.add(getMultiQuestion(i));
+            Question tmp = qList.get(i);
+            if (tmp instanceof MultiQuestion)
+            {
+                res.add((MultiQuestion)tmp);
+            }
         }
-
         return res;
     }
 
@@ -53,7 +56,7 @@ public class QuestionList {
     }
 
     // verkrijgt een multiquestion uit de lijst, gespecificeert, als dat geen multiquestion is de volgende
-    public MultiQuestion getMultiQuestion(int nummer) {
+    /* public MultiQuestion getMultiQuestion(int nummer) {
         for ( int i = 0; i< qList.size(); i++)
         {
             if (getQ(nummer + i) instanceof MultiQuestion)
@@ -63,7 +66,7 @@ public class QuestionList {
         }
         // De multiquestions zijn op
         throw new IndexOutOfBoundsException();
-    }
+    } */ // Overbodige method volgens mij
 
     public void setQList(List<Question> qList) {
         this.qList = qList;

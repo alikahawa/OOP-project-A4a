@@ -37,12 +37,12 @@
       </GridPane>
       <Button fx:id="login" layoutX="115.0" layoutY="185.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="78.0" prefWidth="378.0" style="-fx-background-color: Black;" text="Log in " textFill="#fdf9f9">
          <font>
-            <Font name="Georgia Pro Bold" size="26.0" />
+            <Font size="26.0" />
          </font>
       </Button>
       <Button fx:id="createAccount" layoutX="115.0" layoutY="294.0" mnemonicParsing="false" onAction="#createAccountButton" prefHeight="44.0" prefWidth="378.0" style="-fx-background-color: Black;" text="Create account" textFill="#fdfcfc">
          <font>
-            <Font name="Georgia Pro Bold" size="18.0" />
+            <Font size="18.0" />
          </font>
       </Button>
    </children>

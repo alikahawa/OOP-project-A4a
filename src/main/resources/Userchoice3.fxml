@@ -8,17 +8,17 @@
    <children>
       <Button fx:id="createAccount_student" layoutX="140.0" layoutY="55.0" mnemonicParsing="false" onAction="#createAccountButton_student" prefHeight="126.0" prefWidth="319.0" style="-fx-background-color: Black;" text="Student" textFill="#f8f5f5">
          <font>
-            <Font name="Georgia Pro" size="57.0" />
+            <Font size="57.0" />
          </font>
       </Button>
       <Button fx:id="createAccount_teacher" layoutX="204.0" layoutY="212.0" mnemonicParsing="false" onAction="#createAccountButton_teacher" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: Black;" text="Teacher" textFill="#fdfcfc">
          <font>
-            <Font name="Georgia Pro" size="22.0" />
+            <Font size="22.0" />
          </font>
       </Button>
       <Button fx:id="user_choice_cancel" layoutX="205.0" layoutY="287.0" mnemonicParsing="false" onAction="#userChoiceCancelButton" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: Black;" text="Back" textFill="#faf7f7">
          <font>
-            <Font name="Georgia Pro" size="22.0" />
+            <Font size="22.0" />
          </font>
       </Button>
    </children>
