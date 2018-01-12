@@ -51,6 +51,20 @@ public class QuestionList {
         return res;
     }
 
+    public ArrayList<PictureQuestion> getPictureQList(){
+        ArrayList<PictureQuestion> res =  new ArrayList<PictureQuestion>();
+
+        for (int i =0; i< qList.size(); i++)
+        {
+            Question tmp = qList.get(i);
+            if (tmp instanceof PictureQuestion)
+            {
+                res.add((PictureQuestion)tmp);
+            }
+        }
+        return res;
+    }
+
     public Question getQ(int i) {
         return qList.get(i);
     }

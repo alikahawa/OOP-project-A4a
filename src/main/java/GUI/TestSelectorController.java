@@ -16,11 +16,10 @@ public class TestSelectorController {
 
     @FXML private Button TextBasedExamButton;
     @FXML private Button PictureBasedExamButton1;
-    @FXML private Button PictureBasedExamButton2;
+    @FXML private Button ClickablePictureBasedExamButton;
     @FXML private Button UIBasedExamButton;
     @FXML private Button backtologin;
     @FXML private Button mypage;
-
 
     public void goToStartOfTextBasedTest() throws IOException {
         System.out.println("Text-based test is being loaded");
@@ -29,7 +28,14 @@ public class TestSelectorController {
         TextTestController controller = loader.getController();
         TextBasedExamButton.getScene().setRoot(root);
     }
-
+  
+    public void goToStartOfClickablePictureBasedTest() throws IOException {
+        System.out.println("ClickablePicture-based test is being loaded");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ClickablePictureExam.fxml"));
+        Parent root = loader.load();
+        ClickablePictureTestController controller = loader.getController();
+        ClickablePictureBasedExamButton.getScene().setRoot(root);
+    }
     /*
     Back to Login screen
      */
