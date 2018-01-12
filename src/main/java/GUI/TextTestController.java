@@ -22,7 +22,6 @@ public class TextTestController {
     int score = 0;
     ArrayList<Question> tmpq1shuffled;
     QuestionList tmpql;
-    int answer;
     MultiQuestion tmpquestion;
 
     @FXML private Button answerA;
