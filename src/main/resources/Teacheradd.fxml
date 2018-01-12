@@ -4,24 +4,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="600.0" style="-fx-background-color: #5d6464de;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Teacheraddcontroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Teacheraddcontroller">
    <children>
-      <Button fx:id="addtextquestion" layoutX="216.0" layoutY="60.0" mnemonicParsing="false" onAction="#fromTeacheraddToAddquestion" prefHeight="90.0" prefWidth="167.0" style="-fx-background-color: #40ced8de;" text="Add text question">
+      <Button fx:id="addtextquestion" layoutX="216.0" layoutY="60.0" mnemonicParsing="false" onAction="#fromTeacheraddToAddquestion" prefHeight="90.0" prefWidth="167.0" style="-fx-background-color: Black;" text="Add text question" textFill="WHITE">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button fx:id="addimage" layoutX="216.0" layoutY="192.0" mnemonicParsing="false" onAction="#ToAddimage" prefHeight="90.0" prefWidth="167.0" style="-fx-background-color: #40ced8de;" text="Add Image">
+      <Button fx:id="addimage" layoutX="216.0" layoutY="192.0" mnemonicParsing="false" onAction="#ToAddimage" prefHeight="90.0" prefWidth="167.0" style="-fx-background-color: Black;" text="Add Image" textFill="#fcfcfc">
          <font>
             <Font size="26.0" />
          </font>
       </Button>
-      <Button fx:id="back" layoutX="216.0" layoutY="335.0" mnemonicParsing="false" onAction="#backtoLoginscreen" prefHeight="90.0" prefWidth="167.0" style="-fx-background-color: #40ced8de;" text="Back">
+      <Button fx:id="back" layoutX="216.0" layoutY="335.0" mnemonicParsing="false" onAction="#backtoLoginscreen" prefHeight="90.0" prefWidth="167.0" style="-fx-background-color: Black;" text="Back" textFill="WHITE">
          <font>
             <Font size="32.0" />
          </font>
       </Button>
-      <Button fx:id="mypage" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#Tomypage" prefHeight="80.0" prefWidth="115.0" style="-fx-background-color: #f04e0ef3;" text="My page">
+      <Button fx:id="mypage" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#Tomypage" prefHeight="80.0" prefWidth="115.0" style="-fx-background-color: Black;" text="My page" textFill="#fcfafa">
          <font>
             <Font size="21.0" />
          </font>
