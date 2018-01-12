@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="600.0" style="-fx-background-color: #5d6464de;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Teacherpagecontroller">
+   <children>
+      <Button fx:id="mypage" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="135.0" style="-fx-background-color: #f04e0ef3;" text="My page">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonn" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="135.0" style="-fx-background-color: #f04e0ef3;" text="Button">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="back" layoutX="14.0" layoutY="265.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="135.0" style="-fx-background-color: #f04e0ef3;" text="Back">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="logout" layoutX="482.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackToWelcome" prefHeight="45.0" prefWidth="103.0" style="-fx-background-color: #f04e0ef3;" text="Log out">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

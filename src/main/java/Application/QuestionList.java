@@ -29,12 +29,40 @@ public class QuestionList {
         qList = new ArrayList<Question>();
     }
 
+    public QuestionList(ArrayList<Question> qlist) {
+        this.qList = qlist;
+    }
+
     public List<Question> getQList() {
         return qList;
     }
 
+    public ArrayList<MultiQuestion> getMultiQList(){
+        ArrayList<MultiQuestion> res =  new ArrayList<MultiQuestion>();
+
+        for (int i =0; i< qList.size(); i++)
+        {
+            res.add(getMultiQuestion(i));
+        }
+
+        return res;
+    }
+
     public Question getQ(int i) {
         return qList.get(i);
+    }
+
+    // verkrijgt een multiquestion uit de lijst, gespecificeert, als dat geen multiquestion is de volgende
+    public MultiQuestion getMultiQuestion(int nummer) {
+        for ( int i = 0; i< qList.size(); i++)
+        {
+            if (getQ(nummer + i) instanceof MultiQuestion)
+            {
+                return (MultiQuestion)getQ(nummer + i);
+            }
+        }
+        // De multiquestions zijn op
+        throw new IndexOutOfBoundsException();
     }
 
     public void setQList(List<Question> qList) {
