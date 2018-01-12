@@ -28,7 +28,7 @@ public class BeginScreensController {
     public void createAccountButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Userchoice3.fxml"));
         Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
+        CreateAccountController controller = loader.getController();
         createAccount.getScene().setRoot(root);
     }
 
