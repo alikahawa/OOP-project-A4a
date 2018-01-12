@@ -42,19 +42,19 @@
                <font>
                   <Font size="28.0" />
                </font></Label>
-            <Label text="Mail address" GridPane.rowIndex="3">
+            <Label text="Mail address" GridPane.rowIndex="2">
                <font>
                   <Font size="28.0" />
                </font></Label>
             <TextField fx:id="firstnameTeacher" prefHeight="26.0" prefWidth="342.0" promptText="Enter your first name here" GridPane.columnIndex="1" />
             <TextField fx:id="lastnameTeacher" promptText="Enter your last name here" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="mailaddressTeacher" promptText="Enter your mail address here" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Password" GridPane.rowIndex="2">
+            <TextField fx:id="mailaddressTeacher" promptText="Enter your mail address here" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Password" GridPane.rowIndex="3">
                <font>
                   <Font size="28.0" />
                </font>
             </Label>
-            <PasswordField promptText="Enter your password here" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <PasswordField promptText="Enter your password here" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>
