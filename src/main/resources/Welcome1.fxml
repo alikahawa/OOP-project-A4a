@@ -9,7 +9,7 @@
    <children>
       <Label layoutX="103.0" layoutY="20.0" prefHeight="110.0" prefWidth="417.0" style="-fx-background-color: PaleTurquoise;" text="Welcome" textFill="#645757">
          <font>
-            <Font name="Georgia Pro" size="96.0" />
+            <Font size="96.0" />
          </font>
       </Label>
       <Button fx:id="start" layoutX="128.0" layoutY="200.0" mnemonicParsing="false" onAction="#fromWelcomeToLoginScreen" prefHeight="141.0" prefWidth="343.0" style="-fx-background-color: Black;" text="START" textFill="#f5f2f2">
