@@ -18,7 +18,7 @@ public class TestSelectorController {
     @FXML private Button PictureBasedExamButton1;
     @FXML private Button PictureBasedExamButton2;
     @FXML private Button UIBasedExamButton;
-    @FXML private Button back;
+    @FXML private Button backtologin;
     @FXML private Button mypage;
 
 
@@ -38,8 +38,7 @@ public class TestSelectorController {
         System.out.println("Text-based test is being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        TextTestController controller = loader.getController();
-        back.getScene().setRoot(root);
+        backtologin.getScene().setRoot(root);
     }
 
     /*
@@ -50,7 +49,6 @@ public class TestSelectorController {
         System.out.println("Text-based test is being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/StudentProfile.fxml"));
         Parent root = loader.load();
-        TextTestController controller = loader.getController();
         mypage.getScene().setRoot(root);
     }
 }
