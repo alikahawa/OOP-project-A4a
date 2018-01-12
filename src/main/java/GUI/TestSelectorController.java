@@ -38,7 +38,7 @@ public class TestSelectorController {
         System.out.println("Text-based test is being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
+        TextTestController controller = loader.getController();
         back.getScene().setRoot(root);
     }
 

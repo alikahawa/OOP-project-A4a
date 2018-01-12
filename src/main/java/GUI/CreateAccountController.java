@@ -147,13 +147,13 @@ public class CreateAccountController {
     public void createAccountStudentCancelButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        CreateAccountController controller = loader.getController();
+        BeginScreensController controller = loader.getController();
         createAccountStudentCancel.getScene().setRoot(root);
     }
     public void createAccountTeacherCancelButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        CreateAccountController controller = loader.getController();
+        BeginScreensController controller = loader.getController();
         createAccountTeacherCancel.getScene().setRoot(root);
     }
     public void TeacherAuthenticationCancelButton() throws IOException {
