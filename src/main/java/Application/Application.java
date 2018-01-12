@@ -31,7 +31,7 @@ public class Application {
                     System.out.println("Please enter a last name: ");
                     String lastName = sc.next();
                     System.out.println("Enter a password: ");
-                    String password = User.encrypt(sc.next());
+                    String password = sc.next();
                     System.out.println("Enter your email:");
                     key = sc.next();
                     if(type.equals("1")){

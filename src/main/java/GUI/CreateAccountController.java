@@ -1,5 +1,8 @@
 package GUI;
 
+import Application.UserList;
+import Application.Student;
+import Application.Teacher;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,6 +38,14 @@ public class CreateAccountController {
     @FXML private PasswordField passwordStudent;
     @FXML private PasswordField passwordTeacher;
 
+    private UserList userList;
+
+    @FXML
+    protected void initialize()
+    {
+        this.userList = UserList.readFromXML("src/Users.xml");
+    }
+
     public void createAccountButton_student() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_student.fxml"));
         Parent root = loader.load();
@@ -69,7 +80,13 @@ public class CreateAccountController {
         else if (passwordStudent.getText().isEmpty()){
             warningPromptStudent.setText("Enter a valid password");
         }
+        else if (userList.getUser(mailaddressStudent.getText()) != null) {
+            warningPromptStudent.setText("This user already exists");
+        }
         else {
+            userList.add(new Student(firstnameStudent.getText(), lastnameStudent.getText(), passwordStudent.getText(), mailaddressStudent.getText()));
+            userList.writeToXML("src/Users.xml");
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
             Parent root = loader.load();
             CreateAccountController controller = loader.getController();
@@ -88,9 +105,15 @@ public class CreateAccountController {
             warningPromptTeacher.setText("Please use a valid mail address");
         }
         else if (passwordTeacher.getText().isEmpty()){
-            warningPromptStudent.setText("Enter a valid password");
+            warningPromptTeacher.setText("Enter a valid password");
+        }
+        else if (userList.getUser(mailaddressTeacher.getText()) != null) {
+            warningPromptTeacher.setText("This user already exists");
         }
         else {
+            userList.add(new Teacher(firstnameTeacher.getText(), lastnameTeacher.getText(), passwordTeacher.getText(), mailaddressTeacher.getText()));
+            userList.writeToXML("src/Users.xml");
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
             Parent root = loader.load();
             CreateAccountController controller = loader.getController();

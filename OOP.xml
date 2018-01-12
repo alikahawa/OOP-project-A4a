@@ -57,7 +57,7 @@
             <Answers>
                 <Answer>Matthias is late</Answer>
                 <Answer>Matthias is on time</Answer>
-		        <Answer>Matthias does not arrive</Answer>
+                <Answer>Matthias does not arrive</Answer>
             </Answers>
             <RightAnswer>Matthias is late</RightAnswer>
         </Question>
@@ -97,7 +97,7 @@
             <Answers>
                 <Answer>Maxime will be late for her next lecture</Answer>
                 <Answer>Maxime will be on time for her next lecture</Answer>
-		        <Answer>Maxime stops with her study</Answer>
+                <Answer>Maxime stops with her study</Answer>
             </Answers>
             <RightAnswer>Maxime will be late for her next lecture</RightAnswer>
         </Question>
@@ -215,8 +215,18 @@
             </Answers>
             <RightAnswers>
                 <RightAnswer>
+                
+                
+                
+                
+                
                 1
                 2
+            
+            
+            
+            
+            
             </RightAnswer>
             </RightAnswers>
         </Question>
@@ -229,8 +239,18 @@
             </Answers>
             <RightAnswers>
                 <RightAnswer>
+                
+                
+                
+                
+                
                 answer 1
                 answer 2
+            
+            
+            
+            
+            
             </RightAnswer>
             </RightAnswers>
         </Question>

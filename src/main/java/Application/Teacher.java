@@ -8,6 +8,10 @@ public class Teacher extends User {
         super(firstName, lastName, password, email);
     }
 
+    public Teacher(String firstName, String lastName, String password, String salt, String email){
+        super(firstName, lastName, password, salt, email);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o instanceof Teacher) {

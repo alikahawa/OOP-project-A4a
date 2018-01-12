@@ -34,6 +34,23 @@ public abstract class User {
         this.lastName = lastName;
     }
 
+    /**
+     * The constructor of an user
+     *
+     * @param firstName - the string firstName
+     * @param lastName - the string lastName
+     * @param hashedPassword - the hashed password of the username
+     * @param salt - the salt used to hash the password
+     * @param email    - the string email
+     */
+    public User(String firstName, String lastName, String hashedPassword, String salt, String email) {
+        this.email = email;
+        this.passwordSalt = salt;
+        this.passwordHash = hashedPassword;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -49,6 +66,8 @@ public abstract class User {
     public String getPasswordHash() {
         return passwordHash;
     }
+
+    public String getPasswordSalt() { return passwordSalt; }
 
     /**
      * A method that can encode strings

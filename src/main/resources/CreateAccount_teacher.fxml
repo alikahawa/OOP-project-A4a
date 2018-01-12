@@ -54,7 +54,7 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <PasswordField promptText="Enter your password here" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <PasswordField fx:id="passwordTeacher" promptText="Enter your password here" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
