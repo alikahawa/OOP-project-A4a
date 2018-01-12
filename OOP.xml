@@ -183,12 +183,122 @@
         </Question>
     </MultiQuestions>
     <PictureQuestions>
-        <Question>
-            <Text>push in the upper left corner</Text>
+	<Question>
+            <Text>push in the upper left1 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
-                <X1>80</X1>
-                <X2>100</X2>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left2 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left3 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left4 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left5 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left6 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left7 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left8 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left9 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left10 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left11 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
                 <Y1>0</Y1>
                 <Y2>20</Y2>
             </Bounds>

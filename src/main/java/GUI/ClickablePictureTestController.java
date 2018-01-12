@@ -1,44 +1,40 @@
 package GUI;
 
 import Application.MultiQuestion;
+import Application.PictureQuestion;
 import Application.Question;
 import Application.QuestionList;
-import Application.UserList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.text.Text;
 import javafx.scene.image.ImageView;
+import static java.lang.Math.abs;
+
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
-public class TextTestController {
+public class ClickablePictureTestController {
+
+    @FXML private Button correctButton;
+    @FXML private Button incorrectButton;
+    @FXML private Label questionText;
+    @FXML private Label scoreCounter;
+    @FXML private ImageView progressbar;
+    @FXML private ImageView questionPicture;
+
     int examquestioncount = 0;
     int score = 0;
     ArrayList<Question> tmpq1shuffled;
     QuestionList tmpql;
-    MultiQuestion tmpquestion;
+    PictureQuestion tmpquestion;
 
-    @FXML private Button answerA;
-    @FXML private Button answerB;
-    @FXML private Button answerC;
-    @FXML private Label answerAText;
-    @FXML private Label answerBText;
-    @FXML private Label answerCText;
-    @FXML private Label questionText;
-    @FXML private Label scoreCounter;
-    private Button abcButton;
-    @FXML private ImageView progressbar;
-
-    @FXML
     public void initialize() {
 
-        System.out.println("Text-based test is loaded");
+        System.out.println("ClickablePicture-based test is loaded");
         tmpql = QuestionList.ReadFromXML("OOP.xml");
 
         tmpq1shuffled = tmpql.shuffleQuestionList();
@@ -49,67 +45,59 @@ public class TextTestController {
 
     public void displayQuestion() {
 
-        // Krijg uit de geshufflede lijst een question, en zet die als de tmpquestion(de vraag die nu beantwoord moet worden).
-        // 1. Ik zet "tmpq1shuffled" om naar een questionlist zodat ik makkelijk een multiquestion uit de geshufflde lijst kan halen.
-        // 2. Daarna haal ik de multiquestionlist eruit en haal ik er een vraag uit, "tmpquestion".
-        // 3. Ik weet dat dit heel vaag is wat er nu allemaal gebeurd, ik zal het later oplossen als daar animo voor is
-
         QuestionList tmpq1shuffledQuestionList = new QuestionList(tmpq1shuffled);
-        ArrayList<MultiQuestion> tmp2 = tmpq1shuffledQuestionList.getMultiQList();
+        ArrayList<PictureQuestion> tmp2 = tmpq1shuffledQuestionList.getPictureQList();
         tmpquestion = tmp2.get(examquestioncount);
 
+        System.out.println("This picture is now being shown: " + tmpquestion.getPicture());
+        Image imagetmp = new Image(tmpquestion.getPicture());
+        questionPicture.setImage(imagetmp);
+
         questionText.setText(tmpquestion.getQuestion());
-        answerAText.setText(tmpquestion.getAnswerList().get(0));
-        answerBText.setText(tmpquestion.getAnswerList().get(1));
-        answerCText.setText(tmpquestion.getAnswerList().get(2));
+
+        int tmpx1 = tmpquestion.getX1();
+        int tmpx2 = tmpquestion.getX2();
+        int tmpy1 = tmpquestion.getY1();
+        int tmpy2 = tmpquestion.getY2();
+
+        int dx = Math.abs(tmpx2 - tmpx1);
+        int dy = Math.abs(tmpy2 - tmpy1);
+
+        correctButton.setPrefWidth(dx);
+        correctButton.setPrefHeight(dy);
+
+        correctButton.setLayoutX(questionPicture.getLayoutX() + tmpx1 - 20 );
+        correctButton.setLayoutY(questionPicture.getLayoutY() + tmpy1);
 
         scoreCounter.setText("Score: " + score + "/" + examquestioncount);
         progressBar();
     }
 
-    public void checkAnswer(int answer) throws IOException {
-        if (answer == tmpquestion.getRightAnswer()) {
-            // correcte antwoord score gaat omhoog en naar volgende vraag
-            score++;
-            examquestioncount++;
-            scoreCounter.setText("Score: " + score + "/" + examquestioncount);
 
-            // hier scherm GROEN
+    public void correctlyClicked() throws IOException
+    {
+        score++;
+        examquestioncount++;
+        scoreCounter.setText("Score: " + score + "/" + examquestioncount);
 
-            // display volgende vraag.
-            if (examquestioncount < 10) {
-                displayQuestion();
-            } else {
-                examDone();
-            }
+        // display volgende vraag.
+        if (examquestioncount < 10) {
+            displayQuestion();
         } else {
-            // incorrecte antwoord score blijft gelijk
-            score = score;
-            examquestioncount++;
-            scoreCounter.setText("Score: " + score + "/" + examquestioncount);
-
-            // display volgende vraag.
-            if (examquestioncount < 10) {
-                displayQuestion();
-            } else {
-                examDone();
-            }
+            examDone();
         }
     }
+    public void incorrectlyClicked() throws IOException{
+        score = score;
+        examquestioncount++;
+        scoreCounter.setText("Score: " + score + "/" + examquestioncount);
 
-    public void answerAPressed() throws IOException {
-        checkAnswer(0);
-        abcButton = answerA;
-    }
-
-    public void answerBPressed() throws IOException {
-        checkAnswer(1);
-        abcButton = answerB;
-    }
-
-    public void answerCPressed() throws IOException {
-        checkAnswer(2);
-        abcButton = answerC;
+        // display volgende vraag.
+        if (examquestioncount < 10) {
+            displayQuestion();
+        } else {
+            examDone();
+        }
     }
 
     public void examDone() throws IOException {
@@ -120,14 +108,14 @@ public class TextTestController {
             Parent root = loader.load();
             examDoneController controller = loader.getController();
             controller.setFinalScore(Result);
-            abcButton.getScene().setRoot(root);
+            correctButton.getScene().setRoot(root);
         }
         else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/examFailed.fxml"));
             Parent root = loader.load();
             examDoneController controller = loader.getController();
             controller.setFinalScore(Result);
-            abcButton.getScene().setRoot(root);
+            correctButton.getScene().setRoot(root);
         }
     }
 
@@ -171,4 +159,5 @@ public class TextTestController {
         Image image2 = new Image(imageString);
         progressbar.setImage(image2);
     }
+
 }
