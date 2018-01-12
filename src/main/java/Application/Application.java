@@ -26,26 +26,20 @@ public class Application {
                 else if(key.equals("2")){
                     System.out.println("Are you a teacher(1) or a student(2)?");
                     String type = sc.next();
-                    System.out.println("Please enter a username: ");
-                    String username = sc.next();
-                    // Checks is username is already used, could later be implemented in an add user function
-                    for(User user : userList.getUserList()){
-                        if(user.getUserName().equals(username)){
-                            System.out.println("Username already used.");
-                            continue login_register_loop;
-                        }
-                    }
-                    // The password itself is never saved as a string. See the Users.xml file to see how it is saved
+                    System.out.println("Please enter a first name: ");
+                    String firstName = sc.next();
+                    System.out.println("Please enter a last name: ");
+                    String lastName = sc.next();
                     System.out.println("Enter a password: ");
                     String password = User.encrypt(sc.next());
                     System.out.println("Enter your email:");
                     key = sc.next();
                     if(type.equals("1")){
-                        userList.add(new Teacher(username, password, key));
+                        userList.add(new Teacher(firstName, lastName, password, key));
                         System.out.println("User added!");
                     }
                     else if(type.equals("2")){
-                        userList.add(new Student(username, password, key));
+                        userList.add(new Student(firstName, lastName, password, key));
                         System.out.println("User added!");
                     }
                     break;
@@ -53,16 +47,16 @@ public class Application {
             }
             System.out.println("Username: user\nPassword: password\n");
             while(true) {
-                System.out.println("Please enter your username: ");
+                System.out.println("Please enter your email address: ");
                 key = sc.next();
                 int loggedIn = 0;
                 int usernameFound = 0;
                 for(User user : userList.getUserList()){
-                    if(key.equals(user.getUserName())) {
+                    if(key.equals(user.getEmail())) {
                         usernameFound = 1;
                         System.out.println("Please enter your password: ");
                         key = sc.next();
-                        if (user.getPassword().equals(User.encrypt(key))) {
+                        if (user.CheckPassword(key)) {
                             loggedIn = 1;
                             break;
                         } else {

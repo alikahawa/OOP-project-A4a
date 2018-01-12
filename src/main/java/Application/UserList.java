@@ -63,12 +63,13 @@ public class UserList {
 
                 Element tmpElement = (Element) nNode;
 
-                String userName = tmpElement.getElementsByTagName("UserName").item(0).getTextContent();
+                String firstName = tmpElement.getElementsByTagName("FirstName").item(0).getTextContent();
+                String lastName = tmpElement.getElementsByTagName("LastName").item(0).getTextContent();
                 String password = tmpElement.getElementsByTagName("Password").item(0).getTextContent();
                 String email = tmpElement.getElementsByTagName("Email").item(0).getTextContent();
 
                 // Creates a new Student with the elements in the Student element
-                userList.add(new Student(userName, password, email));
+                userList.add(new Student(firstName, lastName, password, email));
             }
 
             // Same for teachers...
@@ -77,11 +78,12 @@ public class UserList {
 
                 Element tmpElement = (Element) nNode;
 
-                String userName = tmpElement.getElementsByTagName("UserName").item(0).getTextContent();
+                String firstName = tmpElement.getElementsByTagName("FirstName").item(0).getTextContent();
+                String lastName = tmpElement.getElementsByTagName("LastName").item(0).getTextContent();
                 String password = tmpElement.getElementsByTagName("Password").item(0).getTextContent();
                 String email = tmpElement.getElementsByTagName("Email").item(0).getTextContent();
 
-                userList.add(new Teacher(userName, password, email));
+                userList.add(new Teacher(firstName, lastName, password, email));
             }
 
             // After all the Students and Teachers have been added, it returns the new UserList
@@ -123,12 +125,16 @@ public class UserList {
                 MultiUsers.appendChild(User);
 
                 // Adds the username, password and email to the user element
-                Element UserName = doc.createElement("UserName");
-                UserName.appendChild(doc.createTextNode(user.getUserName()));
-                User.appendChild(UserName);
+                Element FirstName = doc.createElement("FirstName");
+                FirstName.appendChild(doc.createTextNode(user.getFirstName()));
+                User.appendChild(FirstName);
+
+                Element LastName = doc.createElement("LastName");
+                LastName.appendChild(doc.createTextNode(user.getFirstName()));
+                User.appendChild(LastName);
 
                 Element Password = doc.createElement("Password");
-                Password.appendChild(doc.createTextNode(user.getPassword()));
+                Password.appendChild(doc.createTextNode(user.getPasswordHash()));
                 User.appendChild(Password);
 
                 Element Email = doc.createElement("Email");

@@ -21,12 +21,12 @@
             <Font size="26.0" />
          </font>
       </Button>
-      <Button layoutX="467.0" layoutY="321.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="123.0" style="-fx-background-color: Black;" text="Back" textFill="#faf7f7">
+      <Button fx:id="back" layoutX="467.0" layoutY="321.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="66.0" prefWidth="123.0" style="-fx-background-color: Black;" text="Back" textFill="#faf7f7">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="108.0" style="-fx-background-color: Black;" text="My page" textFill="#faf7f7">
+      <Button fx:id="mypage" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMypagestudent" prefHeight="50.0" prefWidth="116.0" style="-fx-background-color: Black;" text="My Profile" textFill="#faf7f7">
          <font>
             <Font size="19.0" />
          </font>
