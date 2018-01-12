@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -31,6 +32,8 @@ public class CreateAccountController {
     @FXML private Text authenticationPrompt;
     @FXML private TextField authenticationPassword;
     @FXML private Button teacherAuthenticationCancel;
+    @FXML private PasswordField passwordStudent;
+    @FXML private PasswordField passwordTeacher;
 
     public void createAccountButton_student() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/CreateAccount_student.fxml"));
@@ -63,6 +66,9 @@ public class CreateAccountController {
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")){
             warningPromptStudent.setText("Please use a valid mail address");
         }
+        else if (passwordStudent.getText().isEmpty()){
+            warningPromptStudent.setText("Enter a valid password");
+        }
         else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/createAccountSuccesfully.fxml"));
             Parent root = loader.load();
@@ -80,6 +86,9 @@ public class CreateAccountController {
         else if (mailaddressTeacher.getText().isEmpty() || !mailaddressTeacher.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")){
             warningPromptTeacher.setText("Please use a valid mail address");
+        }
+        else if (passwordTeacher.getText().isEmpty()){
+            warningPromptStudent.setText("Enter a valid password");
         }
         else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacher_authentication.fxml"));
@@ -109,19 +118,19 @@ public class CreateAccountController {
     public void userChoiceCancelButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        CreateAccountController controller = loader.getController();
+        BeginScreensController controller = loader.getController();
         user_choice_cancel.getScene().setRoot(root);
     }
     public void createAccountStudentCancelButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        CreateAccountController controller = loader.getController();
+        BeginScreensController controller = loader.getController();
         createAccountStudentCancel.getScene().setRoot(root);
     }
     public void createAccountTeacherCancelButton() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        CreateAccountController controller = loader.getController();
+        BeginScreensController controller = loader.getController();
         createAccountTeacherCancel.getScene().setRoot(root);
     }
     public void TeacherAuthenticationCancelButton() throws IOException {

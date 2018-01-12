@@ -9,7 +9,7 @@
    <children>
       <Label fx:id="finalText" alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="188.0" prefHeight="68.0" prefWidth="446.0" style="-fx-background-color: green;" text="Well Done!" textFill="WHITE">
          <font>
-            <Font name="Georgia Pro" size="30.0" />
+            <Font size="30.0" />
          </font>
       </Label>
       <Button fx:id="returnButton" layoutX="139.0" layoutY="285.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="58.0" prefWidth="307.0" style="-fx-background-color: Black;" text="Return to main menu" textAlignment="CENTER" textFill="#f5f2f2">
@@ -19,7 +19,7 @@
       </Button>
       <Label fx:id="finalScore" layoutX="93.0" layoutY="36.0" prefHeight="164.0" prefWidth="484.0" style="-fx-background-color: green;" text="Score: 0/10" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Georgia Pro" size="75.0" />
+            <Font size="75.0" />
          </font>
       </Label>
    </children>
