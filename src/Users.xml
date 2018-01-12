@@ -2,17 +2,23 @@
 <MultiUsers>
     <Student>
         <FirstName>Andor</FirstName>
-        <LastName>Andor</LastName>
+        <LastName>Michels</LastName>
         <Password>77+977+9J++/ve+/ve+/ve+/vWIg77+977+977+9Xe+/vX59yaga77+9LkER77+9G++/vX8p77+9QRXvv70=</Password>
         <Salt>77+977+977+977+9Me+/ve+/vTjvv73vv70V0bUA77+977+977+9RO+/ve+/vS3QjXY=</Salt>
         <Email>a.m@gmail.nl</Email>
     </Student>
     <Teacher>
         <FirstName>Andy</FirstName>
-        <LastName>Andy</LastName>
+        <LastName>Zaidman</LastName>
         <Password>77+9Te+/vX1l77+977+9ZWo777+977+915zvv73vv73vv71HHu+/vVN177+9DxtbJO+/ve+/vUth77+9</Password>
         <Salt>T3Hvv70I77+977+9WmDvv70C77+9Pk0o77+977+9N++/ve+/ve+/ve+/ve+/vdi+</Salt>
         <Email>az@ziggo.nl</Email>
     </Teacher>
+    <Student>
+        <FirstName>Otto</FirstName>
+        <LastName>Visser</LastName>
+        <Password>JU9m77+977+9aO+/ve+/vTJU77+9fwRS77+977+9Ee+/vSYXOO+/vRbvv70SLiZcFg==</Password>
+        <Salt>TGEVLu+/ve+/ve+/vRnvv70r77+9GDFR77+9Be+/vWHvv73vv70F77+977+9EA==</Salt>
+        <Email>ov@trein.nl</Email>
+    </Student>
 </MultiUsers>
-

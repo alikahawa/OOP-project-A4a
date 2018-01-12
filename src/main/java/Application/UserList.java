@@ -150,7 +150,7 @@ public class UserList {
                 User.appendChild(FirstName);
 
                 Element LastName = doc.createElement("LastName");
-                LastName.appendChild(doc.createTextNode(user.getFirstName()));
+                LastName.appendChild(doc.createTextNode(user.getLastName()));
                 User.appendChild(LastName);
 
                 Element Password = doc.createElement("Password");
