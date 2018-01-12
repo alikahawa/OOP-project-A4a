@@ -17,7 +17,7 @@
             <Font size="27.0" />
          </font>
       </Button>
-      <Label fx:id="finalScore" layoutX="93.0" layoutY="36.0" prefHeight="164.0" prefWidth="414.0" style="-fx-background-color: green;" text="Score: 0/10" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="finalScore" layoutX="93.0" layoutY="36.0" prefHeight="164.0" prefWidth="484.0" style="-fx-background-color: green;" text="Score: 0/10" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Georgia Pro" size="75.0" />
          </font>

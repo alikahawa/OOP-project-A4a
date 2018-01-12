@@ -66,17 +66,58 @@ public class ClickablePictureTestController {
         correctButton.setPrefWidth(dx);
         correctButton.setPrefHeight(dy);
 
-        correctButton.setLayoutX(questionPicture.getLayoutX() + tmpx1);
+        correctButton.setLayoutX(questionPicture.getLayoutX() + tmpx1 - 20 );
         correctButton.setLayoutY(questionPicture.getLayoutY() + tmpy1);
 
-        
+        scoreCounter.setText("Score: " + score + "/" + examquestioncount);
+        progressBar();
     }
+
 
     public void correctlyClicked() throws IOException
-    {}
+    {
+        score++;
+        examquestioncount++;
+        scoreCounter.setText("Score: " + score + "/" + examquestioncount);
+
+        // display volgende vraag.
+        if (examquestioncount < 10) {
+            displayQuestion();
+        } else {
+            examDone();
+        }
+    }
     public void incorrectlyClicked() throws IOException{
+        score = score;
+        examquestioncount++;
+        scoreCounter.setText("Score: " + score + "/" + examquestioncount);
+
+        // display volgende vraag.
+        if (examquestioncount < 10) {
+            displayQuestion();
+        } else {
+            examDone();
+        }
     }
 
+    public void examDone() throws IOException {
+        int Result = score;
+
+        if (Result > 6) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/examPassed.fxml"));
+            Parent root = loader.load();
+            examDoneController controller = loader.getController();
+            controller.setFinalScore(Result);
+            correctButton.getScene().setRoot(root);
+        }
+        else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/examFailed.fxml"));
+            Parent root = loader.load();
+            examDoneController controller = loader.getController();
+            controller.setFinalScore(Result);
+            correctButton.getScene().setRoot(root);
+        }
+    }
 
     public void progressBar() {
         String imageString;
