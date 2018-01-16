@@ -7,9 +7,9 @@
             <Answers>
                 <Answer>Liam will meet his friends to play football</Answer>
                 <Answer>Liam does not have a swimming diploma</Answer>
-                <Answer>Liam is going to swim and is on his way to the pool at the moment</Answer>
+                <Answer>Liam is going to swim and is on his way to the pool</Answer>
             </Answers>
-            <RightAnswer>Liam is going to swim and is on his way to the pool at the moment</RightAnswer>
+            <RightAnswer>Liam is going to swim and is on his way to the pool</RightAnswer>
         </Question>
         <Question>
             <Text>Every sunday Nathalie visits her grandmother. They always bake cookies together. What is NOT correct?</Text>
@@ -36,10 +36,10 @@
             <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>In Delft there are no giraffes</Answer>
-                <Answer>There is an elephant born in Delft</Answer>
+                <Answer>There is a baby elephant in Delft</Answer>
                 <Answer>The zoo of Rotterdam does not have elephants</Answer>
             </Answers>
-            <RightAnswer>There is an elephant born in Delft</RightAnswer>
+            <RightAnswer>There is a baby elephant in Delft</RightAnswer>
         </Question>
         <Question>
             <Text>Maxime and Kirti play in a band together. Maxime is the singer and Kirti plays guitar. What is correct?</Text>
@@ -72,7 +72,7 @@
             <RightAnswer>Nathalie can only buy 2 books</RightAnswer>
         </Question>
         <Question>
-            <Text>Andor is at home and he wants to do 2 things: eat and go swimming. Eating takes him 1.50 hours and swimming takes him 2.00 hours. It's 21.00 and he has to sleep at 22.40. What is correct?</Text>
+            <Text>Andor is at home and he wants to do 2 things: eat and go swimming. Eating takes him 90 minutes and swimming takes him 2 hours. It's 21.00 and he has to sleep at 22.40. What is correct?</Text>
             <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Andor only has time to go swimming</Answer>
@@ -92,7 +92,7 @@
             <RightAnswer>Ali forgot his glasses at home</RightAnswer>
         </Question>
         <Question>
-            <Text>It's 12.45 and it's the lunch break at the TU Delft. Maxime has a lecture at 13.45. She takes 1.50 hours to have lunch. What is correct?</Text>
+            <Text>It's 12.45 and it's the lunch break at the TU Delft. Maxime has a lecture at 13.45. She takes 90 minutes to have lunch. What is correct?</Text>
             <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>Maxime will be late for her next lecture</Answer>
@@ -112,7 +112,7 @@
             <RightAnswer>12</RightAnswer>
         </Question>
         <Question>
-            <Text>Matthias drinks 1 bottle of water every 1.5 hours. Considering that there are 24 hours in a day, how many bottles does he finish?</Text>
+            <Text>Matthias drinks 1 bottle of water every 1 hour and 30 minutes. Considering that there are 24 hours in a day, how many bottles does he finish?</Text>
             <NumberOfAnswers>3</NumberOfAnswers>
             <Answers>
                 <Answer>16</Answer>
@@ -183,18 +183,128 @@
         </Question>
     </MultiQuestions>
     <PictureQuestions>
-        <Question>
-            <Text>push in the upper left corner</Text>
+	<Question>
+            <Text>push in the upper left1 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
-                <X1>80</X1>
-                <X2>100</X2>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left2 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left3 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left4 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left5 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left6 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left7 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left8 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left9 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left10 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
+                <Y1>0</Y1>
+                <Y2>20</Y2>
+            </Bounds>
+        </Question>
+
+	<Question>
+            <Text>push in the upper left11 corner</Text>
+            <Picture>testPicture1.png</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>0</X2>
                 <Y1>0</Y1>
                 <Y2>20</Y2>
             </Bounds>
         </Question>
     </PictureQuestions>
-    <DropDownQuestions>
+        <DropDownQuestions>
         <Question>
             <Text>What color is the sky when it's sunny outside?</Text>
             <Answers>

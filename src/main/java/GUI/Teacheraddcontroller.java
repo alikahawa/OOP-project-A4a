@@ -25,7 +25,7 @@ public class Teacheraddcontroller {
     public void fromTeacheraddToAddquestion() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Addquestion.fxml"));
         Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
+        TextTestController controller = loader.getController();
         addtextquestion.getScene().setRoot(root);
     }
 
@@ -36,7 +36,7 @@ public class Teacheraddcontroller {
     public void ToAddimage() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Loginpage1.fxml"));
         Parent root = loader.load();
-        BeginScreensController controller = loader.getController();
+        TextTestController controller = loader.getController();
         addimage.getScene().setRoot(root);
     }
 

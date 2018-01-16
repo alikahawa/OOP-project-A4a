@@ -14,6 +14,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 /**
@@ -35,6 +36,23 @@ public class UserList {
 
     public void add(User q) {
         userList.add(q);
+    }
+
+    public static boolean UserIsTeacher(User u)
+    {
+        return u instanceof Teacher;
+    }
+
+    public User getUser(String mail)
+    {
+        for (User i : userList)
+        {
+            if (i.getEmail().equals(mail))
+            {
+                return i;
+            }
+        }
+        return null;
     }
 
     /**
@@ -63,12 +81,14 @@ public class UserList {
 
                 Element tmpElement = (Element) nNode;
 
-                String userName = tmpElement.getElementsByTagName("UserName").item(0).getTextContent();
-                String password = tmpElement.getElementsByTagName("Password").item(0).getTextContent();
+                String firstName = tmpElement.getElementsByTagName("FirstName").item(0).getTextContent();
+                String lastName = tmpElement.getElementsByTagName("LastName").item(0).getTextContent();
+                String password = new String(Base64.getDecoder().decode(tmpElement.getElementsByTagName("Password").item(0).getTextContent()));
+                String salt = new String(Base64.getDecoder().decode(tmpElement.getElementsByTagName("Salt").item(0).getTextContent()));
                 String email = tmpElement.getElementsByTagName("Email").item(0).getTextContent();
 
                 // Creates a new Student with the elements in the Student element
-                userList.add(new Student(userName, password, email));
+                userList.add(new Student(firstName, lastName, password, salt, email));
             }
 
             // Same for teachers...
@@ -77,11 +97,13 @@ public class UserList {
 
                 Element tmpElement = (Element) nNode;
 
-                String userName = tmpElement.getElementsByTagName("UserName").item(0).getTextContent();
-                String password = tmpElement.getElementsByTagName("Password").item(0).getTextContent();
+                String firstName = tmpElement.getElementsByTagName("FirstName").item(0).getTextContent();
+                String lastName = tmpElement.getElementsByTagName("LastName").item(0).getTextContent();
+                String password = new String(Base64.getDecoder().decode(tmpElement.getElementsByTagName("Password").item(0).getTextContent()));
+                String salt = new String(Base64.getDecoder().decode(tmpElement.getElementsByTagName("Salt").item(0).getTextContent()));
                 String email = tmpElement.getElementsByTagName("Email").item(0).getTextContent();
 
-                userList.add(new Teacher(userName, password, email));
+                userList.add(new Teacher(firstName, lastName, password, salt, email));
             }
 
             // After all the Students and Teachers have been added, it returns the new UserList
@@ -123,13 +145,21 @@ public class UserList {
                 MultiUsers.appendChild(User);
 
                 // Adds the username, password and email to the user element
-                Element UserName = doc.createElement("UserName");
-                UserName.appendChild(doc.createTextNode(user.getUserName()));
-                User.appendChild(UserName);
+                Element FirstName = doc.createElement("FirstName");
+                FirstName.appendChild(doc.createTextNode(user.getFirstName()));
+                User.appendChild(FirstName);
+
+                Element LastName = doc.createElement("LastName");
+                LastName.appendChild(doc.createTextNode(user.getLastName()));
+                User.appendChild(LastName);
 
                 Element Password = doc.createElement("Password");
-                Password.appendChild(doc.createTextNode(user.getPassword()));
+                Password.appendChild(doc.createTextNode(Base64.getEncoder().encodeToString(user.getPasswordHash().getBytes())));
                 User.appendChild(Password);
+
+                Element Salt = doc.createElement("Salt");
+                Salt.appendChild(doc.createTextNode(Base64.getEncoder().encodeToString(user.getPasswordSalt().getBytes())));
+                User.appendChild(Salt);
 
                 Element Email = doc.createElement("Email");
                 Email.appendChild(doc.createTextNode(user.getEmail()));

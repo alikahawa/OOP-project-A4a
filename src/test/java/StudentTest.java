@@ -18,8 +18,8 @@ public class StudentTest {
      */
     @Test
     public void test_the_constructor() {
-        User Simo = new Student("simo","0123","simo@gmail.com");
-        assertTrue("User constructer is not working well", new Student("simo","","").getUserName().equals("simo"));
+        User Simo = new Student("simo", "lino","0123","simo@gmail.com");
+        assertTrue("User constructer is not working well", new Student("simo", "lino","","").getFirstName().equals("simo"));
     }
 
     /**
@@ -27,24 +27,24 @@ public class StudentTest {
      */
     @Test
     public void test_the_constructor1() {
-        User Simo = new Student("simo","0123","simo@gmail.com");
-        assertTrue("User constructer is not working well", new Student("simo","","simo@gmail.com").getEmail().equals("simo@gmail.com"));
+        User Simo = new Student("simo", "lino","0123","simo@gmail.com");
+        assertTrue("User constructer is not working well", new Student("simo", "lino","","simo@gmail.com").getEmail().equals("simo@gmail.com"));
     }
     /**
      * Test for the getter of the  password
      */
     @Test
     public void test_the_constructor2() {
-        User Simo = new Student("simo","0123","simo@gmail.com");
-        assertTrue("User constructer is not working well", new Student("simo","0123","simo@gmail.com").getPassword().equals("0123"));
+        User Simo = new Student("simo", "lino","0123","simo@gmail.com");
+        assertTrue("User constructer is not working well", new Student("simo", "lino","0123","simo@gmail.com").CheckPassword("0123"));
     }
     /**
      * Test the constructor
      */
     @Test
     public void test_the_constructor3(){
-        Student Simo = new Student("T","","");
-        assertFalse("User constructer is not working well",Simo.getUserName().equals("teacher"));
+        Student Simo = new Student("T", "S","","");
+        assertFalse("User constructer is not working well",Simo.getFirstName().equals("teacher"));
     }
 
     /**
@@ -52,7 +52,7 @@ public class StudentTest {
      */
     @Test
     public void test_the_constructor4(){
-        Student Simo = new Student("","","a@gmail.com");
+        Student Simo = new Student("", "","","a@gmail.com");
         assertFalse("User constructer is not working well",Simo.getEmail().equals("teacher"));
     }
 
@@ -61,8 +61,8 @@ public class StudentTest {
      */
     @Test
     public void test_the_constructor5(){
-        Student Simo = new Student("","01235","");
-        assertFalse("User constructer is not working well",Simo.getPassword().equals("teacher"));
+        Student Simo = new Student("", "","01235","");
+        assertFalse("User constructer is not working well",Simo.CheckPassword("teacher"));
     }
 
     /**
@@ -70,8 +70,8 @@ public class StudentTest {
      */
     @Test
     public void test_equals(){
-        Teacher S = new Teacher("1","1234","1@");
-        Student s1 = new Student("1","1234","1@");
+        Teacher S = new Teacher("1", "2","1234","1@");
+        Student s1 = new Student("1", "2","1234","1@");
         assertFalse("Equals method is not working well", s1.equals(S));
     }
     /**
@@ -79,8 +79,8 @@ public class StudentTest {
      */
     @Test
     public void test_equals1(){
-        Teacher S = new Teacher("2","1234","1@");
-        Student s1 = new Student("1","1234","1@");
+        Teacher S = new Teacher("2", "2","1234","1@");
+        Student s1 = new Student("1", "2","1234","1@");
         assertFalse("Equals method is not working well", s1.equals(S));
     }
     /**
@@ -88,8 +88,8 @@ public class StudentTest {
      */
     @Test
     public void test_equals2(){
-        Student S = new Student("1","1234","1@");
-        Student s1 = new Student("1","1234","1@");
+        Student S = new Student("1", "2","1234","1@");
+        Student s1 = new Student("1", "2","1234","1@");
         assertTrue("Equals method is not working well", s1.equals(S));
     }
     /**
@@ -97,8 +97,8 @@ public class StudentTest {
      */
     @Test
     public void test_equals4(){
-        Teacher S = new Teacher("1","1234","1@");
-        Student s1 = new Student("1","1234","1@");
+        Teacher S = new Teacher("1", "2","1234","1@");
+        Student s1 = new Student("1", "2","1234","1@");
         assertFalse("Equals method is not working well", s1.equals(S));
     }
     /**
@@ -106,8 +106,8 @@ public class StudentTest {
      */
     @Test
     public void test_equals5(){
-        Student S = new Student("1111","1234","1@");
-        Student s1 = new Student("1111","1234","1@");
+        Student S = new Student("1111", "2","1234","1@");
+        Student s1 = new Student("1111", "2","1234","1@");
         assertTrue("Equals method is not working well", s1.equals(S));
     }
 

@@ -1,40 +1,73 @@
 package Application;
 
 import java.util.Base64;
-import java.util.Objects;
+import java.security.SecureRandom;
+import java.security.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * An abstract class user with some getters and setters for all types of users
  */
 public abstract class User {
-    private String userName;
-    private String password;
+    private String firstName;
+    private String lastName;
+    private String passwordSalt;
+    private String passwordHash;
     private String email;
 
     /**
      * The constructor of an user
      *
-     * @param userName - the string username
+     * @param firstName - the string firstName
+     * @param lastName - the string lastName
      * @param password - the password of the username(preferably encrypted)
      * @param email    - the string email
      */
-    public User(String userName, String password, String email) {
+    public User(String firstName, String lastName, String password, String email) {
         this.email = email;
-        this.password = password;
-        this.userName = userName;
+        SecureRandom random = new SecureRandom();
+        byte bytes[] = new byte[24];
+        random.nextBytes(bytes);
+        this.passwordSalt = new String(bytes);
+        this.passwordHash = HashPassword(password, this.passwordSalt);
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public String getUserName() {
-        return userName;
+    /**
+     * The constructor of an user
+     *
+     * @param firstName - the string firstName
+     * @param lastName - the string lastName
+     * @param hashedPassword - the hashed password of the username
+     * @param salt - the salt used to hash the password
+     * @param email    - the string email
+     */
+    public User(String firstName, String lastName, String hashedPassword, String salt, String email) {
+        this.email = email;
+        this.passwordSalt = salt;
+        this.passwordHash = hashedPassword;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return passwordHash;
     }
+
+    public String getPasswordSalt() { return passwordSalt; }
 
     /**
      * A method that can encode strings
@@ -56,21 +89,40 @@ public abstract class User {
         return new String(Base64.getDecoder().decode(password));
     }
 
-    @Override
-    public int hashCode() {
+    /**
+     * A method that hashes a password using a secure hashing function
+     *
+     * @param password the password to hash
+     * @param salt the salt used to secure the hash
+     * @return the hashed password
+     */
+    public String HashPassword(String password, String salt)
+    {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest((salt + password).getBytes(StandardCharsets.UTF_8));
+            return new String(hash);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return "";
+    }
 
-        return Objects.hash(userName, password, email);
+    public boolean CheckPassword(String password)
+    {
+        return HashPassword(password, passwordSalt).equals(this.passwordHash);
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
         if (o instanceof User) {
-            if (((User) o).getUserName().equals(this.getUserName())) {
-                if (((User) o).getEmail().equals(this.getEmail())) {
-                    return true;
-                }
+            if (((User)o).getFirstName().equals(this.getFirstName()) &&
+                ((User)o).getFirstName().equals(this.getFirstName()) &&
+                ((User)o).getEmail().equals(this.getEmail()))
+            {
+                return true;
             }
         }
         return false;
