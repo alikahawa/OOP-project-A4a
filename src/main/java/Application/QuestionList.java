@@ -12,9 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -87,8 +85,8 @@ public class QuestionList {
                 if(this.qList.get(i) instanceof DropDown){
                     res.add((DropDown)this.qList.get(i));
                 }
-                else if(this.qList.get(i) instanceof CheckBox){
-                    res.add((CheckBox)this.qList.get(i));
+                else if(this.qList.get(i) instanceof CheckBoxQuestion){
+                    res.add((CheckBoxQuestion)this.qList.get(i));
                 }
             }
         }
@@ -257,7 +255,7 @@ public class QuestionList {
                     rightAnswerList.add(tmp);
                 }
 
-                questionList.add(new CheckBox(rightAnswerList, answersList, questionText));
+                questionList.add(new CheckBoxQuestion(rightAnswerList, answersList, questionText));
 
             }
 
@@ -396,8 +394,8 @@ public class QuestionList {
                     QuestionElement.appendChild(RightAnswerElement);
                 }
 
-                else if (q2 instanceof CheckBox) {
-                    CheckBox q = (CheckBox)q2;
+                else if (q2 instanceof CheckBoxQuestion) {
+                    CheckBoxQuestion q = (CheckBoxQuestion)q2;
 
                     // Question elements
                     Element QuestionElement = doc.createElement("Question");

@@ -1,9 +1,6 @@
 package GUI;
 
 import Application.*;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,11 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.text.Text;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -77,7 +72,7 @@ public class UITestController {
         tmpquestion = examQuestions.get(examquestioncount);
         if (tmpquestion instanceof DropDown) {
             type = 1;
-        } else if (tmpquestion instanceof CheckBox) {
+        } else if (tmpquestion instanceof CheckBoxQuestion) {
             type = 2;
         }
         questionText.setText(tmpquestion.getQuestion());
@@ -169,7 +164,7 @@ public class UITestController {
 
     public void submitCheckBoxPressed(){
         List<String> givenAnswers = new ArrayList<String>();
-        CheckBox checkBox = (CheckBox)tmpquestion;
+        CheckBoxQuestion checkBox = (CheckBoxQuestion)tmpquestion;
         if(checkBox1.isSelected()){
             givenAnswers.add(checkBox1.getText());
         }
