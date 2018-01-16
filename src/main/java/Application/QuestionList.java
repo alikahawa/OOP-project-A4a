@@ -61,6 +61,24 @@ public class QuestionList {
         return res;
     }
 
+    public ArrayList<UIQuestions> getUIList(){
+        ArrayList<UIQuestions> res =  new ArrayList<UIQuestions>();
+
+        for (int i =0; i< qList.size(); i++)
+        {
+            if(this.qList.get(i) instanceof UIQuestions){
+                if(this.qList.get(i) instanceof DropDown){
+                    res.add((DropDown)this.qList.get(i));
+                }
+                else if(this.qList.get(i) instanceof CheckBox){
+                    res.add((CheckBox)this.qList.get(i));
+                }
+            }
+        }
+
+        return res;
+    }
+
     public Question getQ(int i) {
         return qList.get(i);
     }

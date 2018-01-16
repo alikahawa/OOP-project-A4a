@@ -308,7 +308,7 @@
             </Answers>
             <RightAnswers>
                 <RightAnswer>answer 1</RightAnswer>
-                <RightAnswer> answer 2</RightAnswer>
+                <RightAnswer>answer 2</RightAnswer>
             </RightAnswers>
         </Question>
     </CheckBoxQuestions>

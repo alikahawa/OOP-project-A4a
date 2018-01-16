@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UIDropDownTestController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UITestController">
    <children>
       <Label fx:id="questionText" graphicTextGap="3.0" layoutX="35.0" layoutY="61.0" prefHeight="134.0" prefWidth="544.0" text="Testvraag?? sdfljsdfsdfkljklsdf sdflsdfjklsdfjklsdfjkl sdfjklsdfjklsdfjkl sdfjklsdfjklsdfjl" textOverrun="CLIP" wrapText="true">
          <font>
@@ -20,12 +21,16 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ImageView fx:id="progressbar" fitHeight="48.0" fitWidth="255.0" layoutX="34.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="progressbar" fitHeight="48.0" fitWidth="255.0" layoutX="35.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/0.png" />
          </image>
       </ImageView>
       <ChoiceBox fx:id="choiceBox" layoutX="214.0" layoutY="195.0" prefWidth="150.0" />
-      <Button fx:id="submitButton" layoutX="274.0" layoutY="236.0" mnemonicParsing="false" onAction="#submitButtonPressed" text="Submit" />
+      <Button fx:id="submitDropDown" layoutX="274.0" layoutY="236.0" mnemonicParsing="false" onAction="#submitDropDownPressed" text="Submit" />
+      <CheckBox fx:id="checkBox1" layoutX="238.0" layoutY="178.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox fx:id="checkBox2" layoutX="238.0" layoutY="199.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox fx:id="checkBox3" layoutX="238.0" layoutY="220.0" mnemonicParsing="false" text="CheckBox" />
+      <Button fx:id="submitCheckBox" layoutX="273.0" layoutY="261.0" mnemonicParsing="false" onAction="#submitCheckBoxPressed" text="Submit" />
    </children>
 </AnchorPane>

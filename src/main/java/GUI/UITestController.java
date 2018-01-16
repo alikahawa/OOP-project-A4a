@@ -23,7 +23,7 @@ import java.util.List;
 import javafx.collections.FXCollections;
 
 
-public class UIDropDownTestController {
+public class UITestController {
     int examquestioncount = 0;
     int score = 0;
     ArrayList<Question> tmpq1shuffled;
@@ -31,6 +31,7 @@ public class UIDropDownTestController {
     QuestionList tmpql;
     int answer;
     UIQuestions tmpquestion;
+    int type = 0;
 
     @FXML
     private ChoiceBox<String> choiceBox;
@@ -43,14 +44,22 @@ public class UIDropDownTestController {
     @FXML
     private ImageView progressbar;
     @FXML
-    private Button submitButton;
+    private Button submitDropDown;
+    @FXML
+    private Button submitCheckBox;
+    @FXML
+    private javafx.scene.control.CheckBox checkBox1;
+    @FXML
+    private javafx.scene.control.CheckBox checkBox2;
+    @FXML
+    private javafx.scene.control.CheckBox checkBox3;
 
     @FXML
     public void initialize() {
 
         QuestionList questionList = QuestionList.ReadFromXML("OOP.xml");
         questionList.shuffleQuestionList();
-        examQuestions = questionList.getDropDownList();
+        examQuestions = questionList.getUIList();
         Collections.shuffle(examQuestions);
         System.out.println("Hello world");
 
@@ -66,23 +75,42 @@ public class UIDropDownTestController {
     public void displayQuestion() {
         System.out.println("displaay");
         tmpquestion = examQuestions.get(examquestioncount);
-
+        if (tmpquestion instanceof DropDown) {
+            type = 1;
+        } else if (tmpquestion instanceof CheckBox) {
+            type = 2;
+        }
         questionText.setText(tmpquestion.getQuestion());
+        if (type == 1) {
+            checkBox1.setVisible(false);
+            checkBox2.setVisible(false);
+            checkBox3.setVisible(false);
+            submitCheckBox.setVisible(false);
 
-        choiceBox.setItems(FXCollections.observableArrayList("Select sth", tmpquestion.getAnswerList().get(0), tmpquestion.getAnswerList().get(1), tmpquestion.getAnswerList().get(2)));
-        choiceBox.getSelectionModel().selectFirst();
+            choiceBox.setVisible(true);
+            submitDropDown.setVisible(true);
 
-//        choiceBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-//            @Override
-//            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number number2) {
-//                DropDown tmpDrop = (DropDown) tmpquestion;
-//                if ((Integer) number2 == tmpDrop.getRightAnswer() + 1) {
-//                    right();
-//                } else if((Integer) number2 != 0){
-//                    wrong();
-//                }
-//            }
-//        });
+            choiceBox.setItems(FXCollections.observableArrayList("Select sth", tmpquestion.getAnswerList().get(0), tmpquestion.getAnswerList().get(1), tmpquestion.getAnswerList().get(2)));
+            choiceBox.getSelectionModel().selectFirst();
+        }
+
+        if(type == 2) {
+            checkBox1.setVisible(true);
+            checkBox2.setVisible(true);
+            checkBox3.setVisible(true);
+            submitCheckBox.setVisible(true);
+
+            choiceBox.setVisible(false);
+            submitDropDown.setVisible(false);
+
+            checkBox1.setSelected(false);
+            checkBox2.setSelected(false);
+            checkBox3.setSelected(false);
+
+            checkBox1.setText(tmpquestion.getAnswerList().get(0));
+            checkBox2.setText(tmpquestion.getAnswerList().get(1));
+            checkBox3.setText(tmpquestion.getAnswerList().get(2));
+        }
     }
 
     public void right() {
@@ -106,7 +134,6 @@ public class UIDropDownTestController {
         }
     }
 
-
     public void wrong() {
         // incorrecte antwoord score blijft gelijk
         score = score;
@@ -126,7 +153,7 @@ public class UIDropDownTestController {
         }
     }
 
-    public void submitButtonPressed() throws IOException {
+    public void submitDropDownPressed() throws IOException {
         System.out.println("Button Pressed");
         int choice = choiceBox.getSelectionModel().getSelectedIndex();
         System.out.println(choice);
@@ -140,6 +167,28 @@ public class UIDropDownTestController {
 
     }
 
+    public void submitCheckBoxPressed(){
+        List<String> givenAnswers = new ArrayList<String>();
+        CheckBox checkBox = (CheckBox)tmpquestion;
+        if(checkBox1.isSelected()){
+            givenAnswers.add(checkBox1.getText());
+        }
+        if(checkBox2.isSelected()){
+            givenAnswers.add(checkBox2.getText());
+        }
+        if(checkBox3.isSelected()){
+            givenAnswers.add(checkBox3.getText());
+        }
+        System.out.println(givenAnswers);
+        System.out.println(checkBox.checkAnswer(givenAnswers));
+        if(checkBox.checkAnswer(givenAnswers)){
+            right();
+        }
+        else{
+            wrong();
+        }
+    }
+
     public void examDone() throws IOException {
         int Result = score;
 
@@ -148,14 +197,14 @@ public class UIDropDownTestController {
             Parent root = loader.load();
             examDoneController controller = loader.getController();
             controller.setFinalScore(Result);
-            submitButton.getScene().setRoot(root);
+            submitDropDown.getScene().setRoot(root);
         }
         else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/examFailed.fxml"));
             Parent root = loader.load();
             examDoneController controller = loader.getController();
             controller.setFinalScore(Result);
-            submitButton.getScene().setRoot(root);
+            submitDropDown.getScene().setRoot(root);
         }
     }
 

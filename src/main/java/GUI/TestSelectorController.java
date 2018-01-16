@@ -29,9 +29,9 @@ public class TestSelectorController {
 
     public void goToStartOfUITest() throws IOException {
         System.out.println("Text-based test is not being loaded");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/UIDropDownExam.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/UIExam.fxml"));
         Parent root = loader.load();
-        UIDropDownTestController controller = loader.getController();
+        UITestController controller = loader.getController();
         UIBasedExamButton.getScene().setRoot(root);
     }
 }
