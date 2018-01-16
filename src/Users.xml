@@ -22,8 +22,10 @@
         <Email>ov@trein.nl</Email>
     </Student>
     <Teacher>
-        <UserName>user</UserName>
-        <Password>cGFzc3dvcmQ=</Password>
-        <Email>user@email.com</Email>
+        <FirstName>Teacher</FirstName>
+        <LastName>School</LastName>
+        <Password>J++/vVdI77+9LO+/ve+/vX8EOQAjfE7vv73vv73vv71EJgk+cBIh77+977+9DO+/ve+/vW9H</Password>
+        <Salt>77+977+9f3t+YW58z4grZQAf3p4e77+9ajltBDvvv70=</Salt>
+        <Email>user@gmail.com</Email>
     </Teacher>
 </MultiUsers>
