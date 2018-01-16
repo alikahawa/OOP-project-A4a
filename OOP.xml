@@ -57,7 +57,7 @@
             <Answers>
                 <Answer>Matthias is late</Answer>
                 <Answer>Matthias is on time</Answer>
-		<Answer>Matthias does not arrive</Answer>
+                <Answer>Matthias does not arrive</Answer>
             </Answers>
             <RightAnswer>Matthias is late</RightAnswer>
         </Question>
@@ -97,7 +97,7 @@
             <Answers>
                 <Answer>Maxime will be late for her next lecture</Answer>
                 <Answer>Maxime will be on time for her next lecture</Answer>
-		<Answer>Maxime stops with her study</Answer>
+                <Answer>Maxime stops with her study</Answer>
             </Answers>
             <RightAnswer>Maxime will be late for her next lecture</RightAnswer>
         </Question>
@@ -196,13 +196,94 @@
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
-            <Text>Example</Text>
+            <Text>Question 1</Text>
             <Answers>
-                <Answer>1</Answer>
-                <Answer>2</Answer>
-                <Answer>3</Answer>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
             </Answers>
-            <RightAnswer>1</RightAnswer>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 2</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 3</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 4</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 5</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 6</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 7</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 8</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 9</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Question 10</Text>
+            <Answers>
+                <Answer>This is answer 1</Answer>
+                <Answer>This is answer 2</Answer>
+                <Answer>This is answer 3</Answer>
+            </Answers>
+            <RightAnswer>This is answer 1</RightAnswer>
         </Question>
     </DropDownQuestions>
     <CheckBoxQuestions>
@@ -226,8 +307,8 @@
                 <Answer>answer 3</Answer>
             </Answers>
             <RightAnswers>
-               <RightAnswer>answer 1</RightAnswer>
-               <RightAnswer> answer 2</RightAnswer>
+                <RightAnswer>answer 1</RightAnswer>
+                <RightAnswer> answer 2</RightAnswer>
             </RightAnswers>
         </Question>
     </CheckBoxQuestions>
