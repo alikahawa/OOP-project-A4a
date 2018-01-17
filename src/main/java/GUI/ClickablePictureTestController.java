@@ -1,6 +1,5 @@
 package GUI;
 
-import Application.MultiQuestion;
 import Application.PictureQuestion;
 import Application.Question;
 import Application.QuestionList;
@@ -11,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import static java.lang.Math.abs;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -103,7 +101,7 @@ public class ClickablePictureTestController {
     public void examDone() throws IOException {
         int Result = score;
 
-        if (Result > 6) {
+        if (Result >= 6) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/examPassed.fxml"));
             Parent root = loader.load();
             examDoneController controller = loader.getController();
