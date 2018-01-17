@@ -20,6 +20,8 @@ public class TestSelectorController {
     @FXML private Button UIBasedExamButton;
     @FXML private Button back;
     @FXML private Button mypage;
+    @FXML private Button addDropDownButton;
+    @FXML private Button addCheckBoxButton;
 
     public void goToStartOfTextBasedTest() throws IOException {
         System.out.println("Text-based test is being loaded");
@@ -59,4 +61,28 @@ public class TestSelectorController {
         TextTestController controller = loader.getController();
         mypage.getScene().setRoot(root);
     }
+	
+	public void goToStartOfUITest() throws IOException {
+        System.out.println("Text-based test is not being loaded");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/UIExam.fxml"));
+        Parent root = loader.load();
+        UITestController controller = loader.getController();
+        UIBasedExamButton.getScene().setRoot(root);
+    }
+
+    public void addDropDown() throws IOException {
+        System.out.println("Text-based test is not being loaded");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/AddDropDown.fxml"));
+        Parent root = loader.load();
+        AddDropDownController controller = loader.getController();
+        UIBasedExamButton.getScene().setRoot(root);
+    }
+    public void addCheckBox() throws IOException {
+        System.out.println("Text-based test is not being loaded");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/AddCheckBox.fxml"));
+        Parent root = loader.load();
+        AddCheckBoxController controller = loader.getController();
+        UIBasedExamButton.getScene().setRoot(root);
+    }
+
 }

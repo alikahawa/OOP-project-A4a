@@ -304,64 +304,110 @@
             </Bounds>
         </Question>
     </PictureQuestions>
-    <DropDownQuestions>
+        <DropDownQuestions>
         <Question>
-            <Text>Example</Text>
+            <Text>What color is the sky when it's sunny outside?</Text>
             <Answers>
-                <Answer>1</Answer>
-                <Answer>2</Answer>
-                <Answer>3</Answer>
+                <Answer>black</Answer>
+                <Answer>grey</Answer>
+                <Answer>blue</Answer>
             </Answers>
-            <RightAnswer>1</RightAnswer>
+            <RightAnswer>blue</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Andor has to get to the train station, it takes him 5 minutes to get there by bike and 20 minutes to get there by foot. He decides to take the bike. How long does it take him to get there?</Text>
+            <Answers>
+                <Answer>20 min</Answer>
+                <Answer>5 min</Answer>
+                <Answer>5 hours</Answer>
+            </Answers>
+            <RightAnswer>5 min</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Matthias didn't go to school today because he was singing too loud and now his throat hurts: where didn't Matthias go today?</Text>
+            <Answers>
+                <Answer>school</Answer>
+                <Answer>hospital</Answer>
+                <Answer>home</Answer>
+            </Answers>
+            <RightAnswer>school</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Raymond is tall, Maxime is taller than Raymond and Kirti is taller than Maxime: who is the tallest?</Text>
+            <Answers>
+                <Answer>Kirti</Answer>
+                <Answer>Raymond</Answer>
+                <Answer>Maxime</Answer>
+            </Answers>
+            <RightAnswer>Kirti</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Every friday I go swimming and every saturday I go running. It's friday: what am I going to do?</Text>
+            <Answers>
+                <Answer>swim</Answer>
+                <Answer>run</Answer>
+                <Answer>swim and run</Answer>
+            </Answers>
+            <RightAnswer>swim</RightAnswer>
         </Question>
     </DropDownQuestions>
     <CheckBoxQuestions>
         <Question>
-            <Text>Example</Text>
+            <Text>Select all animals</Text>
             <Answers>
-                <Answer>1</Answer>
-                <Answer>2</Answer>
-                <Answer>3</Answer>
+                <Answer>dog</Answer>
+                <Answer>cat</Answer>
+                <Answer>carrot</Answer>
             </Answers>
             <RightAnswers>
-                <RightAnswer>
-                
-                
-                
-                
-                
-                1
-                2
-            
-            
-            
-            
-            
-            </RightAnswer>
+                <RightAnswer>dog</RightAnswer>
+                <RightAnswer>cat</RightAnswer>
             </RightAnswers>
         </Question>
         <Question>
-            <Text>What is right?</Text>
+            <Text>What things can you write with?</Text>
             <Answers>
-                <Answer>answer 1</Answer>
-                <Answer>answer 2</Answer>
-                <Answer>answer 3</Answer>
+                <Answer>a pen</Answer>
+                <Answer>a candle</Answer>
+                <Answer>tea</Answer>
             </Answers>
             <RightAnswers>
-                <RightAnswer>
-                
-                
-                
-                
-                
-                answer 1
-                answer 2
-            
-            
-            
-            
-            
-            </RightAnswer>
+                <RightAnswer>a pen</RightAnswer>
+            </RightAnswers>
+        </Question>
+        <Question>
+            <Text>Which of the options can you drink?</Text>
+            <Answers>
+                <Answer>water</Answer>
+                <Answer>coffee</Answer>
+                <Answer>chocolate milk</Answer>
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>water</RightAnswer>
+                <RightAnswer>coffee</RightAnswer>
+                <RightAnswer>chocolate milk</RightAnswer>
+            </RightAnswers>
+        </Question>
+        <Question>
+            <Text>If it's saturday today, yesterday would be:</Text>
+            <Answers>
+                <Answer>friday</Answer>
+                <Answer>monday</Answer>
+                <Answer>tuesday</Answer>
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>friday</RightAnswer>
+            </RightAnswers>
+        </Question>
+        <Question>
+            <Text>If it's 9:56am, what time would it be 5 minutes ago?</Text>
+            <Answers>
+                <Answer>9:51</Answer>
+                <Answer>10:01</Answer>
+                <Answer>4:56</Answer>
+            </Answers>
+            <RightAnswers>
+                <RightAnswer>9:51</RightAnswer>
             </RightAnswers>
         </Question>
     </CheckBoxQuestions>

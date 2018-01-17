@@ -88,6 +88,12 @@ public class Application {
                     int nQuestions = Integer.parseInt(sc.next());
                     tmpql.displayQuestionList(sc, nQuestions);
                     break;
+                case "3":
+                    for(Question question : tmpql.getQList()){
+                        if(question instanceof UIQuestions){
+                            System.out.println(question.getQuestion());
+                        }
+                    }
                  default:
                      System.out.println("Try another choice");
                      continue;
