@@ -65,7 +65,6 @@ public class CreateAccountController {
      * @throws IOException
      */
     public void createAccount_button_finished_student() throws IOException {
-        //System.out.println(firstname.getText());
 
         if (firstnameStudent.getText().isEmpty() || !firstnameStudent.getText().matches("[A-Za-z0-9_]+")){
             warningPromptStudent.setText("Please only use letters and numbers for first name");

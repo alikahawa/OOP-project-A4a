@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BeginScreensController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BeginScreensController">
    <children>
       <GridPane layoutX="118.0" layoutY="44.0" prefHeight="106.0" prefWidth="378.0">
         <columnConstraints>
@@ -45,6 +45,6 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Label fx:id="msglb" layoutX="115.0" layoutY="173.0" prefHeight="17.0" prefWidth="378.0" text="test" />
+      <Label fx:id="msglb" layoutX="115.0" layoutY="173.0" prefHeight="17.0" prefWidth="378.0" />
    </children>
 </AnchorPane>

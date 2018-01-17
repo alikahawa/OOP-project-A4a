@@ -1,9 +1,6 @@
 package GUI;
 
-import Application.MultiQuestion;
-import Application.Question;
-import Application.UserList;
-import Application.User;
+import Application.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 
 public class BeginScreensController {
@@ -51,15 +48,30 @@ public class BeginScreensController {
         String givenMail = EMail.getText();
         String givenPassword = Password.getText();
         User tmpu = userList.getUser(givenMail);
+
+        System.out.println();
+        System.out.println();
         if (tmpu != null)
         {
             if (tmpu.CheckPassword(givenPassword))
             {
-                msglb.setText("");
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Difficultyselectionpage.fxml"));
-                Parent root = loader.load();
-                TestSelectorController controller = loader.getController();
-                login.getScene().setRoot(root);
+                if (userList.getUser(givenMail) instanceof Teacher) {
+                    msglb.setText("");
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
+                    Parent root = loader.load();
+                    TestSelectorController controller = loader.getController();
+                    login.getScene().setRoot(root);
+                }
+                else if (userList.getUser(givenMail) instanceof Student){
+                    msglb.setText("");
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Studentpage.fxml"));
+                    Parent root = loader.load();
+                    TestSelectorController controller = loader.getController();
+                    login.getScene().setRoot(root);
+                }
+                else {
+                    msglb.setText("You are not a user or a teacher, maybe transgender?");
+                }
             }
             else
             {
