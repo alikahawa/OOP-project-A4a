@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 public class Profilecontroller {
-    @FXML private Button ToExams;
+    @FXML private Button ToExamsTeacher;
     @FXML private Button Logout;
     @FXML private Button Edit;
     @FXML private CheckBox  username;
@@ -20,7 +20,7 @@ public class Profilecontroller {
     @FXML private TextField usernametext;
     @FXML private TextField passwordtext;
     @FXML private TextField emailAddresstext;
-
+    @FXML private Button ToExamsStudent;
 
         /*
     Logout and go to welcome screen
@@ -37,11 +37,17 @@ public class Profilecontroller {
     Navigate to the exams
      */
 
-    public void goToExams() throws IOException {
+    public void goToExamsTeacher() throws IOException {
         System.out.println("Text-based test is being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
         Parent root = loader.load();
-        ToExams.getScene().setRoot(root);
+        ToExamsTeacher.getScene().setRoot(root);
+    }
+    public void goToExamsStudent() throws IOException {
+        System.out.println("Text-based test is being loaded");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Studentpage.fxml"));
+        Parent root = loader.load();
+        ToExamsStudent.getScene().setRoot(root);
     }
 
     /*

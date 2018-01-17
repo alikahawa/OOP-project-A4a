@@ -59,7 +59,7 @@ public class TestSelectorController {
     }
     public void goToMypageteacher() throws IOException {
         System.out.println("Text-based test is being loaded");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/StudentProfile.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/TeacherProfile.fxml"));
         Parent root = loader.load();
         Profilecontroller controller = loader.getController();
         mypageteacher.getScene().setRoot(root);
