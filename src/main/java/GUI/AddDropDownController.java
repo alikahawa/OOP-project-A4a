@@ -1,13 +1,10 @@
 package GUI;
 
 import Application.*;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,7 +53,7 @@ public class AddDropDownController {
 
         Optional<ButtonType> result = alert.showAndWait();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Difficultyselectionpage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -68,7 +65,7 @@ public class AddDropDownController {
     }
 
     public void goBack(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Difficultyselectionpage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
         Parent root = null;
         try {
             root = loader.load();

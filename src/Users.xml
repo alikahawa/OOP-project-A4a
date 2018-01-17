@@ -7,13 +7,6 @@
         <Salt>77+977+977+977+9Me+/ve+/vTjvv73vv70V0bUA77+977+977+9RO+/ve+/vS3QjXY=</Salt>
         <Email>a.m@gmail.nl</Email>
     </Student>
-    <Teacher>
-        <FirstName>Andy</FirstName>
-        <LastName>Zaidman</LastName>
-        <Password>77+9Te+/vX1l77+977+9ZWo777+977+915zvv73vv73vv71HHu+/vVN177+9DxtbJO+/ve+/vUth77+9</Password>
-        <Salt>T3Hvv70I77+977+9WmDvv70C77+9Pk0o77+977+9N++/ve+/ve+/ve+/ve+/vdi+</Salt>
-        <Email>az@ziggo.nl</Email>
-    </Teacher>
     <Student>
         <FirstName>Otto</FirstName>
         <LastName>Visser</LastName>
@@ -22,10 +15,24 @@
         <Email>ov@trein.nl</Email>
     </Student>
     <Teacher>
+        <FirstName>Andy</FirstName>
+        <LastName>Zaidman</LastName>
+        <Password>77+9Te+/vX1l77+977+9ZWo777+977+915zvv73vv73vv71HHu+/vVN177+9DxtbJO+/ve+/vUth77+9</Password>
+        <Salt>T3Hvv70I77+977+9WmDvv70C77+9Pk0o77+977+9N++/ve+/ve+/ve+/ve+/vdi+</Salt>
+        <Email>az@ziggo.nl</Email>
+    </Teacher>
+    <Teacher>
         <FirstName>Teacher</FirstName>
         <LastName>School</LastName>
         <Password>J++/vVdI77+9LO+/ve+/vX8EOQAjfE7vv73vv73vv71EJgk+cBIh77+977+9DO+/ve+/vW9H</Password>
         <Salt>77+977+9f3t+YW58z4grZQAf3p4e77+9ajltBDvvv70=</Salt>
         <Email>user@gmail.com</Email>
     </Teacher>
+    <Student>
+        <FirstName>Raymond</FirstName>
+        <LastName>henk</LastName>
+        <Password>77+9ce+/vWTvv71Uw7h3KhEYBu+/vQfvv73vv70mejBW77+977+9XUPvv73vv73vv71wO++/ve+/vQ==</Password>
+        <Salt>Ce+/vX5OKE9D77+9YULvv70KYg8lYkrQnGHvv70VAQU=</Salt>
+        <Email>raymond@gmail.com</Email>
+    </Student>
 </MultiUsers>

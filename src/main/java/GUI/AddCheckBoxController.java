@@ -8,7 +8,6 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,7 +70,7 @@ public class AddCheckBoxController {
 
         Optional<ButtonType> result = alert.showAndWait();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Difficultyselectionpage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
         Parent root = null;
         try {
             root = loader.load();
@@ -84,7 +83,7 @@ public class AddCheckBoxController {
     }
 
     public void goBack(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Difficultyselectionpage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
         Parent root = null;
         try {
             root = loader.load();

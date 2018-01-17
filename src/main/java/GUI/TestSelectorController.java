@@ -1,27 +1,23 @@
 package GUI;
 
-import Application.MultiQuestion;
-import Application.Question;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 
 public class TestSelectorController {
 
     @FXML private Button TextBasedExamButton;
-    @FXML private Button PictureBasedExamButton1;
     @FXML private Button ClickablePictureBasedExamButton;
     @FXML private Button UIBasedExamButton;
     @FXML private Button back;
     @FXML private Button mypage;
     @FXML private Button addDropDownButton;
     @FXML private Button addCheckBoxButton;
+    @FXML private Button mypageteacher;
 
     public void goToStartOfTextBasedTest() throws IOException {
         System.out.println("Text-based test is being loaded");
@@ -58,10 +54,17 @@ public class TestSelectorController {
         System.out.println("Text-based test is being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/StudentProfile.fxml"));
         Parent root = loader.load();
-        TextTestController controller = loader.getController();
+        Profilecontroller controller = loader.getController();
         mypage.getScene().setRoot(root);
     }
-	
+    public void goToMypageteacher() throws IOException {
+        System.out.println("Text-based test is being loaded");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/StudentProfile.fxml"));
+        Parent root = loader.load();
+        Profilecontroller controller = loader.getController();
+        mypageteacher.getScene().setRoot(root);
+    }
+
 	public void goToStartOfUITest() throws IOException {
         System.out.println("Text-based test is not being loaded");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/UIExam.fxml"));
