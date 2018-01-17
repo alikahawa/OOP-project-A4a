@@ -22,7 +22,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="mypage" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMypagestudent" prefHeight="50.0" prefWidth="116.0" style="-fx-background-color: Black;" text="My Profile" textFill="#faf7f7">
+      <Button fx:id="mypage" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMypagestudent" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: Black;" text="My Teacher" textFill="#faf7f7">
          <font>
             <Font size="19.0" />
          </font>

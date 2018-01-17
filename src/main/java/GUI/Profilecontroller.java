@@ -13,13 +13,6 @@ import java.io.IOException;
 public class Profilecontroller {
     @FXML private Button ToExamsTeacher;
     @FXML private Button Logout;
-    @FXML private Button Edit;
-    @FXML private CheckBox  username;
-    @FXML private CheckBox  password;
-    @FXML private CheckBox  emailaddress;
-    @FXML private TextField usernametext;
-    @FXML private TextField passwordtext;
-    @FXML private TextField emailAddresstext;
     @FXML private Button ToExamsStudent;
 
         /*

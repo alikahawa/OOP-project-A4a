@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 
 public class Addimagequestioncontroller {
-
     @FXML private Button mypage;
     @FXML private Button save;
     @FXML private Button logout;
