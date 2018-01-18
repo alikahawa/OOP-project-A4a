@@ -22,12 +22,13 @@ public class Teacheraddcontroller {
     This method will make the butoon add text question navigate the teacher to the screen where
     the question can be added
      */
+    /*
     public void fromTeacheraddToAddquestion() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Addquestion.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ddquestion.fxml"));
         Parent root = loader.load();
         TextTestController controller = loader.getController();
         addtextquestion.getScene().setRoot(root);
-    }
+    } */
 
     /*
     This method is for the add image button, It will navigate the teacher to another screen where he/she can upload

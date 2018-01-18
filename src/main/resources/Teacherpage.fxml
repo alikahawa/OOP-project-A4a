@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TestSelectorController">
    <children>
-      <Button fx:id="TextBasedExamButton" layoutX="152.0" layoutY="76.0" mnemonicParsing="false" onAction="#goToStartOfTextBasedTest" prefHeight="66.0" prefWidth="298.0" style="-fx-background-color: Black;" text="Text Exam" textFill="#f8f6f6">
+      <Button fx:id="TextBasedExamButton" layoutX="147.0" layoutY="76.0" mnemonicParsing="false" onAction="#goToStartOfTextBasedTest" prefHeight="66.0" prefWidth="298.0" style="-fx-background-color: Black;" text="Text Exam" textFill="#f8f6f6">
          <font>
             <Font size="26.0" />
          </font>
@@ -39,5 +39,7 @@
             <Font size="36.0" />
          </font>
       </Text>
+      <Button fx:id="addTextQuestionButton" layoutX="9.0" layoutY="96.0" mnemonicParsing="false" onAction="#addTextQuestion" prefHeight="26.0" prefWidth="133.0" text="Add Text Question" />
+      <Button fx:id="addClickablePictureButton" layoutX="9.0" layoutY="178.0" mnemonicParsing="false" onAction="#addClickablePicture" prefHeight="26.0" prefWidth="133.0" text="Add Clickable Picture" />
    </children>
 </AnchorPane>

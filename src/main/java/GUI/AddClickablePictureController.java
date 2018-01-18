@@ -1,44 +1,42 @@
 package GUI;
 
-import Application.*;
+import Application.MultiQuestion;
+import Application.QuestionList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
 
 
-public class AddDropDownController {
+public class AddClickablePictureController {
 
     private QuestionList questionList = QuestionList.ReadFromXML("OOP.xml");
 
     @FXML
-    private TextField rightAnswer;
-    @FXML
-    private TextField wrongAnswer1;
-    @FXML
-    private TextField wrongAnswer2;
-    @FXML
     private TextArea questionText;
     @FXML
+    private Button uploadImageButton;
+    @FXML
     private Button saveButton;
+    @FXML
+    private ImageView questionPicture;
 
     public void addQuestion(){
-        List<String> answers = new ArrayList<String>();
-        answers.add(wrongAnswer1.getText());
-        answers.add(wrongAnswer2.getText());
-        answers.add(rightAnswer.getText());
-        Collections.shuffle(answers);
-        int index = answers.indexOf(rightAnswer.getText());
-        DropDown dropDown = new DropDown(index, answers, questionText.getText());
-        System.out.println(dropDown.getAnswerList() + "\n" + dropDown.getRightAnswer() + "\n" + dropDown.getQuestion());
 
-        questionList.add(dropDown);
+        //questionList.add(pictureQuestion);
         questionList.WriteToXML("OOP.xml");
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -71,4 +69,24 @@ public class AddDropDownController {
         saveButton.getScene().setRoot(root);
     }
 
+    public void uploadImage() throws IOException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Picture");
+
+        Path currentRelativePath = Paths.get("");
+        String s = currentRelativePath.toAbsolutePath().toString();
+
+        fileChooser.setInitialDirectory(
+                new File(s)
+            );
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+                new FileChooser.ExtensionFilter("PNG", "*.png")
+            );
+
+        File tmp = fileChooser.showOpenDialog(saveButton.getScene().getWindow());
+        File tmp2 = new File(s);
+        Files.copy(tmp.toPath(), tmp2.toPath());
+    }
 }

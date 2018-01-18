@@ -1,6 +1,9 @@
 package GUI;
 
-import Application.*;
+import Application.DropDown;
+import Application.MultiQuestion;
+import Application.QuestionList;
+import com.sun.org.apache.xpath.internal.operations.Mult;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class AddDropDownController {
+public class AddTextController {
 
     private QuestionList questionList = QuestionList.ReadFromXML("OOP.xml");
 
@@ -29,16 +32,16 @@ public class AddDropDownController {
     private Button saveButton;
 
     public void addQuestion(){
-        List<String> answers = new ArrayList<String>();
+        ArrayList<String> answers = new ArrayList<String>();
         answers.add(wrongAnswer1.getText());
         answers.add(wrongAnswer2.getText());
         answers.add(rightAnswer.getText());
         Collections.shuffle(answers);
         int index = answers.indexOf(rightAnswer.getText());
-        DropDown dropDown = new DropDown(index, answers, questionText.getText());
-        System.out.println(dropDown.getAnswerList() + "\n" + dropDown.getRightAnswer() + "\n" + dropDown.getQuestion());
+        MultiQuestion multiQuestion = new MultiQuestion(index, answers, questionText.getText());
+        System.out.println(multiQuestion.getAnswerList() + "\n" + multiQuestion.getRightAnswer() + "\n" + multiQuestion.getQuestion());
 
-        questionList.add(dropDown);
+        questionList.add(multiQuestion);
         questionList.WriteToXML("OOP.xml");
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
