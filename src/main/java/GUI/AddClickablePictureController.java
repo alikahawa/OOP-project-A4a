@@ -122,8 +122,8 @@ public class AddClickablePictureController {
 
         File tmp = fileChooser.showOpenDialog(saveButton.getScene().getWindow());
 
-        System.out.println(s + "\\" +  new Date().toString());
-        File tmp2 = new File(s + "\\" +  new Date().toString().replaceAll(" ", "").replaceAll(":", ""));
+        String name =  new Date().toString().replaceAll(" ", "").replaceAll(":", "");
+        File tmp2 = new File(s + "\\" + name);
         tmp2.getParentFile().mkdirs();
         tmp2.createNewFile();
 
@@ -149,30 +149,19 @@ public class AddClickablePictureController {
         Image image2 = new Image(uploadedImage);
         questionPicture.setImage(image2);
 
-        getCoordinates(0);
+        uploadedImage = "images\\" + name;
 
-        clickButtonXY.setPrefHeight(y2 - y1);
-        clickButtonXY.setPrefWidth(x2 - x1);
-        clickButtonXY.setLayoutX(x1);
-        clickButtonXY.setLayoutY(y1);
+        getTopLeft();
 
         System.out.println("HOI");
     }
 
-    private void getCoordinates(int i) {
-        ArrayList<String> cornerList = new ArrayList<String>();
-        cornerList.add("lower left");
-        cornerList.add("upper left");
-        cornerList.add("lower right");
-        cornerList.add("upper right");
+    public void getTopLeft() {
 
-        teller = i;
-
-        String corner = cornerList.get(i);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
-        alert.setContentText("Click " + corner + " corner of correct part");
+        alert.setContentText("Click top left corner of correct part");
 
         Optional<ButtonType> result = alert.showAndWait();
 
@@ -183,31 +172,42 @@ public class AddClickablePictureController {
                 mousex = (int) Math.floor(mouseEvent.getX() - questionPicture.getX());
                 mousey = (int) Math.floor(mouseEvent.getY() - questionPicture.getY());
 
-                if (corner == "lower left")
-                {
-                    x1 = mousex;
-                }
-                if (corner == "upper left")
-                {
-                    x2 = mousex;
-                }
-                if (corner == "lower right")
-                {
-                    y1 = mousey;
-                }
-                if (corner == "upper right")
-                {
-                    y2 = mousey;
-                }
-
-                teller++;
-
-                if (teller < 4) {
-                    getCoordinates(teller);
-                }
+                x1 = mousex;
+                y1 = mousey;
+                getLowerRight();
+                System.out.println("x1 is: " + x1 + " y1 is: " + y1);
             }
         });
     }
 
+    public void getLowerRight() {
 
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Click bottom right corner of correct part");
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        questionPicture.setOnMouseReleased(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+
+                mousex = (int) Math.floor(mouseEvent.getX() - questionPicture.getX());
+                mousex = (int) Math.floor(mouseEvent.getX());
+                mousey = (int) Math.floor(mouseEvent.getY() - questionPicture.getY());
+                mousey = (int) Math.floor(mouseEvent.getY());
+
+                x2 = mousex;
+                y2 = mousey;
+
+                System.out.println("x2 is: " + x2 + " y2 is: " + y2);
+
+                clickButtonXY.setPrefHeight(y2 - y1);
+                clickButtonXY.setPrefWidth(x2 - x1);
+                clickButtonXY.setLayoutX(x1 + questionPicture.getX()+ 14);
+                clickButtonXY.setLayoutY(y1 + questionPicture.getY()+ 55);
+            }
+        });
+    }
 }

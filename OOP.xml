@@ -194,113 +194,33 @@
     </MultiQuestions>
     <PictureQuestions>
         <Question>
-            <Text>push in the upper left1 corner</Text>
-            <Picture>testPicture1.png</Picture>
+            <Text>Click andys mouth</Text>
+            <Picture>images\ThuJan18202633CET2018</Picture>
             <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
+                <X1>99</X1>
+                <X2>168</X2>
+                <Y1>168</Y1>
+                <Y2>192</Y2>
             </Bounds>
         </Question>
         <Question>
-            <Text>push in the upper left2 corner</Text>
-            <Picture>testPicture1.png</Picture>
+            <Text>Click the happy horse</Text>
+            <Picture>images\ThuJan18203125CET2018</Picture>
             <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
+                <X1>8</X1>
+                <X2>177</X2>
+                <Y1>21</Y1>
+                <Y2>218</Y2>
             </Bounds>
         </Question>
         <Question>
-            <Text>push in the upper left3 corner</Text>
-            <Picture>testPicture1.png</Picture>
+            <Text>Click his left ear</Text>
+            <Picture>images\ThuJan18203346CET2018</Picture>
             <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left4 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left5 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left6 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left7 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left8 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left9 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left10 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left11 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
+                <X1>18</X1>
+                <X2>60</X2>
+                <Y1>121</Y1>
+                <Y2>177</Y2>
             </Bounds>
         </Question>
     </PictureQuestions>
