@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class ClickablePictureTestController {
 
     @FXML private Button correctButton;
-    @FXML private Button incorrectButton;
     @FXML private Label questionText;
     @FXML private Label scoreCounter;
     @FXML private ImageView progressbar;
