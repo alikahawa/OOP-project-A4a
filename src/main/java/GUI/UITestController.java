@@ -31,6 +31,12 @@ public class UITestController {
     @FXML
     private ChoiceBox<String> choiceBox;
 
+    @FXML private Button answerA;
+    @FXML private Button answerB;
+    @FXML private Button answerC;
+    @FXML private Label answerAText;
+    @FXML private Label answerBText;
+    @FXML private Label answerCText;
     @FXML
     private Label questionText;
     @FXML
@@ -74,6 +80,8 @@ public class UITestController {
             type = 1;
         } else if (tmpquestion instanceof CheckBoxQuestion) {
             type = 2;
+        } else if( tmpquestion instanceof UITextQuestion) {
+            type = 3;
         }
         questionText.setText(tmpquestion.getQuestion());
         if (type == 1) {
@@ -81,6 +89,13 @@ public class UITestController {
             checkBox2.setVisible(false);
             checkBox3.setVisible(false);
             submitCheckBox.setVisible(false);
+
+            answerA.setVisible(false);
+            answerB.setVisible(false);
+            answerC.setVisible(false);
+            answerAText.setVisible(false);
+            answerBText.setVisible(false);
+            answerCText.setVisible(false);
 
             choiceBox.setVisible(true);
             submitDropDown.setVisible(true);
@@ -102,9 +117,68 @@ public class UITestController {
             checkBox2.setSelected(false);
             checkBox3.setSelected(false);
 
+            answerA.setVisible(false);
+            answerB.setVisible(false);
+            answerC.setVisible(false);
+            answerAText.setVisible(false);
+            answerBText.setVisible(false);
+            answerCText.setVisible(false);
+
             checkBox1.setText(tmpquestion.getAnswerList().get(0));
             checkBox2.setText(tmpquestion.getAnswerList().get(1));
             checkBox3.setText(tmpquestion.getAnswerList().get(2));
+        }
+
+        if(type == 3){
+            choiceBox.setVisible(false);
+            submitDropDown.setVisible(false);
+
+            checkBox1.setSelected(false);
+            checkBox2.setSelected(false);
+            checkBox3.setSelected(false);
+
+            answerA.setVisible(true);
+            answerB.setVisible(true);
+            answerC.setVisible(true);
+            answerAText.setVisible(true);
+            answerBText.setVisible(true);
+            answerCText.setVisible(true);
+
+            checkBox1.setVisible(false);
+            checkBox2.setVisible(false);
+            checkBox3.setVisible(false);
+            submitCheckBox.setVisible(false);
+
+            answerAText.setText(tmpquestion.getAnswerList().get(0));
+            answerBText.setText(tmpquestion.getAnswerList().get(1));
+            answerCText.setText(tmpquestion.getAnswerList().get(2));
+        }
+    }
+
+    public void answerAPressed() throws IOException {
+        UITextQuestion tmpUI = (UITextQuestion)tmpquestion;
+        if ( 0 == tmpUI.getRightAnswer()) {
+            right();
+        } else {
+            wrong();
+        }
+    }
+
+    public void answerBPressed() throws IOException {
+        UITextQuestion tmpUI = (UITextQuestion) tmpquestion;
+        if (1 == tmpUI.getRightAnswer()) {
+            right();
+        } else {
+            wrong();
+        }
+    }
+
+    public void answerCPressed() throws IOException {
+        UITextQuestion tmpUI = (UITextQuestion) tmpquestion;
+        if (2 == tmpUI.getRightAnswer()) {
+            right();
+        } else {
+            wrong();
         }
     }
 

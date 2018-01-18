@@ -81,6 +81,14 @@ public class TestSelectorController {
         AddDropDownController controller = loader.getController();
         UIBasedExamButton.getScene().setRoot(root);
     }
+
+    public void addUIText() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/AddUIText.fxml"));
+        Parent root = loader.load();
+        AddUITextController controller = loader.getController();
+        UIBasedExamButton.getScene().setRoot(root);
+    }
+
     public void addCheckBox() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/AddCheckBox.fxml"));
         Parent root = loader.load();

@@ -88,6 +88,9 @@ public class QuestionList {
                 else if(this.qList.get(i) instanceof CheckBoxQuestion){
                     res.add((CheckBoxQuestion)this.qList.get(i));
                 }
+                else if(this.qList.get(i) instanceof UITextQuestion){
+                    res.add((UITextQuestion)this.qList.get(i));
+                }
             }
         }
 
@@ -156,6 +159,7 @@ public class QuestionList {
             Element PictureQuestionsElement = (Element)doc.getElementsByTagName("PictureQuestions").item(0);
             Element DropDownElement = (Element)doc.getElementsByTagName("DropDownQuestions").item(0);
             Element CheckBoxElement = (Element)doc.getElementsByTagName("CheckBoxQuestions").item(0);
+            Element UITextQuestionElement = (Element)doc.getElementsByTagName("UITextQuestions").item(0);
 
             NodeList nList = MultiQuestionsElement.getElementsByTagName("Question");
 
@@ -229,6 +233,32 @@ public class QuestionList {
 
         }
 
+            nList = UITextQuestionElement.getElementsByTagName("Question");
+
+            for (int temp = 0; temp < nList.getLength(); temp++) {
+                Node nNode = nList.item(temp);
+
+                Element tmpElement = (Element) nNode;
+                String questionText = tmpElement.getElementsByTagName("Text").item(0).getTextContent();
+                String rightAnswerString = tmpElement.getElementsByTagName("RightAnswer").item(0).getTextContent();
+                int rightAnswerIndex = 0;
+
+                ArrayList<String> answersList = new ArrayList<>();
+
+                NodeList answersNodeList = tmpElement.getElementsByTagName("Answer");
+
+                for (int i = 0; i < 3; i++) {
+                    String tmp = answersNodeList.item(i).getTextContent();
+                    if (tmp.equals(rightAnswerString)) {
+                        rightAnswerIndex = i;
+                    }
+                    answersList.add(tmp);
+                }
+
+                questionList.add(new UITextQuestion(rightAnswerIndex, answersList, questionText));
+
+            }
+
         nList = CheckBoxElement.getElementsByTagName("Question");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -285,6 +315,8 @@ public class QuestionList {
             QuestionsElement.appendChild(PictureQuestionsElement);
             Element DropDownElement = doc.createElement("DropDownQuestions");
             QuestionsElement.appendChild(DropDownElement);
+            Element UITextQuestionElement = doc.createElement("UITextQuestions");
+            QuestionsElement.appendChild(UITextQuestionElement);
             Element CheckBoxElement = doc.createElement("CheckBoxQuestions");
             QuestionsElement.appendChild(CheckBoxElement);
 
@@ -371,6 +403,36 @@ public class QuestionList {
                     // Question elements
                     Element QuestionElement = doc.createElement("Question");
                     DropDownElement.appendChild(QuestionElement);
+
+                    //Text element
+                    Element TextElement = doc.createElement("Text");
+                    TextElement.appendChild(doc.createTextNode(q.getQuestion()));
+                    QuestionElement.appendChild(TextElement);
+
+                    //Answers element
+                    Element AnswersElement = doc.createElement("Answers");
+                    QuestionElement.appendChild(AnswersElement);
+
+                    for (String s : q.getAnswerList()) {
+                        //Answer element
+                        Element AnswerElement = doc.createElement("Answer");
+                        AnswerElement.appendChild(doc.createTextNode(s));
+                        AnswersElement.appendChild(AnswerElement);
+                    }
+
+                    //RightAnswer element
+                    Element RightAnswerElement = doc.createElement("RightAnswer");
+                    RightAnswerElement.appendChild(doc.createTextNode(String.valueOf(q.getAnswerList().get(q.getRightAnswer()))));
+                    QuestionElement.appendChild(RightAnswerElement);
+                }
+
+                else if (q2 instanceof UITextQuestion) {
+                    UITextQuestion q = (UITextQuestion) q2;
+
+                    // Question elements
+                    // Question elements
+                    Element QuestionElement = doc.createElement("Question");
+                    UITextQuestionElement.appendChild(QuestionElement);
 
                     //Text element
                     Element TextElement = doc.createElement("Text");

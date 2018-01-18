@@ -271,6 +271,17 @@
             <RightAnswer>swim</RightAnswer>
         </Question>
     </DropDownQuestions>
+    <UITextQuestions>
+        <Question>
+            <Text>How does a dropdown box work?</Text>
+            <Answers>
+                <Answer>You select multiple answers by clicking the checkbox</Answer>
+                <Answer>You click on the radio button</Answer>
+                <Answer>You click on the arrow and select the answer from the list</Answer>
+            </Answers>
+            <RightAnswer>You click on the arrow and select the answer from the list</RightAnswer>
+        </Question>
+    </UITextQuestions>
     <CheckBoxQuestions>
         <Question>
             <Text>Select all animals</Text>

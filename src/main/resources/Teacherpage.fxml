@@ -41,5 +41,6 @@
       </Text>
       <Button fx:id="addTextQuestionButton" layoutX="9.0" layoutY="96.0" mnemonicParsing="false" onAction="#addTextQuestion" prefHeight="26.0" prefWidth="133.0" text="Add Text Question" />
       <Button fx:id="addClickablePictureButton" layoutX="9.0" layoutY="178.0" mnemonicParsing="false" onAction="#addClickablePicture" prefHeight="26.0" prefWidth="133.0" text="Add Clickable Picture" />
+      <Button fx:id="addDropDownButton1" layoutX="10.0" layoutY="211.0" mnemonicParsing="false" onAction="#addUIText" prefHeight="26.0" prefWidth="133.0" text="Add UI Question" />
    </children>
 </AnchorPane>
