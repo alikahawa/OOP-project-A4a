@@ -243,6 +243,26 @@
                 <Y2>85</Y2>
             </Bounds>
         </Question>
+        <Question>
+            <Text>CLICK the protecting hotdog</Text>
+            <Picture>images\FriJan19102702CET2018</Picture>
+            <Bounds>
+                <X1>59</X1>
+                <X2>134</X2>
+                <Y1>114</Y1>
+                <Y2>222</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Click " YOU" </Text>
+            <Picture>images\FriJan19102825CET2018</Picture>
+            <Bounds>
+                <X1>104</X1>
+                <X2>173</X2>
+                <Y1>3</Y1>
+                <Y2>35</Y2>
+            </Bounds>
+        </Question>
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
