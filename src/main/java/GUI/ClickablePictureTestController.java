@@ -38,7 +38,7 @@ public class ClickablePictureTestController {
         tmpql = QuestionList.ReadFromXML("OOP.xml");
 
         tmpq1shuffled = tmpql.shuffleQuestionList();
-        // start quiz, per vraag show vraag en 3 antwoorden.
+        // start quiz, per vraag show vraag en 3 antwoorden !!!!!!!!.
 
         displayQuestion();
     }
