@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Questions>
     <MultiQuestions>
         <Question>
@@ -232,14 +232,6 @@
                 <Y1>114</Y1>
                 <Y2>130</Y2>
             </Bounds>
-            <Text>Click on the apples</Text>
-            <Picture>images\FriJan19101038CET2018</Picture>
-            <Bounds>
-                <X1>87</X1>
-                <X2>289</X2>
-                <Y1>12</Y1>
-                <Y2>129</Y2>
-            </Bounds>
         </Question>
         <Question>
             <Text>Click on the color yellow</Text>
@@ -319,6 +311,16 @@
                 <X2>150</X2>
                 <Y1>35</Y1>
                 <Y2>59</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Click the diver</Text>
+            <Picture>images\FriJan19105413CET2018</Picture>
+            <Bounds>
+                <X1>1</X1>
+                <X2>198</X2>
+                <Y1>58</Y1>
+                <Y2>190</Y2>
             </Bounds>
         </Question>
     </PictureQuestions>
