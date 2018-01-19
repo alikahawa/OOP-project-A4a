@@ -54,5 +54,10 @@
             <Image url="@images/0.png" />
          </image>
       </ImageView>
+      <Button fx:id="rageQuit" contentDisplay="CENTER" layoutX="524.0" layoutY="67.0" mnemonicParsing="false" onAction="#rageQuitButton" prefHeight="313.0" prefWidth="45.0" style="-fx-background-color: Black;" text="Rage  Qui t " textFill="#fdfcfc" wrapText="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

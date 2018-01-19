@@ -183,7 +183,7 @@
         </Question>
     </MultiQuestions>
     <PictureQuestions>
-	<Question>
+        <Question>
             <Text>push in the upper left1 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -193,8 +193,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left2 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -204,8 +203,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left3 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -215,8 +213,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left4 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -226,8 +223,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left5 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -237,8 +233,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left6 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -248,8 +243,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left7 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -259,8 +253,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left8 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -270,8 +263,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left9 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -281,8 +273,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left10 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -292,8 +283,7 @@
                 <Y2>20</Y2>
             </Bounds>
         </Question>
-
-	<Question>
+        <Question>
             <Text>push in the upper left11 corner</Text>
             <Picture>testPicture1.png</Picture>
             <Bounds>
@@ -304,7 +294,7 @@
             </Bounds>
         </Question>
     </PictureQuestions>
-        <DropDownQuestions>
+    <DropDownQuestions>
         <Question>
             <Text>What color is the sky when it's sunny outside?</Text>
             <Answers>
@@ -349,6 +339,15 @@
                 <Answer>swim and run</Answer>
             </Answers>
             <RightAnswer>swim</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Write your question</Text>
+            <Answers>
+                <Answer>an answer</Answer>
+                <Answer>The right answer</Answer>
+                <Answer>an answer</Answer>
+            </Answers>
+            <RightAnswer>The right answer</RightAnswer>
         </Question>
     </DropDownQuestions>
     <CheckBoxQuestions>

@@ -1,7 +1,10 @@
+GUI\Addquestioncontroller.class
+GUI\BeginScreensController.class
+GUI\examDoneController.class
+Application\PictureQuestion.class
 GUI\TestSelectorController.class
 Application\Teacher.class
 Application\QuestionList.class
-GUI\Addquestioncontroller.class
 GUI\Teacherpagecontroller.class
 GUI\Main.class
 Application\User.class
@@ -11,12 +14,8 @@ Application\MultiQuestion.class
 GUI\TextTestController.class
 GUI\Teacheraddcontroller.class
 Application\Student.class
-GUI\BeginScreensController.class
-GUI\examDoneController.class
 Application\Application.class
 GUI\Addimagequestioncontroller.class
-Application\CheckBox.class
 Application\UIQuestions.class
 Application\DropDown.class
-Application\PictureQuestion.class
 Application\UserList.class

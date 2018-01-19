@@ -25,6 +25,7 @@ public class ClickablePictureTestController {
     @FXML private Label scoreCounter;
     @FXML private ImageView progressbar;
     @FXML private ImageView questionPicture;
+    @FXML private Button rageQuit;
 
     int examquestioncount = 0;
     int score = 0;
@@ -159,5 +160,12 @@ public class ClickablePictureTestController {
         Image image2 = new Image(imageString);
         progressbar.setImage(image2);
     }
+    public void rageQuitButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Studentpage.fxml"));
+        Parent root = loader.load();
+        TestSelectorController controller = loader.getController();
+        rageQuit.getScene().setRoot(root);
+    }
+
 
 }
