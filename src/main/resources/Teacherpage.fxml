@@ -7,12 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TestSelectorController">
    <children>
-      <Button fx:id="back" layoutX="467.0" layoutY="321.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="66.0" prefWidth="123.0" style="-fx-background-color: Black;" text="Log out" textFill="#faf7f7">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="mypageteacher" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMypageteacher" prefHeight="50.0" prefWidth="123.0" style="-fx-background-color: Black;" text="My Teacher" textFill="#faf7f7">
+      <Button fx:id="mypageteacher" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToMypageteacher" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: Black;" text="My Teacher" textFill="#faf7f7">
          <font>
             <Font size="19.0" />
          </font>
@@ -25,7 +20,7 @@
          <font>
             <Font size="20.0" />
          </font></Button>
-      <Text layoutX="190.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher page">
+      <Text layoutX="193.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher page">
          <font>
             <Font size="36.0" />
          </font>
