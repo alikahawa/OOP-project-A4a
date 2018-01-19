@@ -116,7 +116,7 @@ public class TextTestController {
     public void examDone() throws IOException {
         int Result = score;
 
-        if (Result > 6) {
+        if (Result >= 6) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/examPassed.fxml"));
             Parent root = loader.load();
             examDoneController controller = loader.getController();
