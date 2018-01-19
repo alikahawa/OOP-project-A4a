@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class ClickablePictureTestController {
 
     @FXML private Button correctButton;
-    @FXML private Button incorrectButton;
     @FXML private Label questionText;
     @FXML private Label scoreCounter;
     @FXML private ImageView progressbar;
@@ -67,7 +66,7 @@ public class ClickablePictureTestController {
         correctButton.setPrefWidth(dx);
         correctButton.setPrefHeight(dy);
 
-        correctButton.setLayoutX(questionPicture.getLayoutX() + tmpx1 - 20 );
+        correctButton.setLayoutX(questionPicture.getLayoutX() + tmpx1);
         correctButton.setLayoutY(questionPicture.getLayoutY() + tmpy1);
 
         scoreCounter.setText("Score: " + score + "/" + examquestioncount);

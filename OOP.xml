@@ -181,118 +181,18 @@
             </Answers>
             <RightAnswer>VU Amsterdam</RightAnswer>
         </Question>
+        <Question>
+            <Text>What is a list of items that appear when clicking on a button?</Text>
+            <NumberOfAnswers>3</NumberOfAnswers>
+            <Answers>
+                <Answer>A dropdown menu</Answer>
+                <Answer>A list-box</Answer>
+                <Answer>A checkbox</Answer>
+            </Answers>
+            <RightAnswer>A dropdown menu</RightAnswer>
+        </Question>
     </MultiQuestions>
     <PictureQuestions>
-        <Question>
-            <Text>push in the upper left1 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left2 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left3 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left4 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left5 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left6 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left7 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left8 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left9 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left10 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>push in the upper left11 corner</Text>
-            <Picture>testPicture1.png</Picture>
-            <Bounds>
-                <X1>20</X1>
-                <X2>0</X2>
-                <Y1>0</Y1>
-                <Y2>20</Y2>
-            </Bounds>
-        </Question>
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
@@ -350,6 +250,17 @@
             <RightAnswer>The right answer</RightAnswer>
         </Question>
     </DropDownQuestions>
+    <UITextQuestions>
+        <Question>
+            <Text>How does a dropdown box work?</Text>
+            <Answers>
+                <Answer>You select multiple answers by clicking the checkbox</Answer>
+                <Answer>You click on the radio button</Answer>
+                <Answer>You click on the arrow and select the answer from the list</Answer>
+            </Answers>
+            <RightAnswer>You click on the arrow and select the answer from the list</RightAnswer>
+        </Question>
+    </UITextQuestions>
     <CheckBoxQuestions>
         <Question>
             <Text>Select all animals</Text>

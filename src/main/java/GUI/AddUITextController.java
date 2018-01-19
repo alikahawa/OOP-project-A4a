@@ -1,6 +1,8 @@
 package GUI;
 
-import Application.*;
+import Application.DropDown;
+import Application.QuestionList;
+import Application.UITextQuestion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class AddDropDownController {
+public class AddUITextController {
 
     private QuestionList questionList = QuestionList.ReadFromXML("OOP.xml");
 
@@ -35,10 +37,10 @@ public class AddDropDownController {
         answers.add(rightAnswer.getText());
         Collections.shuffle(answers);
         int index = answers.indexOf(rightAnswer.getText());
-        DropDown dropDown = new DropDown(index, answers, questionText.getText());
-        System.out.println(dropDown.getAnswerList() + "\n" + dropDown.getRightAnswer() + "\n" + dropDown.getQuestion());
+        UITextQuestion uiTextQuestion = new UITextQuestion(index, answers, questionText.getText());
+        System.out.println(uiTextQuestion.getAnswerList() + "\n" + uiTextQuestion.getRightAnswer() + "\n" + uiTextQuestion.getQuestion());
 
-        questionList.add(dropDown);
+        questionList.add(uiTextQuestion);
         questionList.WriteToXML("OOP.xml");
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
