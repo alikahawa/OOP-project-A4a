@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ClickablePictureTestController">
    <children>
-      <Label fx:id="questionText" alignment="CENTER" layoutX="27.0" layoutY="58.0" prefHeight="58.0" prefWidth="544.0" text="TESTVRAAG: WIJS DE TU AULA AAN" wrapText="true">
+      <Label fx:id="questionText" alignment="CENTER" layoutX="27.0" layoutY="58.0" prefHeight="58.0" prefWidth="491.0" text="TESTVRAAG: WIJS DE TU AULA AAN" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
@@ -18,7 +18,7 @@
          <image>
             <Image url="@testPicture1.PNG" />
          </image></ImageView>
-      <Button fx:id="incorrectButton" alignment="TOP_LEFT" layoutX="7.0" layoutY="103.0" mnemonicParsing="false" onAction="#incorrectlyClicked" prefHeight="298.0" prefWidth="591.0" style="-fx-background-color: rgba(100, 100, 100, 0.0);" text="Button" textFill="TRANSPARENT" />
+      <Button fx:id="incorrectButton" alignment="TOP_LEFT" layoutX="7.0" layoutY="103.0" mnemonicParsing="false" onAction="#incorrectlyClicked" prefHeight="298.0" prefWidth="516.0" style="-fx-background-color: rgba(100, 100, 100, 0.0);" text="Button" textFill="TRANSPARENT" />
       <Button fx:id="correctButton" alignment="CENTER" layoutX="409.0" layoutY="154.0" mnemonicParsing="false" onAction="#correctlyClicked" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: rgba(100, 100, 100, 0.0);" text="Tijdeiljk" textFill="#3881f500" />
       <Label fx:id="scoreCounter" layoutX="455.0" layoutY="22.0" prefHeight="35.0" prefWidth="130.0" text="Score: x/y" wrapText="true">
          <font>
@@ -30,9 +30,9 @@
             <Image url="@images/0.png" />
          </image>
       </ImageView>
-      <Button fx:id="rageQuit" layoutX="429.0" layoutY="295.0" mnemonicParsing="false" onAction="#rageQuitButton" prefHeight="66.0" prefWidth="112.0" style="-fx-background-color: Black;" text="Rage Quit" textFill="WHITE">
+      <Button fx:id="rageQuit1" contentDisplay="CENTER" layoutX="544.0" layoutY="73.0" mnemonicParsing="false" onAction="#rageQuitButton" prefHeight="318.0" prefWidth="46.0" style="-fx-background-color: Black;" text="Rage  Qui t " textFill="#fdfcfc" wrapText="true">
          <font>
-            <Font size="18.0" />
+            <Font size="22.0" />
          </font>
       </Button>
    </children>
