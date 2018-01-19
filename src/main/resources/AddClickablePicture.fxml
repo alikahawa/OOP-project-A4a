@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddClickablePictureController">
    <children>
-      <TextArea fx:id="questionText" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="400.0" text="Write your question" />
+      <TextArea fx:id="questionText" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="400.0" promptText="Write your question" />
       <Button fx:id="saveButton" layoutX="191.0" layoutY="346.0" mnemonicParsing="false" onAction="#addQuestion" prefHeight="0.0" prefWidth="152.0" style="-fx-background-color: Black;" text="Save" textFill="WHITE">
          <font>
             <Font size="21.0" />

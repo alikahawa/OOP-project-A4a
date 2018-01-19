@@ -8,10 +8,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddDropDownController">
    <children>
-      <TextArea fx:id="questionText" layoutX="100.0" layoutY="63.0" prefHeight="81.0" prefWidth="400.0" text="Write your question" />
-      <TextField fx:id="wrongAnswer2" layoutX="215.0" layoutY="255.0" text="an answer" />
-      <TextField fx:id="rightAnswer" layoutX="215.0" layoutY="172.0" text="The right answer" />
-      <TextField fx:id="wrongAnswer1" layoutX="215.0" layoutY="212.0" text="an answer" />
+      <TextArea fx:id="questionText" layoutX="100.0" layoutY="63.0" prefHeight="81.0" prefWidth="400.0" promptText="Write your question" />
+      <TextField fx:id="wrongAnswer2" layoutX="215.0" layoutY="255.0" promptText="an answer" />
+      <TextField fx:id="rightAnswer" layoutX="215.0" layoutY="172.0" promptText="The right answer" />
+      <TextField fx:id="wrongAnswer1" layoutX="215.0" layoutY="212.0" promptText="an answer" />
       <Button fx:id="saveButton" layoutX="134.0" layoutY="302.0" mnemonicParsing="false" onAction="#addQuestion" prefHeight="74.0" prefWidth="129.0" style="-fx-background-color: Black;" text="Save" textFill="WHITE">
          <font>
             <Font size="31.0" />

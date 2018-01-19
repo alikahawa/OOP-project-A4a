@@ -4,7 +4,7 @@
         <FirstName>Andor</FirstName>
         <LastName>Michels</LastName>
         <Password>77+977+9J++/ve+/ve+/ve+/vWIg77+977+977+9Xe+/vX59yaga77+9LkER77+9G++/vX8p77+9QRXvv70=</Password>
-        <Salt>77+977+977+977+9Me+/ve+/vTjvv73vv70V0bUA77+977+977+9RO+/ve+/vS3QjXY=</Salt>
+        <Salt>77+977+977+977+9Me+/ve+/vTjvv73vv70V0bUA77+977+977+9RO+/ve+/vS3QP3Y=</Salt>
         <Email>a.m@gmail.nl</Email>
     </Student>
     <Student>
@@ -49,4 +49,11 @@
         <Salt>77+9ZO+/vRjvv73vv70377+977+977+9aGZtO++/vdq3Ru+/ve+/ve+/ve+/vRwY</Salt>
         <Email>teachera@b.com</Email>
     </Teacher>
+    <Student>
+        <FirstName>henk2</FirstName>
+        <LastName>henk2</LastName>
+        <Password>Ae16zYjXceSCivixcD9UBPYGmqcmRc3l3vsgqOorYbU=</Password>
+        <Salt>IvIMez+WAy1wEeETNkFPnujZQs0KDWgB</Salt>
+        <Email>henk@gmail.com</Email>
+    </Student>
 </MultiUsers>

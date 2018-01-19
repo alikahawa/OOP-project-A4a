@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UITestController">
    <children>
-      <Label fx:id="questionText" graphicTextGap="3.0" layoutX="35.0" layoutY="61.0" prefHeight="134.0" prefWidth="544.0" text="Testvraag?? sdfljsdfsdfkljklsdf sdflsdfjklsdfjklsdfjkl sdfjklsdfjklsdfjkl sdfjklsdfjklsdfjl" textOverrun="CLIP" wrapText="true">
+      <Label fx:id="questionText" graphicTextGap="3.0" layoutX="35.0" layoutY="61.0" prefHeight="134.0" prefWidth="497.0" text="Testvraag?? sdfljsdfsdfkljklsdf sdflsdfjklsdfjklsdfjkl sdfjklsdfjklsdfjkl sdfjklsdfjklsdfjl" textOverrun="CLIP" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
@@ -32,7 +32,7 @@
       <CheckBox fx:id="checkBox2" layoutX="238.0" layoutY="199.0" mnemonicParsing="false" text="CheckBox" />
       <CheckBox fx:id="checkBox3" layoutX="238.0" layoutY="220.0" mnemonicParsing="false" text="CheckBox" />
       <Button fx:id="submitCheckBox" layoutX="273.0" layoutY="261.0" mnemonicParsing="false" onAction="#submitCheckBoxPressed" text="Submit" />
-      <Label fx:id="answerBText" layoutX="117.0" layoutY="264.0" prefHeight="58.0" prefWidth="448.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
+      <Label fx:id="answerBText" layoutX="117.0" layoutY="264.0" prefHeight="58.0" prefWidth="416.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
@@ -52,19 +52,19 @@
             <Font size="22.0" />
          </font>
       </Button>
-      <Label fx:id="answerAText" layoutX="117.0" layoutY="205.0" prefHeight="58.0" prefWidth="448.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
+      <Label fx:id="answerAText" layoutX="117.0" layoutY="205.0" prefHeight="58.0" prefWidth="416.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Label fx:id="answerCText" layoutX="117.0" layoutY="325.0" prefHeight="58.0" prefWidth="448.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
+      <Label fx:id="answerCText" layoutX="117.0" layoutY="325.0" prefHeight="58.0" prefWidth="416.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <Button fx:id="rageQuit" layoutX="5.0" layoutY="297.0" mnemonicParsing="false" onAction="#rageQuitButton" prefHeight="92.0" prefWidth="590.0" style="-fx-background-color: Black;" text="Rage Quit " textFill="WHITE">
+      <Button fx:id="rageQuit" contentDisplay="CENTER" layoutX="544.0" layoutY="77.0" mnemonicParsing="false" onAction="#rageQuitButton" prefHeight="314.0" prefWidth="39.0" style="-fx-background-color: Black;" text="Rage  Qui t " textFill="#fdfcfc" wrapText="true">
          <font>
-            <Font size="36.0" />
+            <Font size="22.0" />
          </font>
       </Button>
    </children>
