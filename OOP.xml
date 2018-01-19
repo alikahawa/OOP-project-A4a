@@ -213,6 +213,16 @@
                 <Y2>54</Y2>
             </Bounds>
         </Question>
+        <Question>
+            <Text>Click one of andy's eyes</Text>
+            <Picture>images\FriJan19101652CET2018</Picture>
+            <Bounds>
+                <X1>52</X1>
+                <X2>197</X2>
+                <Y1>50</Y1>
+                <Y2>85</Y2>
+            </Bounds>
+        </Question>
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
