@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: PaleTurquoise;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TextTestController">
    <children>
-      <Label fx:id="answerBText" layoutX="107.0" layoutY="254.0" prefHeight="58.0" prefWidth="448.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
+      <Label fx:id="answerBText" layoutX="107.0" layoutY="254.0" prefHeight="58.0" prefWidth="410.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
@@ -29,12 +29,12 @@
             <Font size="22.0" />
          </font>
       </Button>
-      <Label fx:id="questionText" graphicTextGap="3.0" layoutX="35.0" layoutY="61.0" prefHeight="134.0" prefWidth="544.0" text="Testvraag?? sdfljsdfsdfkljklsdf sdflsdfjklsdfjklsdfjkl sdfjklsdfjklsdfjkl sdfjklsdfjklsdfjl" textOverrun="CLIP" wrapText="true">
+      <Label fx:id="questionText" graphicTextGap="3.0" layoutX="35.0" layoutY="61.0" prefHeight="134.0" prefWidth="488.0" text="Testvraag?? sdfljsdfsdfkljklsdf sdflsdfjklsdfjklsdfjkl sdfjklsdfjklsdfjkl sdfjklsdfjklsdfjl" textOverrun="CLIP" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="answerAText" layoutX="107.0" layoutY="195.0" prefHeight="58.0" prefWidth="448.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
+      <Label fx:id="answerAText" layoutX="107.0" layoutY="195.0" prefHeight="58.0" prefWidth="410.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="answerCText" layoutX="107.0" layoutY="315.0" prefHeight="58.0" prefWidth="448.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
+      <Label fx:id="answerCText" layoutX="107.0" layoutY="315.0" prefHeight="58.0" prefWidth="410.0" text="asdfjlasdfj asdfjklasdfjkljklasdf asdfjkljklasdfjklasdf asdjklasdfjklasdfjkl jkl" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
@@ -54,5 +54,10 @@
             <Image url="@images/0.png" />
          </image>
       </ImageView>
+      <Button fx:id="rageQuit" contentDisplay="CENTER" layoutX="534.0" layoutY="67.0" mnemonicParsing="false" onAction="#rageQuitButton" prefHeight="314.0" prefWidth="39.0" style="-fx-background-color: Black;" text="Rage  Qui t " textFill="#fdfcfc" wrapText="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

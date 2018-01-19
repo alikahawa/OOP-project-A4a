@@ -22,6 +22,7 @@ public class BeginScreensController {
     @FXML private PasswordField Password;
     @FXML private Label msglb;
 
+
     private UserList userList;
 
     public void fromWelcomeToLoginScreen() throws IOException {
@@ -85,4 +86,5 @@ public class BeginScreensController {
             msglb.setText("This user does not exist");
         }
     }
+
 }

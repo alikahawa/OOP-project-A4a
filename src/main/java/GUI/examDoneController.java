@@ -26,7 +26,7 @@ public class examDoneController {
 
     public void returnToMainMenu() throws IOException
     {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Teacherpage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Studentpage.fxml"));
         Parent root = loader.load();
         TestSelectorController controller = loader.getController();
         returnButton.getScene().setRoot(root);

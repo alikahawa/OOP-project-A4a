@@ -193,36 +193,6 @@
         </Question>
     </MultiQuestions>
     <PictureQuestions>
-        <Question>
-            <Text>Click andys mouth</Text>
-            <Picture>images\ThuJan18202633CET2018</Picture>
-            <Bounds>
-                <X1>99</X1>
-                <X2>168</X2>
-                <Y1>168</Y1>
-                <Y2>192</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>Click the happy horse</Text>
-            <Picture>images\ThuJan18203125CET2018</Picture>
-            <Bounds>
-                <X1>8</X1>
-                <X2>177</X2>
-                <Y1>21</Y1>
-                <Y2>218</Y2>
-            </Bounds>
-        </Question>
-        <Question>
-            <Text>Click his left ear</Text>
-            <Picture>images\ThuJan18203346CET2018</Picture>
-            <Bounds>
-                <X1>18</X1>
-                <X2>60</X2>
-                <Y1>121</Y1>
-                <Y2>177</Y2>
-            </Bounds>
-        </Question>
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
@@ -269,6 +239,15 @@
                 <Answer>swim and run</Answer>
             </Answers>
             <RightAnswer>swim</RightAnswer>
+        </Question>
+        <Question>
+            <Text>Write your question</Text>
+            <Answers>
+                <Answer>an answer</Answer>
+                <Answer>The right answer</Answer>
+                <Answer>an answer</Answer>
+            </Answers>
+            <RightAnswer>The right answer</RightAnswer>
         </Question>
     </DropDownQuestions>
     <UITextQuestions>

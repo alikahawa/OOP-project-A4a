@@ -27,13 +27,14 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button fx:id="UIBasedExamButton" layoutX="152.0" layoutY="247.0" mnemonicParsing="false" onAction="#goToStartOfUITest" prefHeight="66.0" prefWidth="298.0" style="-fx-background-color: Black;" text="UI Exam" textFill="#fdfcfc">
+      <Button fx:id="addDropDownButton" layoutX="189.0" layoutY="200.0" mnemonicParsing="false" onAction="#addDropDown" prefHeight="50.0" prefWidth="232.0" style="-fx-background-color: Black;" text="Add DropDown" textFill="WHITE">
          <font>
-            <Font size="26.0" />
-         </font>
-      </Button>
-      <Button fx:id="addDropDownButton" layoutX="9.0" layoutY="247.0" mnemonicParsing="false" onAction="#addDropDown" prefHeight="26.0" prefWidth="133.0" text="Add DropDown" />
-      <Button fx:id="addCheckBoxButton" layoutX="9.0" layoutY="286.0" mnemonicParsing="false" onAction="#addCheckBox" prefHeight="26.0" prefWidth="134.0" text="Add CheckBox" />
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="addCheckBoxButton" layoutX="189.0" layoutY="262.0" mnemonicParsing="false" onAction="#addCheckBox" prefHeight="58.0" prefWidth="232.0" style="-fx-background-color: Black;" text="Add CheckBox" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
       <Text layoutX="190.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher page">
          <font>
             <Font size="36.0" />
@@ -42,5 +43,15 @@
       <Button fx:id="addTextQuestionButton" layoutX="9.0" layoutY="96.0" mnemonicParsing="false" onAction="#addTextQuestion" prefHeight="26.0" prefWidth="133.0" text="Add Text Question" />
       <Button fx:id="addClickablePictureButton" layoutX="9.0" layoutY="178.0" mnemonicParsing="false" onAction="#addClickablePicture" prefHeight="26.0" prefWidth="133.0" text="Add Clickable Picture" />
       <Button fx:id="addDropDownButton1" layoutX="10.0" layoutY="211.0" mnemonicParsing="false" onAction="#addUIText" prefHeight="26.0" prefWidth="133.0" text="Add UI Question" />
+      <Button fx:id="addDropDownButton1" layoutX="189.0" layoutY="139.0" mnemonicParsing="false" onAction="#addDropDown" prefHeight="50.0" prefWidth="232.0" style="-fx-background-color: Black;" text="Add Picture Question" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="addDropDownButton11" layoutX="189.0" layoutY="79.0" mnemonicParsing="false" onAction="#addDropDown" prefHeight="50.0" prefWidth="232.0" style="-fx-background-color: Black;" text="Add Text Question" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

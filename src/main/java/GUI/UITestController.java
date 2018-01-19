@@ -54,6 +54,7 @@ public class UITestController {
     private javafx.scene.control.CheckBox checkBox2;
     @FXML
     private javafx.scene.control.CheckBox checkBox3;
+    @FXML private Button rageQuit;
 
     @FXML
     public void initialize() {
@@ -316,5 +317,11 @@ public class UITestController {
         }
         Image image2 = new Image(imageString);
         progressbar.setImage(image2);
+    }
+    public void rageQuitButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Studentpage.fxml"));
+        Parent root = loader.load();
+        TestSelectorController controller = loader.getController();
+        rageQuit.getScene().setRoot(root);
     }
 }
