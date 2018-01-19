@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Questions>
     <MultiQuestions>
         <Question>
@@ -194,6 +194,43 @@
     </MultiQuestions>
     <PictureQuestions>
         <Question>
+            <Text>Click on the cow.</Text>
+            <Picture>images\FriJan19101317CET2018</Picture>
+            <Bounds>
+                <X1>75</X1>
+                <X2>318</X2>
+                <Y1>87</Y1>
+                <Y2>184</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Where is the ewi building?</Text>
+            <Picture>images\FriJan19102042CET2018</Picture>
+            <Bounds>
+                <X1>73</X1>
+                <X2>206</X2>
+                <Y1>47</Y1>
+                <Y2>168</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Click on the gorilla</Text>
+            <Picture>images\FriJan19102246CET2018</Picture>
+            <Bounds>
+                <X1>20</X1>
+                <X2>81</X2>
+                <Y1>212</Y1>
+                <Y2>263</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Whereś his right eye?</Text>
+            <Picture>images\FriJan19102355CET2018</Picture>
+            <Bounds>
+                <X1>151</X1>
+                <X2>187</X2>
+                <Y1>114</Y1>
+                <Y2>130</Y2>
             <Text>Click on the apples</Text>
             <Picture>images\FriJan19101038CET2018</Picture>
             <Bounds>
