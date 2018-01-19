@@ -193,6 +193,26 @@
         </Question>
     </MultiQuestions>
     <PictureQuestions>
+        <Question>
+            <Text>Click on the apples</Text>
+            <Picture>images\FriJan19101038CET2018</Picture>
+            <Bounds>
+                <X1>87</X1>
+                <X2>289</X2>
+                <Y1>12</Y1>
+                <Y2>129</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Click on the color yellow</Text>
+            <Picture>images\FriJan19101630CET2018</Picture>
+            <Bounds>
+                <X1>105</X1>
+                <X2>117</X2>
+                <Y1>92</Y1>
+                <Y2>204</Y2>
+            </Bounds>
+        </Question>
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
