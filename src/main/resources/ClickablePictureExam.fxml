@@ -18,8 +18,8 @@
          <image>
             <Image url="@testPicture1.PNG" />
          </image></ImageView>
-      <Button fx:id="incorrectButton" alignment="TOP_LEFT" layoutX="7.0" layoutY="103.0" mnemonicParsing="false" onAction="#incorrectlyClicked" prefHeight="298.0" prefWidth="591.0" style="-fx-background-color: 00;" text="Button" textFill="TRANSPARENT" />
-      <Button fx:id="correctButton" alignment="CENTER" layoutX="409.0" layoutY="154.0" mnemonicParsing="false" onAction="#correctlyClicked" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: 00;" text="Tijdeiljk" textFill="#3881f500" />
+      <Button fx:id="incorrectButton" alignment="TOP_LEFT" layoutX="7.0" layoutY="103.0" mnemonicParsing="false" onAction="#incorrectlyClicked" prefHeight="298.0" prefWidth="591.0" style="-fx-background-color: rgba(100, 100, 100, 0.0);" text="Button" textFill="TRANSPARENT" />
+      <Button fx:id="correctButton" alignment="CENTER" layoutX="409.0" layoutY="154.0" mnemonicParsing="false" onAction="#correctlyClicked" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: rgba(100, 100, 100, 0.0);" text="Tijdeiljk" textFill="#3881f500" />
       <Label fx:id="scoreCounter" layoutX="455.0" layoutY="22.0" prefHeight="35.0" prefWidth="130.0" text="Score: x/y" wrapText="true">
          <font>
             <Font size="24.0" />
