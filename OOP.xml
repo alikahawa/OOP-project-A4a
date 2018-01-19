@@ -368,15 +368,6 @@
             </Answers>
             <RightAnswer>swim</RightAnswer>
         </Question>
-        <Question>
-            <Text>Write your question</Text>
-            <Answers>
-                <Answer>an answer</Answer>
-                <Answer>The right answer</Answer>
-                <Answer>an answer</Answer>
-            </Answers>
-            <RightAnswer>The right answer</RightAnswer>
-        </Question>
     </DropDownQuestions>
     <UITextQuestions>
         <Question>

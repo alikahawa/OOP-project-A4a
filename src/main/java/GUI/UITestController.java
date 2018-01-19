@@ -101,7 +101,7 @@ public class UITestController {
             choiceBox.setVisible(true);
             submitDropDown.setVisible(true);
 
-            choiceBox.setItems(FXCollections.observableArrayList("Select sth", tmpquestion.getAnswerList().get(0), tmpquestion.getAnswerList().get(1), tmpquestion.getAnswerList().get(2)));
+            choiceBox.setItems(FXCollections.observableArrayList("Select an option", tmpquestion.getAnswerList().get(0), tmpquestion.getAnswerList().get(1), tmpquestion.getAnswerList().get(2)));
             choiceBox.getSelectionModel().selectFirst();
         }
 
