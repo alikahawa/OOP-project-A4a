@@ -263,6 +263,26 @@
                 <Y2>35</Y2>
             </Bounds>
         </Question>
+        <Question>
+            <Text>click on the square</Text>
+            <Picture>images\FriJan19103311CET2018</Picture>
+            <Bounds>
+                <X1>13</X1>
+                <X2>132</X2>
+                <Y1>14</Y1>
+                <Y2>133</Y2>
+            </Bounds>
+        </Question>
+        <Question>
+            <Text>Where do you click to go back to the home page?</Text>
+            <Picture>images\FriJan19103537CET2018</Picture>
+            <Bounds>
+                <X1>10</X1>
+                <X2>150</X2>
+                <Y1>35</Y1>
+                <Y2>59</Y2>
+            </Bounds>
+        </Question>
     </PictureQuestions>
     <DropDownQuestions>
         <Question>
